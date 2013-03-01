@@ -11,7 +11,13 @@
         <dependency>
             <groupId>com.google.android</groupId>
             <artifactId>android</artifactId>
-            <version>4.0.0</version>
+            <version>4.0.1.2</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>support-v4</artifactId>
+            <version>r6</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -36,6 +42,7 @@
                 <configuration>
                     <sdk>
                         <platform>14</platform>
+                        <path>../../adt-bundle/sdk</path>
                     </sdk>
                 </configuration>
             </plugin>

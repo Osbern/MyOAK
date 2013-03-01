@@ -1,0 +1,10 @@
+.DS_Store
+*.class
+target/
+.metadata/
+.settings/
+bin/
+*.aux
+*.log
+*.toc
+*.gz
