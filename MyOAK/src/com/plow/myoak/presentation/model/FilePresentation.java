@@ -1,7 +1,7 @@
-package com.plow.myoak.presentation.files;
+package com.plow.myoak.presentation.model;
 
 import com.plow.myoak.R;
-import com.plow.myoak.business.files.File;
+import com.plow.myoak.model.File;
 
 public class FilePresentation  extends ResourcePresentation{
  

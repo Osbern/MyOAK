@@ -13,11 +13,10 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.plow.myoak.R;
-import com.plow.myoak.business.files.ResourceType;
-import com.plow.myoak.presentation.files.DirectoryPresentation;
-import com.plow.myoak.presentation.files.FilePerspectiveFragment;
-import com.plow.myoak.presentation.files.FilePerspectiveListAdapter;
-import com.plow.myoak.presentation.files.ResourcePresentation;
+import com.plow.myoak.presentation.model.DirectoryPresentation;
+import com.plow.myoak.presentation.model.FilePerspectiveFragment;
+import com.plow.myoak.presentation.model.FilePerspectiveListAdapter;
+import com.plow.myoak.presentation.model.ResourcePresentation;
 import com.plow.myoak.utils.MenuListProvider;
 
 
@@ -104,12 +103,12 @@ public class MyOAKMainActivity extends FragmentActivity implements 	PerspectiveL
 	@Override
 	public void onResourceItemSelected(FilePerspectiveFragment filePerspectiveFragment, ResourcePresentation resourcePresentation) {
 		  Toast.makeText(this, "Item selected "+ resourcePresentation.getName(), Toast.LENGTH_SHORT).show();
-		  if(resourcePresentation.getType().equals(ResourceType.DIRECTORY)){
+		  if(resourcePresentation.isDirectory()){
 			  List<ResourcePresentation> resources = ((DirectoryPresentation)resourcePresentation).getChildren();
 			  
 			  FilePerspectiveListAdapter filePerspectiveListAdapter = new FilePerspectiveListAdapter(this, filePerspectiveFragment, resources );
 			  filePerspectiveFragment.setListAdapter(filePerspectiveListAdapter);
-			  Toast.makeText( this, "Item selected "+ resourcePresentation.getType(), Toast.LENGTH_SHORT).show();
+			  Toast.makeText( this, "Item selected "+ (resourcePresentation.isDirectory() ? "D" : "F"), Toast.LENGTH_SHORT).show();
 		  }
 		
 	} 

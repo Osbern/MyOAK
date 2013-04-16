@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import com.plow.myoak.business.files.Directory;
-import com.plow.myoak.business.files.File;
-import com.plow.myoak.business.files.Resource;
-import com.plow.myoak.business.files.ResourceType;
-import com.plow.myoak.presentation.files.DirectoryPresentation;
-import com.plow.myoak.presentation.files.ResourcePresentation;
+import org.apache.jackrabbit.webdav.property.ResourceType;
+
+import com.plow.myoak.model.Directory;
+import com.plow.myoak.model.File;
+import com.plow.myoak.presentation.model.DirectoryPresentation;
+import com.plow.myoak.presentation.model.ResourcePresentation;
 
 public class Factory {
 
@@ -24,15 +24,15 @@ public class Factory {
 		List<ResourcePresentation> resources = new ArrayList<ResourcePresentation>();
 		if(resource == null){
 			
-			Directory root = new Directory("C", "126 Go", new Date(), ResourceType.DIRECTORY, null);
-			Directory dir1 = new Directory("Music", "126 Ko", new Date(), ResourceType.DIRECTORY, root);
-			Directory dir2 = new Directory("Video", "1206 Mo", new Date(), ResourceType.DIRECTORY, root);
-			Directory dir3 = new Directory("Music 1", "126 Ko", new Date(), ResourceType.DIRECTORY, null);
-			Directory dir4 = new Directory("Music 2", "126 Ko", new Date(), ResourceType.DIRECTORY, null);
-			Directory dir5 = new Directory("Music 3", "126 Ko", new Date(), ResourceType.DIRECTORY, null);
-			File banlieuzart1 = new File("banlieuzart 1", "126 Ko", new Date(), ResourceType.DIRECTORY, dir1);
-			File banlieuzart2 = new File("banlieuzart 2", "106 Ko", new Date(), ResourceType.DIRECTORY, dir1);
-			File banlieuzart3 = new File("banlieuzart 3", "186 Ko", new Date(), ResourceType.DIRECTORY, dir2);
+			Directory root = new Directory("C",  new Date());
+			Directory dir1 = new Directory("Music",new Date());
+			Directory dir2 = new Directory("Video", new Date());
+			Directory dir3 = new Directory("Music 1", new Date());
+			Directory dir4 = new Directory("Music 2", new Date());
+			Directory dir5 = new Directory("Music 3", new Date());
+			File banlieuzart1 = new File("banlieuzart 1", 126, new Date());
+			File banlieuzart2 = new File("banlieuzart 2", 106, new Date());
+			File banlieuzart3 = new File("banlieuzart 3", 186, new Date());
 			
 			
 			resources.add(new DirectoryPresentation(root));
@@ -41,7 +41,7 @@ public class Factory {
 			resources.add(new DirectoryPresentation(dir5));
 			
 		}else{
-			if(resource.getType().equals(ResourceType.DIRECTORY)){
+			if(resource.isDirectory()){
 				DirectoryPresentation directory = (DirectoryPresentation) resource;
 				resources =  directory.getChildren();
 			}

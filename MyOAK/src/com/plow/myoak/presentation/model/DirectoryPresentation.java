@@ -1,11 +1,12 @@
-package com.plow.myoak.presentation.files;
+package com.plow.myoak.presentation.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import com.plow.myoak.R;
-import com.plow.myoak.business.files.Directory;
-import com.plow.myoak.business.files.Resource;
+import com.plow.myoak.engine.EngineImpl;
+import com.plow.myoak.model.Directory;
+import com.plow.myoak.model.Node;
 
 public class DirectoryPresentation extends ResourcePresentation{
 	private Directory directory;
@@ -19,16 +20,16 @@ public class DirectoryPresentation extends ResourcePresentation{
 
 	
 	public List<ResourcePresentation> getChildren() {
-		List<Resource> children = directory.getChildren();
+		List<Node> children = EngineImpl.getInstance().ls(directory);
 		childrenPresentations.clear();
-		for (Resource resource : children) {
+		for (Node resource : children) {
 			childrenPresentations.add(new ResourcePresentation(resource));
 		}
 		return childrenPresentations;
 	}
 
-	public Resource createResource() {
-		return directory.createResource();
+	public Node createResource() {
+		return null;//directory.createResource();
 	}
 
 	

@@ -1,6 +1,8 @@
-package com.plow.myoak.presentation.files;
+package com.plow.myoak.presentation.model;
 
 import java.util.List;
+
+import org.apache.jackrabbit.webdav.property.ResourceType;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -17,7 +19,6 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.plow.myoak.R;
-import com.plow.myoak.business.files.ResourceType;
 import com.plow.myoak.utils.Factory;
 
 public class FilePerspectiveFragment extends ListFragment implements android.view.View.OnClickListener, OnItemClickListener{
@@ -136,8 +137,8 @@ public class FilePerspectiveFragment extends ListFragment implements android.vie
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 		ResourcePresentation clickedresource = resources.get(position);
-		  Log.w("***************", "Item selected "+clickedresource.getType());
-		  if(clickedresource.getType().equals(ResourceType.DIRECTORY)){
+		  Log.w("***************", "Item selected "+ (clickedresource.isDirectory() ? "D" : "F"));
+		  if(clickedresource.isDirectory()){
 			  resources = ((DirectoryPresentation)clickedresource).getChildren();
 			  FilePerspectiveListAdapter filePerspectiveListAdapter = new FilePerspectiveListAdapter(getActivity(), this, resources );
 			  setListAdapter(filePerspectiveListAdapter);

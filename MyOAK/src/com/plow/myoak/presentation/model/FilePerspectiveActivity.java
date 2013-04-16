@@ -1,4 +1,4 @@
-package com.plow.myoak.presentation.files;
+package com.plow.myoak.presentation.model;
 
 import android.app.Activity;
 

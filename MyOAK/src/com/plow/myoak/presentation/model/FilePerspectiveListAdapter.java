@@ -1,4 +1,4 @@
-package com.plow.myoak.presentation.files;
+package com.plow.myoak.presentation.model;
 
 import java.util.List;
 
@@ -61,7 +61,7 @@ public class FilePerspectiveListAdapter extends ArrayAdapter<ResourcePresentatio
 	    holder.txtVwname.setText(resourcePresentation.getName()) ;
 	    holder.image.setImageResource(resourcePresentation.getIcon());
 	    holder.txtVwSize.setText(""+resourcePresentation.getSize()) ;
-	    holder.txtVwDate.setText(resourcePresentation.getDate()) ;
+	    holder.txtVwDate.setText(resourcePresentation.getDate().toGMTString()) ;
 	    holder.chkSelect.setChecked(resourcePresentation.isSelected()) ;
 	    //Changing the background
 	    int colorPos = position % colors.length;
