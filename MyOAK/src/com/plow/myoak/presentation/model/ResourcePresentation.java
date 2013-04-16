@@ -35,10 +35,10 @@ public class ResourcePresentation {
 	}
 
 	public String getName() {
-		return resource.getPath();
+		return resource.getName();
 	}
 	
-	public int getSize() {
+	public long getSize() {
 		return resource.getSize();
 	}
 	

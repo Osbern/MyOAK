@@ -22,8 +22,12 @@ import org.apache.jackrabbit.webdav.MultiStatus;
 import org.apache.jackrabbit.webdav.MultiStatusResponse;
 import org.apache.jackrabbit.webdav.client.methods.DavMethod;
 import org.apache.jackrabbit.webdav.client.methods.PropFindMethod;
+import org.apache.jackrabbit.webdav.property.DavProperty;
 import org.apache.jackrabbit.webdav.property.DavPropertyName;
 import org.apache.jackrabbit.webdav.property.DavPropertySet;
+
+import android.os.AsyncTask;
+import android.util.Log;
 
 import com.plow.myoak.model.Directory;
 import com.plow.myoak.model.File;
@@ -31,7 +35,7 @@ import com.plow.myoak.model.Node;
 
 public class EngineImpl implements Engine {
 	
-	private static Engine engine;
+	private static Engine engine = null;
 	
 	public static Engine getInstance() {
 		if (engine == null) {
@@ -78,37 +82,46 @@ public class EngineImpl implements Engine {
         
 		try {
 			pFind = new PropFindMethod(host + dest, DavConstants.PROPFIND_ALL_PROP, DavConstants.DEPTH_1);
+			Log.w("info", host + dest);
 			client.executeMethod(pFind);
 			multiStatus = pFind.getResponseBodyAsMultiStatus();
+			
+			Node tmp;
+	        for (MultiStatusResponse resp : multiStatus.getResponses()) {
+	        	String path = resp.getHref();
+	        	Log.w("info", path);
+	        	DavPropertySet props = resp.getProperties(200);
+	        	
+	        	Date date = null;
+	        	String p = props.get(DavPropertyName.GETLASTMODIFIED).getValue().toString();
+	            try {
+	            	date = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss Z", Locale.US).parse(p);
+	            } catch (ParseException e) {
+	            	e.printStackTrace();
+	            }
+	            
+	            DavProperty prop = props.get(DavPropertyName.GETCONTENTLENGTH);
+	            long size = 0;
+	            
+	            if (prop != null)
+	            	size = Long.parseLong((String) prop.getValue());
+	            
+	            prop = props.get(DavPropertyName.GETCONTENTTYPE);
+	        	
+	        	if (prop == null)
+	        		tmp = new Directory(path, date);
+	        	else
+	        		tmp = new File(path, size, date);
+	        	
+	        	result.add(tmp);
+	        }
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (DavException e) {
 			e.printStackTrace();
 		}
 
-		Node tmp;
-        for (MultiStatusResponse resp : multiStatus.getResponses()) {
-        	String path = resp.getHref().replace("/owncloud/files/webdav.php", "");
-        	DavPropertySet props = resp.getProperties(200);
-        	
-        	Date lMod = null;
-        	String p = props.get(DavPropertyName.GETLASTMODIFIED).getValue().toString();
-            try {
-            	lMod = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss Z", Locale.US).parse(p);
-            } catch (ParseException e) {
-            	e.printStackTrace();
-            }
-        	
-        	if (props.get(DavPropertyName.RESOURCETYPE).getValue() != null)
-        		tmp = new Directory(path);
-        	else
-        		tmp = new File(path);
-        	
-        	//tmp += " " + lMod;
-        	
-        	result.add(tmp);
-        }
-        return null;
+        return result;
 	}
 
 	@Override
