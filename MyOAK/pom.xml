@@ -6,7 +6,6 @@
     <version>0.0.1</version>
     <packaging>apk</packaging>
     <name>MyOAK</name>
-
     <dependencies>
         <dependency>
             <groupId>com.google.android</groupId>
@@ -17,7 +16,7 @@
         <dependency>
             <groupId>com.google.android</groupId>
             <artifactId>support-v4</artifactId>
-            <version>r6</version>
+            <version>r7</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -29,8 +28,7 @@
                 <plugin>
                     <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                     <artifactId>android-maven-plugin</artifactId>
-                    <version>3.5.1</version>
-
+<!--                     <version>3.5.1</version> -->
                     <extensions>true</extensions>
                 </plugin>
             </plugins>

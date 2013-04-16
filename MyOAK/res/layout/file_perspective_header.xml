@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:showDividers="middle" >
+    
+    <TableRow >
+     	
+	     <TextView
+	        android:id="@+id/TypeHeader"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"	        
+	        android:layout_marginLeft="14dp"
+			android:layout_marginRight="20dp"
+			android:text="Type"
+	        />
+	
+	     
+	    <TextView
+	        android:id="@+id/nameHeader"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"	        
+	        android:layout_marginLeft="10dp"
+			android:layout_marginRight="20dp"
+			android:text="Name"
+	        />
+	 
+	    <TextView
+	        android:id="@+id/sizeHeader"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	         android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp" 
+			android:text="Size" 
+			/>
+	    
+	    <TextView
+	        android:id="@+id/date"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	         android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp" 
+			android:text="Date"       
+	        />
+    </TableRow>
+
+</TableLayout>
