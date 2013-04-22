@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+ 
+    <CheckBox android:id="@+id/chkSelect"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="3dp"
+              android:layout_alignParentLeft="true"
+		      android:layout_marginLeft="4dp"
+		      android:layout_marginRight="10dp"  />
+    
+    <ImageView
+        android:id="@+id/img"        
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"
+		android:contentDescription="Dossier"
+		android:layout_toRightOf="@id/chkSelect"/>
+
+     
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textIsSelectable="true" 
+        android:textStyle="bold"
+        android:layout_toRightOf="@id/img"
+        android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"
+        />
+ 
+    <TextView
+        android:id="@+id/size"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp" 
+		android:textIsSelectable="false"        
+        android:layout_toRightOf="@id/name"
+        />
+    
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp" 
+		android:textIsSelectable="false"       
+        android:layout_toRightOf="@id/size"
+        />
+ 
+</RelativeLayout>
