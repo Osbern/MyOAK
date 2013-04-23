@@ -5,7 +5,8 @@ import com.plow.myoak.engine.EngineImpl;
 
 public class EngineUtils {
 	
-	public static String HOST = "http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php";
+	public static String WEBDAV = "http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php";
+	public static String CONTACT = "http://proj135.istic.univ-rennes1.fr/owncloud/apps/contacts/carddav.php/addressbooks/Plow/contacts";
 	
 	private static Engine engine = null;
 	

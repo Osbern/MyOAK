@@ -43,7 +43,7 @@ public class EngineImpl implements Engine {
 	@Override
 	public void connect(String login, String password) {
 		HostConfiguration hostConfig = new HostConfiguration();
-        hostConfig.setHost(EngineUtils.HOST); 
+        hostConfig.setHost(EngineUtils.WEBDAV); 
         HttpConnectionManager connectionManager = new MultiThreadedHttpConnectionManager();
         HttpConnectionManagerParams params = new HttpConnectionManagerParams();
         int maxHostConnections = 20;
@@ -73,8 +73,8 @@ public class EngineImpl implements Engine {
         MultiStatus multiStatus = null;
         
 		try {
-			pFind = new PropFindMethod(EngineUtils.HOST + dest, DavConstants.PROPFIND_ALL_PROP, DavConstants.DEPTH_1);
-			Log.w("info", EngineUtils.HOST + dest);
+			pFind = new PropFindMethod(EngineUtils.WEBDAV + dest, DavConstants.PROPFIND_ALL_PROP, DavConstants.DEPTH_1);
+			Log.w("info", EngineUtils.WEBDAV + dest);
 			client.executeMethod(pFind);
 			multiStatus = pFind.getResponseBodyAsMultiStatus();
 			
