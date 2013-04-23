@@ -4,9 +4,10 @@ import java.util.Date;
 
 public class File implements Node {
 	
+	private String name;
 	private String path;
 	private boolean directory;
-	private int size;
+	private long size;
 	private Date date;
 	
 	public File() {
@@ -19,13 +20,20 @@ public class File implements Node {
 	public File(String path) {
 		this();
 		this.path = path;
+		String[] tmp = path.split("/");
+		name = tmp[tmp.length - 1];
 	}
 
-	public File(String path, int size, Date date) {
-		this();
+	public File(String path, long size, Date date) {
+		this(path);
 		this.path = path;
 		this.size = size;
 		this.date = date;
+	}
+
+	@Override
+	public String getName() {
+		return name;
 	}
 	
 	@Override
@@ -49,7 +57,7 @@ public class File implements Node {
 	}
 	
 	@Override
-	public int getSize() {
+	public long getSize() {
 		return size;
 	}
 
@@ -57,5 +65,4 @@ public class File implements Node {
 	public Date getDate() {
 		return date;
 	}
-
 }

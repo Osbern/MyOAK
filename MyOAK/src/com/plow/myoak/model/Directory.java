@@ -2,8 +2,11 @@ package com.plow.myoak.model;
 
 import java.util.Date;
 
+import android.util.Log;
+
 public class Directory implements Node {
 	
+	private String name;
 	private String path;
 	private boolean directory;
 	private Date date;
@@ -16,12 +19,20 @@ public class Directory implements Node {
 	public Directory(String path) {
 		this();
 		this.path = path;
+		String[] tmp = path.split("/");
+		name = tmp[tmp.length - 1];
+		Log.w("Directory", name);
 	}
 	
 	public Directory(String path, Date date) {
-		this();
+		this(path);
 		this.path = path;
 		this.date = date;
+	}
+	
+	@Override
+	public String getName() {
+		return name;
 	}
 
 	@Override
@@ -45,7 +56,7 @@ public class Directory implements Node {
 	}
 
 	@Override
-	public int getSize() {
+	public long getSize() {
 		return 0;
 	}
 	
