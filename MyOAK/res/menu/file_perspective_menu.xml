@@ -7,11 +7,17 @@
         android:icon="@drawable/delete"
         android:title="Delete"/>
     <item
-        android:id="@+id/action_create"
+        android:id="@+id/action_create_file"
         android:orderInCategory="100"
         android:showAsAction="always"
-        android:icon="@drawable/create"
-        android:title="Create"/>
+        android:icon="@drawable/create_file"
+        android:title="Create File"/>
+    <item
+        android:id="@+id/action_create_folder"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:icon="@drawable/create_folder"
+        android:title="Create Folder"/>
     <item
         android:id="@+id/action_refresh"
         android:orderInCategory="100"
