@@ -12,6 +12,7 @@ import org.apache.commons.httpclient.Credentials;
 import org.apache.commons.httpclient.HostConfiguration;
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpConnectionManager;
+import org.apache.commons.httpclient.HttpException;
 import org.apache.commons.httpclient.MultiThreadedHttpConnectionManager;
 import org.apache.commons.httpclient.UsernamePasswordCredentials;
 import org.apache.commons.httpclient.auth.AuthScope;
@@ -20,38 +21,29 @@ import org.apache.jackrabbit.webdav.DavConstants;
 import org.apache.jackrabbit.webdav.DavException;
 import org.apache.jackrabbit.webdav.MultiStatus;
 import org.apache.jackrabbit.webdav.MultiStatusResponse;
+import org.apache.jackrabbit.webdav.client.methods.CopyMethod;
 import org.apache.jackrabbit.webdav.client.methods.DavMethod;
+import org.apache.jackrabbit.webdav.client.methods.DeleteMethod;
 import org.apache.jackrabbit.webdav.client.methods.PropFindMethod;
 import org.apache.jackrabbit.webdav.property.DavProperty;
 import org.apache.jackrabbit.webdav.property.DavPropertyName;
 import org.apache.jackrabbit.webdav.property.DavPropertySet;
 
-import android.os.AsyncTask;
 import android.util.Log;
 
 import com.plow.myoak.model.Directory;
 import com.plow.myoak.model.File;
 import com.plow.myoak.model.Node;
+import com.plow.myoak.utils.EngineUtils;
 
 public class EngineImpl implements Engine {
 	
-	private static Engine engine = null;
-	
-	public static Engine getInstance() {
-		if (engine == null) {
-			engine = new EngineImpl();
-			engine.connect("Plow", "MoujonBrouh!");
-		}
-		return engine;
-	}
-	
-	private static String host = "http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php";
 	private static HttpClient client;
 
 	@Override
 	public void connect(String login, String password) {
 		HostConfiguration hostConfig = new HostConfiguration();
-        hostConfig.setHost(host); 
+        hostConfig.setHost(EngineUtils.HOST); 
         HttpConnectionManager connectionManager = new MultiThreadedHttpConnectionManager();
         HttpConnectionManagerParams params = new HttpConnectionManagerParams();
         int maxHostConnections = 20;
@@ -81,8 +73,8 @@ public class EngineImpl implements Engine {
         MultiStatus multiStatus = null;
         
 		try {
-			pFind = new PropFindMethod(host + dest, DavConstants.PROPFIND_ALL_PROP, DavConstants.DEPTH_1);
-			Log.w("info", host + dest);
+			pFind = new PropFindMethod(EngineUtils.HOST + dest, DavConstants.PROPFIND_ALL_PROP, DavConstants.DEPTH_1);
+			Log.w("info", EngineUtils.HOST + dest);
 			client.executeMethod(pFind);
 			multiStatus = pFind.getResponseBodyAsMultiStatus();
 			
@@ -126,14 +118,28 @@ public class EngineImpl implements Engine {
 
 	@Override
 	public void cp(Node src, Node dest) {
-		// TODO Auto-generated method stub
-		
+		DavMethod cp = new CopyMethod(src.getPath(), dest.getPath(), true);
+        try {
+			client.executeMethod(cp);
+		} catch (HttpException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+        //return cp.getStatusCode() + " " + cp.getStatusText();
 	}
 
 	@Override
 	public void rm(Node res) {
-		// TODO Auto-generated method stub
-		
+		DavMethod rm = new DeleteMethod(res.getPath());
+		try {
+			client.executeMethod(rm);
+		} catch (HttpException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		//return rm.getStatusCode() + " " + rm.getStatusText();
 	}
 
 	@Override

@@ -26,7 +26,7 @@ public class Factory {
 			
 			StrictMode.setThreadPolicy(ThreadPolicy.LAX);
 			
-			for (Node n : EngineImpl.getInstance().ls()) {
+			for (Node n : EngineUtils.getEngine().ls()) {
 				resources.add(new ResourcePresentation(n));
 			}
 			

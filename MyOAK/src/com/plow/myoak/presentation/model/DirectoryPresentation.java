@@ -7,6 +7,7 @@ import com.plow.myoak.R;
 import com.plow.myoak.engine.EngineImpl;
 import com.plow.myoak.model.Directory;
 import com.plow.myoak.model.Node;
+import com.plow.myoak.utils.EngineUtils;
 
 public class DirectoryPresentation extends ResourcePresentation{
 	private Directory directory;
@@ -20,7 +21,7 @@ public class DirectoryPresentation extends ResourcePresentation{
 
 	
 	public List<ResourcePresentation> getChildren() {
-		List<Node> children = EngineImpl.getInstance().ls(directory);
+		List<Node> children = EngineUtils.getEngine().ls(directory);
 		childrenPresentations.clear();
 		for (Node resource : children) {
 			childrenPresentations.add(new ResourcePresentation(resource));
