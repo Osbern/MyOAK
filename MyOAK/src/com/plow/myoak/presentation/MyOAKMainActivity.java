@@ -1,8 +1,6 @@
 package com.plow.myoak.presentation;
 
 
-import java.util.List;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -13,15 +11,11 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.plow.myoak.R;
-import com.plow.myoak.presentation.model.DirectoryPresentation;
 import com.plow.myoak.presentation.model.FilePerspectiveFragment;
-import com.plow.myoak.presentation.model.FilePerspectiveListAdapter;
-import com.plow.myoak.presentation.model.ResourcePresentation;
 import com.plow.myoak.utils.MenuListProvider;
 
 
-public class MyOAKMainActivity extends FragmentActivity implements 	PerspectiveListFragment.Callbacks
-                                                                    , FilePerspectiveFragment.FilePerspectiveFragmentCallbacks {
+public class MyOAKMainActivity extends FragmentActivity implements 	PerspectiveListFragment.Callbacks {
 
 	/**
 	 * Whether or not the activity is in two-pane mode, i.e. running on a tablet
@@ -67,10 +61,20 @@ public class MyOAKMainActivity extends FragmentActivity implements 	PerspectiveL
 	//When an item in the menu 
 	@Override
 	public void onItemSelected(String id) {
-		FilePerspectiveFragment filePerspectiveFragment = new FilePerspectiveFragment();		
-		FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-		transaction.add(R.id.pespective_detail_container, filePerspectiveFragment);
-		transaction.commit();
+		switch (Integer.parseInt(id)) {
+		case 1: //Fichiers
+			FilePerspectiveFragment filePerspectiveFragment = new FilePerspectiveFragment();		
+			FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+			transaction.add(R.id.pespective_detail_container, filePerspectiveFragment);
+			transaction.commit();
+			break;
+		
+		case 2: 
+			break;
+		default:
+			break;
+		}
+		
 	}
 	
 	@Override
@@ -100,16 +104,5 @@ public class MyOAKMainActivity extends FragmentActivity implements 	PerspectiveL
 
 	  }
 
-	@Override
-	public void onResourceItemSelected(FilePerspectiveFragment filePerspectiveFragment, ResourcePresentation resourcePresentation) {
-		  Toast.makeText(this, "Item selected "+ resourcePresentation.getName(), Toast.LENGTH_SHORT).show();
-		  if(resourcePresentation.isDirectory()){
-			  List<ResourcePresentation> resources = ((DirectoryPresentation)resourcePresentation).getChildren();
-			  
-			  FilePerspectiveListAdapter filePerspectiveListAdapter = new FilePerspectiveListAdapter(this, filePerspectiveFragment, resources );
-			  filePerspectiveFragment.setListAdapter(filePerspectiveListAdapter);
-			  Toast.makeText( this, "Item selected "+ (resourcePresentation.isDirectory() ? "D" : "F"), Toast.LENGTH_SHORT).show();
-		  }
-		
-	} 
+	
 }
