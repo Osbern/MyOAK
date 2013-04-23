@@ -2,8 +2,6 @@ package com.plow.myoak.presentation.model;
 
 import java.util.List;
 
-import org.apache.jackrabbit.webdav.property.ResourceType;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
@@ -15,7 +13,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.plow.myoak.R;
@@ -28,16 +28,16 @@ public class FilePerspectiveFragment extends ListFragment implements android.vie
 	 * implement. This mechanism allows activities to be notified of item
 	 * selections.
 	 */
-	public interface FilePerspectiveFragmentCallbacks {
-		/**
-		 * Callback for when an item has been selected.
-		 * @param filePerspectiveFragment 
-		 * @param l 
-		 */
-		public void onResourceItemSelected(FilePerspectiveFragment filePerspectiveFragment, ResourcePresentation resourcePresentation);
-	}
+//	public interface FilePerspectiveFragmentCallbacks {
+//		/**
+//		 * Callback for when an item has been selected.
+//		 * @param filePerspectiveFragment 
+//		 * @param l 
+//		 */
+//		public void onResourceItemSelected(FilePerspectiveFragment filePerspectiveFragment, ResourcePresentation resourcePresentation);
+//	}
 	
-	private FilePerspectiveFragmentCallbacks mCallbacks;
+//	private FilePerspectiveFragmentCallbacks mCallbacks;
 
 	/**
 	 * The current activated item position. Only used on tablets.
@@ -84,7 +84,7 @@ public class FilePerspectiveFragment extends ListFragment implements android.vie
 			Log.d("onListItemClick","HELLO ************ *********!");
 			// Notify the active callbacks interface (the activity, if the
 			// fragment is attached to one) that an item has been selected.
-			mCallbacks.onResourceItemSelected( this , resources.get(position));
+//			mCallbacks.onResourceItemSelected( this , resources.get(position));
 
 	  }
 	  
@@ -102,7 +102,10 @@ public class FilePerspectiveFragment extends ListFragment implements android.vie
 		    case R.id.action_delete:
 		    	Toast.makeText(getActivity(), "Menu Delete selected", Toast.LENGTH_SHORT).show();
 		    	return true;
-		    case R.id.action_create:
+		    case R.id.action_create_file:
+		    	Toast.makeText(getActivity(), "Menu create selected", Toast.LENGTH_SHORT).show();
+		    	return true;
+		    case R.id.action_create_folder:
 		    	Toast.makeText(getActivity(), "Menu create selected", Toast.LENGTH_SHORT).show();
 		    	return true;
 		    case R.id.action_refresh:
@@ -117,13 +120,22 @@ public class FilePerspectiveFragment extends ListFragment implements android.vie
 	//Handling CheckBox listener
 	@Override
 	public void onClick(View view) {
-		CheckBox cb = (CheckBox) view ; 
-        ResourcePresentation clickedresource = (ResourcePresentation) cb.getTag(); 
-        clickedresource.setSelected(cb.isChecked());
-        //Activate action menus
-        setMenuVisibility(isOneResourceSelected());   
-		getActivity().invalidateOptionsMenu();
-		Toast.makeText(getActivity(), "Menu refresh selected", Toast.LENGTH_SHORT).show();
+		if(view instanceof CheckBox){
+			CheckBox cb = (CheckBox) view ; 
+	        ResourcePresentation clickedresource = (ResourcePresentation) cb.getTag(); 
+	        clickedresource.setSelected(cb.isChecked());
+	        //Activate action menus
+	        setMenuVisibility(isOneResourceSelected());   
+			getActivity().invalidateOptionsMenu();
+			Toast.makeText(getActivity(), "Menu refresh selected", Toast.LENGTH_SHORT).show();
+		}else if (view instanceof ImageView) {
+			ImageView imageView = (ImageView) view;
+			System.out.println("********************* " +((DirectoryPresentation) imageView.getTag()).getName());
+		}else if (view instanceof TextView) {
+			TextView textView = (TextView)  view;
+			System.out.println("********************* " +((DirectoryPresentation) textView.getTag()).getName());
+		}
+		
 	} 
 	
 	private boolean isOneResourceSelected() {		
@@ -151,18 +163,18 @@ public class FilePerspectiveFragment extends ListFragment implements android.vie
 	@Override
 	public void onAttach(Activity activity) {
 		super.onAttach(activity);
-		// Activities containing this fragment must implement its callbacks.
-				if (!(activity instanceof FilePerspectiveFragmentCallbacks)) {
-					throw new IllegalStateException(
-							"Activity must implement fragment's FilePerspectiveFragmentCallbacks.");
-				}
-		mCallbacks = (FilePerspectiveFragmentCallbacks) activity;
+//		// Activities containing this fragment must implement its callbacks.
+//				if (!(activity instanceof FilePerspectiveFragmentCallbacks)) {
+//					throw new IllegalStateException(
+//							"Activity must implement fragment's FilePerspectiveFragmentCallbacks.");
+//				}
+//		mCallbacks = (FilePerspectiveFragmentCallbacks) activity;
 	}
 
 	@Override
 	public void onDetach() {
 		super.onDetach();
-		mCallbacks = null;
+//		mCallbacks = null;
 	}
 	
 	/**
@@ -172,9 +184,10 @@ public class FilePerspectiveFragment extends ListFragment implements android.vie
 	public void setActivateOnItemClick(boolean activateOnItemClick) {
 		// When setting CHOICE_MODE_SINGLE, ListView will automatically
 		// give items the 'activated' state when touched.
-		getListView().setChoiceMode(
-				activateOnItemClick ? ListView.CHOICE_MODE_SINGLE
-						: ListView.CHOICE_MODE_NONE);
+		getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+//		getListView().setChoiceMode(
+//				activateOnItemClick ? ListView.CHOICE_MODE_SINGLE
+//						: ListView.CHOICE_MODE_NONE);
 	}
 
 	private void setActivatedPosition(int position) {

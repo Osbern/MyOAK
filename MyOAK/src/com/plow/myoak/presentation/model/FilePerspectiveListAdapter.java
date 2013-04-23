@@ -11,7 +11,6 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.plow.myoak.R;
 
@@ -52,17 +51,30 @@ public class FilePerspectiveListAdapter extends ArrayAdapter<ResourcePresentatio
 	      viewHolder.chkSelect = (CheckBox) rowView.findViewById(R.id.chkSelect);
 	      
 	      viewHolder.chkSelect.setOnClickListener(listener);
+	      viewHolder.txtVwname.setOnClickListener(listener);
+	      viewHolder.image.setOnClickListener(listener);
+	      viewHolder.txtVwSize.setOnClickListener(listener);
+	      viewHolder.txtVwDate.setOnClickListener(listener);
 	      rowView.setTag(viewHolder);
 	     
 	    }
 
 	    ViewHolder holder = (ViewHolder) rowView.getTag();
 	    holder.chkSelect.setTag(resources.get(position));
-	    holder.txtVwname.setText(resourcePresentation.getName()) ;
-	    holder.image.setImageResource(resourcePresentation.getIcon());
-	    holder.txtVwSize.setText(""+resourcePresentation.getSize()) ;
-	    holder.txtVwDate.setText(resourcePresentation.getDate().toGMTString()) ;
 	    holder.chkSelect.setChecked(resourcePresentation.isSelected()) ;
+	    
+	    holder.txtVwname.setText(resourcePresentation.getName()) ;
+	    holder.txtVwname.setTag(resources.get(position));
+	    
+	    holder.image.setImageResource(resourcePresentation.getIcon());
+	    holder.image.setTag(resources.get(position));
+	    
+	    holder.txtVwSize.setText(""+resourcePresentation.getSize()) ;
+	    holder.txtVwSize.setTag(resources.get(position));
+	    
+	    holder.txtVwDate.setText("" +resourcePresentation.getDate()) ;
+	    holder.txtVwDate.setTag(resources.get(position));
+	    
 	    //Changing the background
 	    int colorPos = position % colors.length;
 	    rowView.setBackgroundColor(colors[colorPos]);
