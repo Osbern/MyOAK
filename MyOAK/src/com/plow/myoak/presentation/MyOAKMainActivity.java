@@ -24,6 +24,8 @@ public class MyOAKMainActivity extends FragmentActivity implements 	PerspectiveL
 	private boolean mTwoPane;
 	private MenuListProvider menu;
 	
+	private FilePerspectiveFragment filePerspectiveFragment;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		
@@ -56,16 +58,16 @@ public class MyOAKMainActivity extends FragmentActivity implements 	PerspectiveL
 		}
 
 		// TODO: If exposing deep links into your app, handle intents here.
+		filePerspectiveFragment = new FilePerspectiveFragment();	
 	}
 	
 	//When an item in the menu 
 	@Override
 	public void onItemSelected(String id) {
 		switch (Integer.parseInt(id)) {
-		case 1: //Fichiers
-			FilePerspectiveFragment filePerspectiveFragment = new FilePerspectiveFragment();		
+		case 1: //Fichiers	
 			FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-			transaction.add(R.id.pespective_detail_container, filePerspectiveFragment);
+			transaction.replace(R.id.pespective_detail_container, filePerspectiveFragment);
 			transaction.commit();
 			break;
 		
