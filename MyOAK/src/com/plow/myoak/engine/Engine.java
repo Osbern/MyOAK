@@ -1,5 +1,6 @@
 package com.plow.myoak.engine;
 
+import java.io.File;
 import java.util.List;
 
 import com.plow.myoak.model.Node;
@@ -13,6 +14,6 @@ public interface Engine {
 	public String rm(Node node);
 	public String mkdir(String name);
 	public String get(Node res);
-	public void put(String src, Node dest);
+	public void put(File src, String dest);
 
 }

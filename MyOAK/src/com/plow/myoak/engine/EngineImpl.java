@@ -1,5 +1,7 @@
 package com.plow.myoak.engine;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -16,6 +18,7 @@ import org.apache.commons.httpclient.HttpException;
 import org.apache.commons.httpclient.MultiThreadedHttpConnectionManager;
 import org.apache.commons.httpclient.UsernamePasswordCredentials;
 import org.apache.commons.httpclient.auth.AuthScope;
+import org.apache.commons.httpclient.methods.GetMethod;
 import org.apache.commons.httpclient.params.HttpConnectionManagerParams;
 import org.apache.jackrabbit.webdav.DavConstants;
 import org.apache.jackrabbit.webdav.DavException;
@@ -119,7 +122,7 @@ public class EngineImpl implements Engine {
 
 	@Override
 	public String cp(Node src, Node dest) {
-		DavMethod cp = new CopyMethod(EngineUtils.WEBDAV + "/" + src.getName(), EngineUtils.WEBDAV + "/" + dest.getName(), true);
+		DavMethod cp = new CopyMethod(EngineUtils.WEBDAV + "/" + src.getPath(), EngineUtils.WEBDAV + "/" + dest.getPath(), true);
         try {
 			client.executeMethod(cp);
 		} catch (HttpException e) {
@@ -132,8 +135,8 @@ public class EngineImpl implements Engine {
 
 	@Override
 	public String rm(Node res) {
-		DavMethod rm = new DeleteMethod(EngineUtils.WEBDAV + "/" + res.getName());
-		Log.w("DELETE", EngineUtils.WEBDAV + res.getName());
+		DavMethod rm = new DeleteMethod(EngineUtils.WEBDAV + "/" + res.getPath());
+		Log.w("DELETE", EngineUtils.WEBDAV + res.getPath());
 		try {
 			client.executeMethod(rm);
 		} catch (HttpException e) {
@@ -157,12 +160,23 @@ public class EngineImpl implements Engine {
 
 	@Override
 	public String get(Node res) {
-		// TODO Auto-generated method stub
-		return null;
+		GetMethod get = new GetMethod(EngineUtils.WEBDAV + "/" + res.getPath());
+		String buffer = "";
+
+		try {
+			client.executeMethod(get);
+			buffer = get.getResponseBodyAsString();
+		} catch (HttpException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		return buffer;
 	}
 
 	@Override
-	public void put(String src, Node dest) {
+	public void put(java.io.File src, String dest) {
 		// TODO Auto-generated method stub
 		
 	}

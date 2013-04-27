@@ -1,10 +1,15 @@
 package com.plow.myoak.presentation.model;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.Menu;
@@ -12,6 +17,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.webkit.MimeTypeMap;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -142,12 +148,7 @@ public class FilePerspectiveFragment extends ListFragment implements OnClickList
 	  }
 	
 	private void refresh() {
-		if (currentRes == null) {
-			resources = Factory.getResources(getActivity(), null);
-		}
-		else if (currentRes.getResource().isDirectory()) {
-			resources = Factory.getResources(getActivity(), currentRes);
-		}
+		resources = Factory.getResources(getActivity(), currentRes);
 		setListAdapter(new FilePerspectiveListAdapter(getActivity(), this, resources));
 	}
 
@@ -155,7 +156,31 @@ public class FilePerspectiveFragment extends ListFragment implements OnClickList
 	public void onClick(View view) {
 		if (view instanceof ResourcePresentation) {
 			currentRes = (ResourcePresentation) view;
-			refresh();
+			if (currentRes.isDirectory())
+				refresh();
+			else {
+				String buffer = EngineUtils.getEngine().get(currentRes.getResource());
+				FileOutputStream outputStream;
+				
+				try {
+				  outputStream = getActivity().openFileOutput(currentRes.getResource().getName(), Context.MODE_WORLD_READABLE);
+				  outputStream.write(buffer.getBytes());
+				  outputStream.close();
+				} catch (Exception e) {
+				  e.printStackTrace();
+				}
+				
+				File file = new File(getActivity().getFilesDir(), currentRes.getResource().getName());
+				String extension = MimeTypeMap.getFileExtensionFromUrl(Uri.fromFile(file).toString());
+				if (extension.isEmpty())
+					extension = "txt";
+				String mimetype = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
+				
+				Intent i = new Intent();
+				i.setAction(android.content.Intent.ACTION_VIEW);
+				i.setDataAndType(Uri.fromFile(file), mimetype);
+				startActivity(i);
+			}
 		}
 		else if(view instanceof CheckBox) {
 			CheckBox cb = (CheckBox) view ; 
