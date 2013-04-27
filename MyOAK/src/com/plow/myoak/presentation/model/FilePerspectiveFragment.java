@@ -2,40 +2,22 @@ package com.plow.myoak.presentation.model;
 
 import java.util.List;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
+import android.view.View.OnClickListener;
+import android.widget.CheckBox;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.plow.myoak.R;
 import com.plow.myoak.utils.Factory;
 
-public class FilePerspectiveFragment extends ListFragment implements android.view.View.OnClickListener, OnItemClickListener {
-
-	/**
-	 * A callback interface that all activities containing this fragment must
-	 * implement. This mechanism allows activities to be notified of item
-	 * selections.
-	 */
-//	public interface FilePerspectiveFragmentCallbacks {
-//		/**
-//		 * Callback for when an item has been selected.
-//		 * @param filePerspectiveFragment 
-//		 * @param l 
-//		 */
-//		public void onResourceItemSelected(FilePerspectiveFragment filePerspectiveFragment, ResourcePresentation resourcePresentation);
-//	}
+public class FilePerspectiveFragment extends ListFragment implements OnClickListener {
 	
-//	private FilePerspectiveFragmentCallbacks mCallbacks;
-
 	/**
 	 * The current activated item position. Only used on tablets.
 	 */
@@ -63,7 +45,6 @@ public class FilePerspectiveFragment extends ListFragment implements android.vie
 	    setHasOptionsMenu(true); 
 	    setMenuVisibility(false);
 	    getListView().setClickable(true);
-	    getListView().setOnItemClickListener(this);
 	    getListView().setTextFilterEnabled(true); 
 	    
 	  }
@@ -76,23 +57,12 @@ public class FilePerspectiveFragment extends ListFragment implements android.vie
 				outState.putInt(STATE_ACTIVATED_POSITION, mActivatedPosition);
 			}
 		}
-	 
-	  @Override
-	  public void onListItemClick(ListView l, View v, int position, long id) {
-		  super.onListItemClick(l, v, position, id);
-			Log.d("onListItemClick","HELLO ************ *********!");
-			// Notify the active callbacks interface (the activity, if the
-			// fragment is attached to one) that an item has been selected.
-//			mCallbacks.onResourceItemSelected( this , resources.get(position));
-
-	  }
 	  
 	//Handling ActionBar menus
 	@Override
 	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
 		inflater.inflate(R.menu.file_perspective_menu, menu);
 	}
-	
 	
 	//Handling ActionBar actions
 	@Override
@@ -115,36 +85,24 @@ public class FilePerspectiveFragment extends ListFragment implements android.vie
 	    }
 	  }
 
-	//Handling CheckBox listener
 	@Override
 	public void onClick(View view) {
 		if (view instanceof ResourcePresentation) {
 			ResourcePresentation res = (ResourcePresentation) view;
-			Log.d("onListItemClick","CLICK ************ *********!" + res.getResource().getName());
-			
 			if (res.getResource().isDirectory()) {
 				resources = Factory.getResources(getActivity(), res);
 				setListAdapter(new FilePerspectiveListAdapter(getActivity(), this, resources));
 			}
 		}
-//		if(view instanceof CheckBox){
-//			CheckBox cb = (CheckBox) view ; 
-//	        ResourcePresentation clickedresource = (ResourcePresentation) cb.getTag(); 
-//	        clickedresource.setSelected(cb.isChecked());
-//	        //Activate action menus
-//	        setMenuVisibility(isOneResourceSelected());   
-//			getActivity().invalidateOptionsMenu();
-//			Toast.makeText(getActivity(), "Menu refresh selected", Toast.LENGTH_SHORT).show();
-//		}else if (view instanceof ImageView) {
-//			ImageView imageView = (ImageView) view;
-//			Toast.makeText(getActivity(), "ImageView selected", Toast.LENGTH_SHORT).show();
-//			System.out.println("********************* " +((DirectoryPresentation) imageView.getTag()).getName());
-//		}else if (view instanceof TextView) {
-//			TextView textView = (TextView)  view;
-//			Toast.makeText(getActivity(), "TextView selected", Toast.LENGTH_SHORT).show();
-//			System.out.println("********************* " +((DirectoryPresentation) textView.getTag()).getName());
-//		}
-		
+		else if(view instanceof CheckBox) {
+			CheckBox cb = (CheckBox) view ; 
+	        ResourcePresentation clickedresource = (ResourcePresentation) cb.getTag(); 
+	        clickedresource.setSelected(cb.isChecked());
+	        //Activate action menus
+	        setMenuVisibility(isOneResourceSelected());   
+			getActivity().invalidateOptionsMenu();
+			Toast.makeText(getActivity(), "Menu refresh selected", Toast.LENGTH_SHORT).show();
+		}
 	} 
 	
 	private boolean isOneResourceSelected() {		
@@ -153,50 +111,6 @@ public class FilePerspectiveFragment extends ListFragment implements android.vie
 			isOneResourceSelected = resources.get(i).isSelected();
 		} 
 		return isOneResourceSelected;
-	}
-
-	@Override
-	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-		ResourcePresentation clickedresource = resources.get(position);
-		  Log.w("***************", "Item selected "+ (clickedresource.isDirectory() ? "D" : "F"));
-//		  if(clickedresource.isDirectory()){
-//			  resources = ((DirectoryPresentation)clickedresource).getChildren();
-//			  FilePerspectiveListAdapter filePerspectiveListAdapter = new FilePerspectiveListAdapter(getActivity(), this, resources );
-//			  setListAdapter(filePerspectiveListAdapter);
-//			  Log.w("***************", "Item selected "+clickedresource.getName());
-//		  }
-
-		
-	}
-
-	@Override
-	public void onAttach(Activity activity) {
-		super.onAttach(activity);
-//		// Activities containing this fragment must implement its callbacks.
-//				if (!(activity instanceof FilePerspectiveFragmentCallbacks)) {
-//					throw new IllegalStateException(
-//							"Activity must implement fragment's FilePerspectiveFragmentCallbacks.");
-//				}
-//		mCallbacks = (FilePerspectiveFragmentCallbacks) activity;
-	}
-
-	@Override
-	public void onDetach() {
-		super.onDetach();
-//		mCallbacks = null;
-	}
-	
-	/**
-	 * Turns on activate-on-click mode. When this mode is on, list items will be
-	 * given the 'activated' state when touched.
-	 */
-	public void setActivateOnItemClick(boolean activateOnItemClick) {
-		// When setting CHOICE_MODE_SINGLE, ListView will automatically
-		// give items the 'activated' state when touched.
-		getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-//		getListView().setChoiceMode(
-//				activateOnItemClick ? ListView.CHOICE_MODE_SINGLE
-//						: ListView.CHOICE_MODE_NONE);
 	}
 
 	private void setActivatedPosition(int position) {

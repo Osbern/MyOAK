@@ -47,6 +47,7 @@ public class ResourcePresentation extends LinearLayout {
 		addView(txtVwDate, 200, 40);
 		
 		setBackgroundColor(colors[i % colors.length]);
+		chkSelect.setTag(this);
 	}
 
 	public Node getResource() {
@@ -55,5 +56,11 @@ public class ResourcePresentation extends LinearLayout {
 
 	public boolean isDirectory() {
 		return resource.isDirectory();
+	}
+	
+	@Override
+	public void setOnClickListener(OnClickListener l) {
+		super.setOnClickListener(l);
+		chkSelect.setOnClickListener(l);
 	}
 }
