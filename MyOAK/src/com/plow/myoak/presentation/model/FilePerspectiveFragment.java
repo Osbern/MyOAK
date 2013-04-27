@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -39,6 +40,7 @@ public class FilePerspectiveFragment extends ListFragment implements OnClickList
 	 private ResourcePresentation currentRes;
 	 
 	 private AlertDialog alert;
+	 private AlertDialog.Builder builder;
 	 
 	 
 	 @Override
@@ -84,7 +86,7 @@ public class FilePerspectiveFragment extends ListFragment implements OnClickList
 		
 	    switch (item.getItemId()) {
 		    case R.id.action_delete:
-		    	AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+		    	builder = new AlertDialog.Builder(getActivity());
 		    	builder.setTitle("Supprimer");
 		    	builder.setMessage("Voulez-vous supprimer cette Intervention ?").setPositiveButton("Oui", new DialogInterface.OnClickListener() {
 		    		@Override
@@ -109,6 +111,25 @@ public class FilePerspectiveFragment extends ListFragment implements OnClickList
 		    	Toast.makeText(getActivity(), "Menu create selected", Toast.LENGTH_SHORT).show();
 		    	return true;
 		    case R.id.action_create_folder:
+		    	final EditText name = new EditText(getActivity());
+		    	builder = new AlertDialog.Builder(getActivity());
+		    	builder.setTitle("Supprimer");
+		    	builder.setMessage("Nom du dossier").setView(name).setPositiveButton("Créer", new DialogInterface.OnClickListener() {
+		    		@Override
+		    		public void onClick(DialogInterface dialogInterface, int i) {
+		    			Toast.makeText(getActivity(), EngineUtils.getEngine().mkdir(name.getText().toString()), Toast.LENGTH_SHORT).show();
+		    			alert.cancel();
+				    	refresh();
+				    	setMenuVisibility(false); 
+		    		}
+		    	}).setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
+		    		@Override
+		    		public void onClick(DialogInterface dialogInterface, int i) {
+		    			alert.cancel();
+		    		}
+		    	});
+		    	alert = builder.create();
+		    	alert.show();
 		    	Toast.makeText(getActivity(), "Menu create selected", Toast.LENGTH_SHORT).show();
 		    	return true;
 		    case R.id.action_refresh:

@@ -24,6 +24,7 @@ import org.apache.jackrabbit.webdav.MultiStatusResponse;
 import org.apache.jackrabbit.webdav.client.methods.CopyMethod;
 import org.apache.jackrabbit.webdav.client.methods.DavMethod;
 import org.apache.jackrabbit.webdav.client.methods.DeleteMethod;
+import org.apache.jackrabbit.webdav.client.methods.MkColMethod;
 import org.apache.jackrabbit.webdav.client.methods.PropFindMethod;
 import org.apache.jackrabbit.webdav.property.DavProperty;
 import org.apache.jackrabbit.webdav.property.DavPropertyName;
@@ -141,6 +142,17 @@ public class EngineImpl implements Engine {
 			e.printStackTrace();
 		}
 		return rm.getStatusCode() + " " + rm.getStatusText();
+	}
+	
+	@Override
+	public String mkdir(String name) {
+        DavMethod mkdir = new MkColMethod(EngineUtils.WEBDAV + "/" + name);
+        try {
+			client.executeMethod(mkdir);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return mkdir.getStatusCode() + " " + mkdir.getStatusText();
 	}
 
 	@Override

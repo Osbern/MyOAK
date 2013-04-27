@@ -16,7 +16,6 @@ import org.apache.commons.httpclient.HttpException;
 import org.apache.commons.httpclient.MultiThreadedHttpConnectionManager;
 import org.apache.commons.httpclient.UsernamePasswordCredentials;
 import org.apache.commons.httpclient.auth.AuthScope;
-import org.apache.commons.httpclient.methods.GetMethod;
 import org.apache.commons.httpclient.params.HttpConnectionManagerParams;
 import org.apache.jackrabbit.webdav.DavConstants;
 import org.apache.jackrabbit.webdav.DavException;
@@ -25,6 +24,7 @@ import org.apache.jackrabbit.webdav.MultiStatusResponse;
 import org.apache.jackrabbit.webdav.client.methods.CopyMethod;
 import org.apache.jackrabbit.webdav.client.methods.DavMethod;
 import org.apache.jackrabbit.webdav.client.methods.DeleteMethod;
+import org.apache.jackrabbit.webdav.client.methods.MkColMethod;
 import org.apache.jackrabbit.webdav.client.methods.PropFindMethod;
 import org.apache.jackrabbit.webdav.property.DavProperty;
 import org.apache.jackrabbit.webdav.property.DavPropertyName;
@@ -132,34 +132,46 @@ public class Main {
         Main pr = new Main();
         pr.connect("Plow", "MoujonBrouh!");
         
-        for (String d : pr.ls()) {
-        	System.out.println(d);
-        }
+//        for (String d : pr.ls()) {
+//        	System.out.println(d);
+//        }
+//        
+//        System.out.println(pr.rm("/Truc/"));
         
-        System.out.println(pr.rm("/Truc/"));
+		//System.out.println(pr.cp("", "/bob2"));
         
-		//System.out.println(pr.cp("/bob", "/bob2"));
-		
-		 for (String d : pr.ls()) {
-	        	System.out.println(d);
-	     }
-        
-		System.out.println("\nDISPLAYING BOB:");
-
-		GetMethod get = new GetMethod(
-				"http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php/bob");
-		String buffer = "";
-
-		try {
-			client.executeMethod(get);
-			buffer = get.getResponseBodyAsString();
-		} catch (HttpException e) {
-			e.printStackTrace();
+        DavMethod mkdir = new MkColMethod(host + "/TOTO");
+        try {
+			client.executeMethod(mkdir);
 		} catch (IOException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-		System.out.println(buffer);
+		
+      for (String d : pr.ls()) {
+    	System.out.println(d);
+      }
+		
+//		 for (String d : pr.ls()) {
+//	        	System.out.println(d);
+//	     }
+//        
+//		System.out.println("\nDISPLAYING BOB:");
+//
+//		GetMethod get = new GetMethod(
+//				"http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php/bob");
+//		String buffer = "";
+//
+//		try {
+//			client.executeMethod(get);
+//			buffer = get.getResponseBodyAsString();
+//		} catch (HttpException e) {
+//			e.printStackTrace();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//
+//		System.out.println(buffer);
 	}
 
 }

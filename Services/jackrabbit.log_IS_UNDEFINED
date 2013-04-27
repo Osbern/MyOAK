@@ -22532,3 +22532,991 @@
 2013-04-16 22:06:12.314 DEBUG [main] MultiThreadedHttpConnectionManager.java:979 Freeing connection, hostConfig=HostConfiguration[host=http://proj135.istic.univ-rennes1.fr]
 2013-04-16 22:06:12.314 DEBUG [main] IdleConnectionHandler.java:76     Adding connection at: 1366142772314
 2013-04-16 22:06:12.314 DEBUG [main] MultiThreadedHttpConnectionManager.java:961 Notifying no-one, there are no waiting threads
+2013-04-27 18:54:28.316 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.useragent = Jakarta Commons-HttpClient/3.1
+2013-04-27 18:54:28.323 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.version = HTTP/1.1
+2013-04-27 18:54:28.324 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.connection-manager.class = class org.apache.commons.httpclient.SimpleHttpConnectionManager
+2013-04-27 18:54:28.325 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.cookie-policy = default
+2013-04-27 18:54:28.325 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.element-charset = US-ASCII
+2013-04-27 18:54:28.325 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.content-charset = ISO-8859-1
+2013-04-27 18:54:28.326 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.method.retry-handler = org.apache.commons.httpclient.DefaultHttpMethodRetryHandler@4a871190
+2013-04-27 18:54:28.327 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.dateparser.patterns = [EEE, dd MMM yyyy HH:mm:ss zzz, EEEE, dd-MMM-yy HH:mm:ss zzz, EEE MMM d HH:mm:ss yyyy, EEE, dd-MMM-yyyy HH:mm:ss z, EEE, dd-MMM-yyyy HH-mm-ss z, EEE, dd MMM yy HH:mm:ss z, EEE dd-MMM-yyyy HH:mm:ss z, EEE dd MMM yyyy HH:mm:ss z, EEE dd-MMM-yyyy HH-mm-ss z, EEE dd-MMM-yy HH:mm:ss z, EEE dd MMM yy HH:mm:ss z, EEE,dd-MMM-yy HH:mm:ss z, EEE,dd-MMM-yyyy HH:mm:ss z, EEE, dd-MM-yyyy HH:mm:ss z]
+2013-04-27 18:54:28.338 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.connection-manager.max-per-host = {HostConfiguration[host=http://http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php]=20}
+2013-04-27 18:54:28.340 DEBUG [main] HttpClient.java:72                Java version: 1.7.0_21
+2013-04-27 18:54:28.340 DEBUG [main] HttpClient.java:73                Java vendor: Oracle Corporation
+2013-04-27 18:54:28.340 DEBUG [main] HttpClient.java:74                Java class path: /home/thibaud/workspace/MyOAK/Services/bin:/home/thibaud/workspace/LIB/jackrabbit-standalone-2.6.0.jar
+2013-04-27 18:54:28.340 DEBUG [main] HttpClient.java:75                Operating system name: Linux
+2013-04-27 18:54:28.340 DEBUG [main] HttpClient.java:76                Operating system architecture: amd64
+2013-04-27 18:54:28.341 DEBUG [main] HttpClient.java:77                Operating system version: 3.5.0-17-generic
+2013-04-27 18:54:28.416 DEBUG [main] HttpClient.java:82                SUN 1.7: SUN (DSA key/parameter generation; DSA signing; SHA-1, MD5 digests; SecureRandom; X.509 certificates; JKS keystore; PKIX CertPathValidator; PKIX CertPathBuilder; LDAP, Collection CertStores, JavaPolicy Policy; JavaLoginConfig Configuration)
+2013-04-27 18:54:28.416 DEBUG [main] HttpClient.java:82                SunRsaSign 1.7: Sun RSA signature provider
+2013-04-27 18:54:28.416 DEBUG [main] HttpClient.java:82                SunJSSE 1.7: Sun JSSE provider(PKCS12, SunX509 key/trust factories, SSLv3, TLSv1)
+2013-04-27 18:54:28.416 DEBUG [main] HttpClient.java:82                SunJCE 1.7: SunJCE Provider (implements RSA, DES, Triple DES, AES, Blowfish, ARCFOUR, RC2, PBE, Diffie-Hellman, HMAC)
+2013-04-27 18:54:28.417 DEBUG [main] HttpClient.java:82                SunJGSS 1.7: Sun (Kerberos v5, SPNEGO)
+2013-04-27 18:54:28.417 DEBUG [main] HttpClient.java:82                SunSASL 1.7: Sun SASL provider(implements client mechanisms for: DIGEST-MD5, GSSAPI, EXTERNAL, PLAIN, CRAM-MD5, NTLM; server mechanisms for: DIGEST-MD5, GSSAPI, CRAM-MD5, NTLM)
+2013-04-27 18:54:28.417 DEBUG [main] HttpClient.java:82                XMLDSig 1.0: XMLDSig (DOM XMLSignatureFactory; DOM KeyInfoFactory)
+2013-04-27 18:54:28.417 DEBUG [main] HttpClient.java:82                SunPCSC 1.7: Sun PC/SC provider
+2013-04-27 18:54:28.417 DEBUG [main] HttpClient.java:82                SunPKCS11-NSS 1.7: SunPKCS11-NSS using library null
+2013-04-27 18:54:28.457 DEBUG [main] MultiThreadedHttpConnectionManager.java:412 HttpConnectionManager.getConnection:  config = HostConfiguration[host=http://proj135.istic.univ-rennes1.fr], timeout = 0
+2013-04-27 18:54:28.458 DEBUG [main] MultiThreadedHttpConnectionManager.java:760 Allocating new connection, hostConfig=HostConfiguration[host=http://proj135.istic.univ-rennes1.fr]
+2013-04-27 18:54:28.461 DEBUG [main] HttpConnection.java:692           Open connection to proj135.istic.univ-rennes1.fr:80
+2013-04-27 18:54:28.571 DEBUG [main] Wire.java:70                      >> "COPY /owncloud/files/webdav.php HTTP/1.1[\r][\n]"
+2013-04-27 18:54:28.571 DEBUG [main] HttpMethodBase.java:1352          Adding Host request header
+2013-04-27 18:54:28.587 DEBUG [main] Wire.java:70                      >> "Destination: http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php/bob2[\r][\n]"
+2013-04-27 18:54:28.588 DEBUG [main] Wire.java:70                      >> "Overwrite: T[\r][\n]"
+2013-04-27 18:54:28.588 DEBUG [main] Wire.java:70                      >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+2013-04-27 18:54:28.588 DEBUG [main] Wire.java:70                      >> "Host: proj135.istic.univ-rennes1.fr[\r][\n]"
+2013-04-27 18:54:28.589 DEBUG [main] Wire.java:70                      >> "Content-Length: 0[\r][\n]"
+2013-04-27 18:54:28.589 DEBUG [main] Wire.java:70                      >> "[\r][\n]"
+2013-04-27 18:54:28.589 DEBUG [main] EntityEnclosingMethod.java:473    Request body has not been specified
+2013-04-27 18:54:28.737 DEBUG [main] Wire.java:70                      << "HTTP/1.1 401 Unauthorized[\r][\n]"
+2013-04-27 18:54:28.739 DEBUG [main] Wire.java:70                      << "HTTP/1.1 401 Unauthorized[\r][\n]"
+2013-04-27 18:54:28.745 DEBUG [main] Wire.java:70                      << "Date: Sat, 27 Apr 2013 17:51:22 GMT[\r][\n]"
+2013-04-27 18:54:28.746 DEBUG [main] Wire.java:70                      << "Server: Apache/2.2.22 (Ubuntu)[\r][\n]"
+2013-04-27 18:54:28.748 DEBUG [main] Wire.java:70                      << "X-Powered-By: PHP/5.4.6-1ubuntu1.2[\r][\n]"
+2013-04-27 18:54:28.750 DEBUG [main] Wire.java:70                      << "Set-Cookie: 514725f796586=pklc4mgtrvc83d8vva47qet892; path=/; HttpOnly[\r][\n]"
+2013-04-27 18:54:28.751 DEBUG [main] Wire.java:70                      << "Expires: Thu, 19 Nov 1981 08:52:00 GMT[\r][\n]"
+2013-04-27 18:54:28.753 DEBUG [main] Wire.java:70                      << "Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0[\r][\n]"
+2013-04-27 18:54:28.754 DEBUG [main] Wire.java:70                      << "Pragma: no-cache[\r][\n]"
+2013-04-27 18:54:28.756 DEBUG [main] Wire.java:70                      << "WWW-Authenticate: Basic realm="ownCloud"[\r][\n]"
+2013-04-27 18:54:28.757 DEBUG [main] Wire.java:70                      << "Content-Length: 291[\r][\n]"
+2013-04-27 18:54:28.761 DEBUG [main] Wire.java:70                      << "Content-Type: application/xml; charset=utf-8[\r][\n]"
+2013-04-27 18:54:28.763 DEBUG [main] Wire.java:70                      << "[\r][\n]"
+2013-04-27 18:54:28.775 DEBUG [main] CookieSpecBase.java:337           Unrecognized cookie attribute: name=HttpOnly, value=null
+2013-04-27 18:54:28.777 DEBUG [main] HttpMethodBase.java:1651          Cookie accepted: "$Version=0; 514725f796586=pklc4mgtrvc83d8vva47qet892; $Path=/"
+2013-04-27 18:54:28.780 DEBUG [main] HttpMethodDirector.java:843       Authorization required
+2013-04-27 18:54:28.790 DEBUG [main] AuthChallengeProcessor.java:90    Supported authentication schemes in the order of preference: [ntlm, digest, basic]
+2013-04-27 18:54:28.791 DEBUG [main] AuthChallengeProcessor.java:111   Challenge for ntlm authentication scheme not available
+2013-04-27 18:54:28.791 DEBUG [main] AuthChallengeProcessor.java:111   Challenge for digest authentication scheme not available
+2013-04-27 18:54:28.791 INFO  [main] AuthChallengeProcessor.java:101   basic authentication scheme selected
+2013-04-27 18:54:28.792 DEBUG [main] AuthChallengeProcessor.java:155   Using authentication scheme: basic
+2013-04-27 18:54:28.792 DEBUG [main] AuthChallengeProcessor.java:163   Authorization challenge processed
+2013-04-27 18:54:28.792 DEBUG [main] HttpMethodDirector.java:714       Authentication scope: BASIC 'ownCloud'@proj135.istic.univ-rennes1.fr:80
+2013-04-27 18:54:28.793 DEBUG [main] HttpMethodDirector.java:194       Retry authentication
+2013-04-27 18:54:28.794 DEBUG [main] Wire.java:70                      << "<?xml version="1.0" encoding="utf-8"?>[\n]"
+2013-04-27 18:54:28.794 DEBUG [main] Wire.java:70                      << "<d:error xmlns:d="DAV:" xmlns:s="http://sabredav.org/ns">[\n]"
+2013-04-27 18:54:28.795 DEBUG [main] Wire.java:70                      << "  <s:exception>Sabre_DAV_Exception_NotAuthenticated</s:exception>[\n]"
+2013-04-27 18:54:28.795 DEBUG [main] Wire.java:70                      << "  <s:message>No basic authentication headers were found</s:message>[\n]"
+2013-04-27 18:54:28.795 DEBUG [main] Wire.java:70                      << "  <s:sabredav-version>1.7.5</s:sabredav-version>[\n]"
+2013-04-27 18:54:28.795 DEBUG [main] Wire.java:70                      << "</d:error>[\n]"
+2013-04-27 18:54:28.796 DEBUG [main] HttpMethodBase.java:1024          Resorting to protocol version default close connection policy
+2013-04-27 18:54:28.796 DEBUG [main] HttpMethodBase.java:1028          Should NOT close connection, using HTTP/1.1
+2013-04-27 18:54:28.796 DEBUG [main] HttpMethodDirector.java:278       Authenticating with BASIC 'ownCloud'@proj135.istic.univ-rennes1.fr:80
+2013-04-27 18:54:28.797 DEBUG [main] HttpMethodParams.java:384         Credential charset not configured, using HTTP element charset
+2013-04-27 18:54:28.804 DEBUG [main] Wire.java:70                      >> "COPY /owncloud/files/webdav.php HTTP/1.1[\r][\n]"
+2013-04-27 18:54:28.804 DEBUG [main] HttpMethodBase.java:1352          Adding Host request header
+2013-04-27 18:54:28.805 DEBUG [main] Wire.java:70                      >> "Destination: http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php/bob2[\r][\n]"
+2013-04-27 18:54:28.805 DEBUG [main] Wire.java:70                      >> "Overwrite: T[\r][\n]"
+2013-04-27 18:54:28.811 DEBUG [main] Wire.java:70                      >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+2013-04-27 18:54:28.811 DEBUG [main] Wire.java:70                      >> "Content-Length: 0[\r][\n]"
+2013-04-27 18:54:28.811 DEBUG [main] Wire.java:70                      >> "Authorization: Basic UGxvdzpNb3Vqb25Ccm91aCE=[\r][\n]"
+2013-04-27 18:54:28.812 DEBUG [main] Wire.java:70                      >> "Host: proj135.istic.univ-rennes1.fr[\r][\n]"
+2013-04-27 18:54:28.812 DEBUG [main] Wire.java:70                      >> "Cookie: $Version=0; 514725f796586=pklc4mgtrvc83d8vva47qet892; $Path=/[\r][\n]"
+2013-04-27 18:54:28.812 DEBUG [main] Wire.java:70                      >> "[\r][\n]"
+2013-04-27 18:54:28.812 DEBUG [main] EntityEnclosingMethod.java:473    Request body has not been specified
+2013-04-27 18:56:03.988 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.useragent = Jakarta Commons-HttpClient/3.1
+2013-04-27 18:56:03.998 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.version = HTTP/1.1
+2013-04-27 18:56:04.000 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.connection-manager.class = class org.apache.commons.httpclient.SimpleHttpConnectionManager
+2013-04-27 18:56:04.000 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.cookie-policy = default
+2013-04-27 18:56:04.000 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.element-charset = US-ASCII
+2013-04-27 18:56:04.000 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.content-charset = ISO-8859-1
+2013-04-27 18:56:04.001 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.method.retry-handler = org.apache.commons.httpclient.DefaultHttpMethodRetryHandler@4a871190
+2013-04-27 18:56:04.002 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.dateparser.patterns = [EEE, dd MMM yyyy HH:mm:ss zzz, EEEE, dd-MMM-yy HH:mm:ss zzz, EEE MMM d HH:mm:ss yyyy, EEE, dd-MMM-yyyy HH:mm:ss z, EEE, dd-MMM-yyyy HH-mm-ss z, EEE, dd MMM yy HH:mm:ss z, EEE dd-MMM-yyyy HH:mm:ss z, EEE dd MMM yyyy HH:mm:ss z, EEE dd-MMM-yyyy HH-mm-ss z, EEE dd-MMM-yy HH:mm:ss z, EEE dd MMM yy HH:mm:ss z, EEE,dd-MMM-yy HH:mm:ss z, EEE,dd-MMM-yyyy HH:mm:ss z, EEE, dd-MM-yyyy HH:mm:ss z]
+2013-04-27 18:56:04.014 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.connection-manager.max-per-host = {HostConfiguration[host=http://http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php]=20}
+2013-04-27 18:56:04.016 DEBUG [main] HttpClient.java:72                Java version: 1.7.0_21
+2013-04-27 18:56:04.016 DEBUG [main] HttpClient.java:73                Java vendor: Oracle Corporation
+2013-04-27 18:56:04.016 DEBUG [main] HttpClient.java:74                Java class path: /home/thibaud/workspace/MyOAK/Services/bin:/home/thibaud/workspace/LIB/jackrabbit-standalone-2.6.0.jar
+2013-04-27 18:56:04.016 DEBUG [main] HttpClient.java:75                Operating system name: Linux
+2013-04-27 18:56:04.017 DEBUG [main] HttpClient.java:76                Operating system architecture: amd64
+2013-04-27 18:56:04.017 DEBUG [main] HttpClient.java:77                Operating system version: 3.5.0-17-generic
+2013-04-27 18:56:04.073 DEBUG [main] HttpClient.java:82                SUN 1.7: SUN (DSA key/parameter generation; DSA signing; SHA-1, MD5 digests; SecureRandom; X.509 certificates; JKS keystore; PKIX CertPathValidator; PKIX CertPathBuilder; LDAP, Collection CertStores, JavaPolicy Policy; JavaLoginConfig Configuration)
+2013-04-27 18:56:04.073 DEBUG [main] HttpClient.java:82                SunRsaSign 1.7: Sun RSA signature provider
+2013-04-27 18:56:04.073 DEBUG [main] HttpClient.java:82                SunJSSE 1.7: Sun JSSE provider(PKCS12, SunX509 key/trust factories, SSLv3, TLSv1)
+2013-04-27 18:56:04.073 DEBUG [main] HttpClient.java:82                SunJCE 1.7: SunJCE Provider (implements RSA, DES, Triple DES, AES, Blowfish, ARCFOUR, RC2, PBE, Diffie-Hellman, HMAC)
+2013-04-27 18:56:04.074 DEBUG [main] HttpClient.java:82                SunJGSS 1.7: Sun (Kerberos v5, SPNEGO)
+2013-04-27 18:56:04.074 DEBUG [main] HttpClient.java:82                SunSASL 1.7: Sun SASL provider(implements client mechanisms for: DIGEST-MD5, GSSAPI, EXTERNAL, PLAIN, CRAM-MD5, NTLM; server mechanisms for: DIGEST-MD5, GSSAPI, CRAM-MD5, NTLM)
+2013-04-27 18:56:04.074 DEBUG [main] HttpClient.java:82                XMLDSig 1.0: XMLDSig (DOM XMLSignatureFactory; DOM KeyInfoFactory)
+2013-04-27 18:56:04.074 DEBUG [main] HttpClient.java:82                SunPCSC 1.7: Sun PC/SC provider
+2013-04-27 18:56:04.075 DEBUG [main] HttpClient.java:82                SunPKCS11-NSS 1.7: SunPKCS11-NSS using library null
+2013-04-27 18:56:04.121 DEBUG [main] MultiThreadedHttpConnectionManager.java:412 HttpConnectionManager.getConnection:  config = HostConfiguration[host=http://proj135.istic.univ-rennes1.fr], timeout = 0
+2013-04-27 18:56:04.124 DEBUG [main] MultiThreadedHttpConnectionManager.java:760 Allocating new connection, hostConfig=HostConfiguration[host=http://proj135.istic.univ-rennes1.fr]
+2013-04-27 18:56:04.127 DEBUG [main] HttpConnection.java:692           Open connection to proj135.istic.univ-rennes1.fr:80
+2013-04-27 18:56:04.174 DEBUG [main] Wire.java:70                      >> "COPY /owncloud/files/webdav.php HTTP/1.1[\r][\n]"
+2013-04-27 18:56:04.175 DEBUG [main] HttpMethodBase.java:1352          Adding Host request header
+2013-04-27 18:56:04.187 DEBUG [main] Wire.java:70                      >> "Destination: http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php/bob2[\r][\n]"
+2013-04-27 18:56:04.187 DEBUG [main] Wire.java:70                      >> "Overwrite: T[\r][\n]"
+2013-04-27 18:56:04.187 DEBUG [main] Wire.java:70                      >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+2013-04-27 18:56:04.187 DEBUG [main] Wire.java:70                      >> "Host: proj135.istic.univ-rennes1.fr[\r][\n]"
+2013-04-27 18:56:04.188 DEBUG [main] Wire.java:70                      >> "Content-Length: 0[\r][\n]"
+2013-04-27 18:56:04.188 DEBUG [main] Wire.java:70                      >> "[\r][\n]"
+2013-04-27 18:56:04.188 DEBUG [main] EntityEnclosingMethod.java:473    Request body has not been specified
+2013-04-27 18:56:19.040 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.useragent = Jakarta Commons-HttpClient/3.1
+2013-04-27 18:56:19.046 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.version = HTTP/1.1
+2013-04-27 18:56:19.047 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.connection-manager.class = class org.apache.commons.httpclient.SimpleHttpConnectionManager
+2013-04-27 18:56:19.047 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.cookie-policy = default
+2013-04-27 18:56:19.047 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.element-charset = US-ASCII
+2013-04-27 18:56:19.047 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.content-charset = ISO-8859-1
+2013-04-27 18:56:19.049 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.method.retry-handler = org.apache.commons.httpclient.DefaultHttpMethodRetryHandler@4a871190
+2013-04-27 18:56:19.049 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.dateparser.patterns = [EEE, dd MMM yyyy HH:mm:ss zzz, EEEE, dd-MMM-yy HH:mm:ss zzz, EEE MMM d HH:mm:ss yyyy, EEE, dd-MMM-yyyy HH:mm:ss z, EEE, dd-MMM-yyyy HH-mm-ss z, EEE, dd MMM yy HH:mm:ss z, EEE dd-MMM-yyyy HH:mm:ss z, EEE dd MMM yyyy HH:mm:ss z, EEE dd-MMM-yyyy HH-mm-ss z, EEE dd-MMM-yy HH:mm:ss z, EEE dd MMM yy HH:mm:ss z, EEE,dd-MMM-yy HH:mm:ss z, EEE,dd-MMM-yyyy HH:mm:ss z, EEE, dd-MM-yyyy HH:mm:ss z]
+2013-04-27 18:56:19.062 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.connection-manager.max-per-host = {HostConfiguration[host=http://http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php]=20}
+2013-04-27 18:56:19.064 DEBUG [main] HttpClient.java:72                Java version: 1.7.0_21
+2013-04-27 18:56:19.064 DEBUG [main] HttpClient.java:73                Java vendor: Oracle Corporation
+2013-04-27 18:56:19.064 DEBUG [main] HttpClient.java:74                Java class path: /home/thibaud/workspace/MyOAK/Services/bin:/home/thibaud/workspace/LIB/jackrabbit-standalone-2.6.0.jar
+2013-04-27 18:56:19.064 DEBUG [main] HttpClient.java:75                Operating system name: Linux
+2013-04-27 18:56:19.064 DEBUG [main] HttpClient.java:76                Operating system architecture: amd64
+2013-04-27 18:56:19.064 DEBUG [main] HttpClient.java:77                Operating system version: 3.5.0-17-generic
+2013-04-27 18:56:19.131 DEBUG [main] HttpClient.java:82                SUN 1.7: SUN (DSA key/parameter generation; DSA signing; SHA-1, MD5 digests; SecureRandom; X.509 certificates; JKS keystore; PKIX CertPathValidator; PKIX CertPathBuilder; LDAP, Collection CertStores, JavaPolicy Policy; JavaLoginConfig Configuration)
+2013-04-27 18:56:19.131 DEBUG [main] HttpClient.java:82                SunRsaSign 1.7: Sun RSA signature provider
+2013-04-27 18:56:19.131 DEBUG [main] HttpClient.java:82                SunJSSE 1.7: Sun JSSE provider(PKCS12, SunX509 key/trust factories, SSLv3, TLSv1)
+2013-04-27 18:56:19.131 DEBUG [main] HttpClient.java:82                SunJCE 1.7: SunJCE Provider (implements RSA, DES, Triple DES, AES, Blowfish, ARCFOUR, RC2, PBE, Diffie-Hellman, HMAC)
+2013-04-27 18:56:19.132 DEBUG [main] HttpClient.java:82                SunJGSS 1.7: Sun (Kerberos v5, SPNEGO)
+2013-04-27 18:56:19.132 DEBUG [main] HttpClient.java:82                SunSASL 1.7: Sun SASL provider(implements client mechanisms for: DIGEST-MD5, GSSAPI, EXTERNAL, PLAIN, CRAM-MD5, NTLM; server mechanisms for: DIGEST-MD5, GSSAPI, CRAM-MD5, NTLM)
+2013-04-27 18:56:19.132 DEBUG [main] HttpClient.java:82                XMLDSig 1.0: XMLDSig (DOM XMLSignatureFactory; DOM KeyInfoFactory)
+2013-04-27 18:56:19.132 DEBUG [main] HttpClient.java:82                SunPCSC 1.7: Sun PC/SC provider
+2013-04-27 18:56:19.132 DEBUG [main] HttpClient.java:82                SunPKCS11-NSS 1.7: SunPKCS11-NSS using library null
+2013-04-27 18:56:19.175 DEBUG [main] MultiThreadedHttpConnectionManager.java:412 HttpConnectionManager.getConnection:  config = HostConfiguration[host=http://proj135.istic.univ-rennes1.fr], timeout = 0
+2013-04-27 18:56:19.176 DEBUG [main] MultiThreadedHttpConnectionManager.java:760 Allocating new connection, hostConfig=HostConfiguration[host=http://proj135.istic.univ-rennes1.fr]
+2013-04-27 18:56:19.180 DEBUG [main] HttpConnection.java:692           Open connection to proj135.istic.univ-rennes1.fr:80
+2013-04-27 18:56:19.247 DEBUG [main] Wire.java:70                      >> "COPY /owncloud/files/webdav.php HTTP/1.1[\r][\n]"
+2013-04-27 18:56:19.250 DEBUG [main] HttpMethodBase.java:1352          Adding Host request header
+2013-04-27 18:56:19.273 DEBUG [main] Wire.java:70                      >> "Destination: http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php/bob2[\r][\n]"
+2013-04-27 18:56:19.279 DEBUG [main] Wire.java:70                      >> "Overwrite: T[\r][\n]"
+2013-04-27 18:56:19.280 DEBUG [main] Wire.java:70                      >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+2013-04-27 18:56:19.280 DEBUG [main] Wire.java:70                      >> "Host: proj135.istic.univ-rennes1.fr[\r][\n]"
+2013-04-27 18:56:19.280 DEBUG [main] Wire.java:70                      >> "Content-Length: 0[\r][\n]"
+2013-04-27 18:56:19.280 DEBUG [main] Wire.java:70                      >> "[\r][\n]"
+2013-04-27 18:56:19.280 DEBUG [main] EntityEnclosingMethod.java:473    Request body has not been specified
+2013-04-27 18:57:08.256 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.useragent = Jakarta Commons-HttpClient/3.1
+2013-04-27 18:57:08.262 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.version = HTTP/1.1
+2013-04-27 18:57:08.263 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.connection-manager.class = class org.apache.commons.httpclient.SimpleHttpConnectionManager
+2013-04-27 18:57:08.263 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.cookie-policy = default
+2013-04-27 18:57:08.263 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.element-charset = US-ASCII
+2013-04-27 18:57:08.264 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.content-charset = ISO-8859-1
+2013-04-27 18:57:08.266 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.method.retry-handler = org.apache.commons.httpclient.DefaultHttpMethodRetryHandler@5599682f
+2013-04-27 18:57:08.266 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.dateparser.patterns = [EEE, dd MMM yyyy HH:mm:ss zzz, EEEE, dd-MMM-yy HH:mm:ss zzz, EEE MMM d HH:mm:ss yyyy, EEE, dd-MMM-yyyy HH:mm:ss z, EEE, dd-MMM-yyyy HH-mm-ss z, EEE, dd MMM yy HH:mm:ss z, EEE dd-MMM-yyyy HH:mm:ss z, EEE dd MMM yyyy HH:mm:ss z, EEE dd-MMM-yyyy HH-mm-ss z, EEE dd-MMM-yy HH:mm:ss z, EEE dd MMM yy HH:mm:ss z, EEE,dd-MMM-yy HH:mm:ss z, EEE,dd-MMM-yyyy HH:mm:ss z, EEE, dd-MM-yyyy HH:mm:ss z]
+2013-04-27 18:57:08.278 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.connection-manager.max-per-host = {HostConfiguration[host=http://http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php]=20}
+2013-04-27 18:57:08.280 DEBUG [main] HttpClient.java:72                Java version: 1.7.0_21
+2013-04-27 18:57:08.280 DEBUG [main] HttpClient.java:73                Java vendor: Oracle Corporation
+2013-04-27 18:57:08.280 DEBUG [main] HttpClient.java:74                Java class path: /home/thibaud/workspace/MyOAK/Services/bin:/home/thibaud/workspace/LIB/jackrabbit-standalone-2.6.0.jar
+2013-04-27 18:57:08.280 DEBUG [main] HttpClient.java:75                Operating system name: Linux
+2013-04-27 18:57:08.280 DEBUG [main] HttpClient.java:76                Operating system architecture: amd64
+2013-04-27 18:57:08.281 DEBUG [main] HttpClient.java:77                Operating system version: 3.5.0-17-generic
+2013-04-27 18:57:08.346 DEBUG [main] HttpClient.java:82                SUN 1.7: SUN (DSA key/parameter generation; DSA signing; SHA-1, MD5 digests; SecureRandom; X.509 certificates; JKS keystore; PKIX CertPathValidator; PKIX CertPathBuilder; LDAP, Collection CertStores, JavaPolicy Policy; JavaLoginConfig Configuration)
+2013-04-27 18:57:08.346 DEBUG [main] HttpClient.java:82                SunRsaSign 1.7: Sun RSA signature provider
+2013-04-27 18:57:08.346 DEBUG [main] HttpClient.java:82                SunJSSE 1.7: Sun JSSE provider(PKCS12, SunX509 key/trust factories, SSLv3, TLSv1)
+2013-04-27 18:57:08.347 DEBUG [main] HttpClient.java:82                SunJCE 1.7: SunJCE Provider (implements RSA, DES, Triple DES, AES, Blowfish, ARCFOUR, RC2, PBE, Diffie-Hellman, HMAC)
+2013-04-27 18:57:08.347 DEBUG [main] HttpClient.java:82                SunJGSS 1.7: Sun (Kerberos v5, SPNEGO)
+2013-04-27 18:57:08.347 DEBUG [main] HttpClient.java:82                SunSASL 1.7: Sun SASL provider(implements client mechanisms for: DIGEST-MD5, GSSAPI, EXTERNAL, PLAIN, CRAM-MD5, NTLM; server mechanisms for: DIGEST-MD5, GSSAPI, CRAM-MD5, NTLM)
+2013-04-27 18:57:08.347 DEBUG [main] HttpClient.java:82                XMLDSig 1.0: XMLDSig (DOM XMLSignatureFactory; DOM KeyInfoFactory)
+2013-04-27 18:57:08.347 DEBUG [main] HttpClient.java:82                SunPCSC 1.7: Sun PC/SC provider
+2013-04-27 18:57:08.347 DEBUG [main] HttpClient.java:82                SunPKCS11-NSS 1.7: SunPKCS11-NSS using library null
+2013-04-27 18:57:08.432 DEBUG [main] MultiThreadedHttpConnectionManager.java:412 HttpConnectionManager.getConnection:  config = HostConfiguration[host=http://proj135.istic.univ-rennes1.fr], timeout = 0
+2013-04-27 18:57:08.433 DEBUG [main] MultiThreadedHttpConnectionManager.java:760 Allocating new connection, hostConfig=HostConfiguration[host=http://proj135.istic.univ-rennes1.fr]
+2013-04-27 18:57:08.438 DEBUG [main] HttpConnection.java:692           Open connection to proj135.istic.univ-rennes1.fr:80
+2013-04-27 18:57:08.499 DEBUG [main] Wire.java:70                      >> "PROPFIND /owncloud/files/webdav.php HTTP/1.1[\r][\n]"
+2013-04-27 18:57:08.501 DEBUG [main] HttpMethodBase.java:1352          Adding Host request header
+2013-04-27 18:57:08.514 DEBUG [main] Wire.java:70                      >> "Depth: 1[\r][\n]"
+2013-04-27 18:57:08.515 DEBUG [main] Wire.java:70                      >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+2013-04-27 18:57:08.515 DEBUG [main] Wire.java:70                      >> "Host: proj135.istic.univ-rennes1.fr[\r][\n]"
+2013-04-27 18:57:08.515 DEBUG [main] Wire.java:70                      >> "Content-Length: 106[\r][\n]"
+2013-04-27 18:57:08.516 DEBUG [main] Wire.java:70                      >> "Content-Type: text/xml; charset=UTF-8[\r][\n]"
+2013-04-27 18:57:08.516 DEBUG [main] Wire.java:70                      >> "[\r][\n]"
+2013-04-27 18:57:08.516 DEBUG [main] Wire.java:84                      >> "<?xml version="1.0" encoding="UTF-8" standalone="no"?><D:propfind xmlns:D="DAV:"><D:allprop/></D:propfind>"
+2013-04-27 18:57:08.517 DEBUG [main] EntityEnclosingMethod.java:508    Request body sent
+2013-04-27 19:02:32.531 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.useragent = Jakarta Commons-HttpClient/3.1
+2013-04-27 19:02:32.538 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.version = HTTP/1.1
+2013-04-27 19:02:32.538 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.connection-manager.class = class org.apache.commons.httpclient.SimpleHttpConnectionManager
+2013-04-27 19:02:32.539 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.cookie-policy = default
+2013-04-27 19:02:32.539 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.element-charset = US-ASCII
+2013-04-27 19:02:32.539 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.content-charset = ISO-8859-1
+2013-04-27 19:02:32.540 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.method.retry-handler = org.apache.commons.httpclient.DefaultHttpMethodRetryHandler@5599682f
+2013-04-27 19:02:32.541 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.dateparser.patterns = [EEE, dd MMM yyyy HH:mm:ss zzz, EEEE, dd-MMM-yy HH:mm:ss zzz, EEE MMM d HH:mm:ss yyyy, EEE, dd-MMM-yyyy HH:mm:ss z, EEE, dd-MMM-yyyy HH-mm-ss z, EEE, dd MMM yy HH:mm:ss z, EEE dd-MMM-yyyy HH:mm:ss z, EEE dd MMM yyyy HH:mm:ss z, EEE dd-MMM-yyyy HH-mm-ss z, EEE dd-MMM-yy HH:mm:ss z, EEE dd MMM yy HH:mm:ss z, EEE,dd-MMM-yy HH:mm:ss z, EEE,dd-MMM-yyyy HH:mm:ss z, EEE, dd-MM-yyyy HH:mm:ss z]
+2013-04-27 19:02:32.553 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.connection-manager.max-per-host = {HostConfiguration[host=http://http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php]=20}
+2013-04-27 19:02:32.555 DEBUG [main] HttpClient.java:72                Java version: 1.7.0_21
+2013-04-27 19:02:32.555 DEBUG [main] HttpClient.java:73                Java vendor: Oracle Corporation
+2013-04-27 19:02:32.555 DEBUG [main] HttpClient.java:74                Java class path: /home/thibaud/workspace/MyOAK/Services/bin:/home/thibaud/workspace/LIB/jackrabbit-standalone-2.6.0.jar
+2013-04-27 19:02:32.555 DEBUG [main] HttpClient.java:75                Operating system name: Linux
+2013-04-27 19:02:32.555 DEBUG [main] HttpClient.java:76                Operating system architecture: amd64
+2013-04-27 19:02:32.555 DEBUG [main] HttpClient.java:77                Operating system version: 3.5.0-17-generic
+2013-04-27 19:02:32.612 DEBUG [main] HttpClient.java:82                SUN 1.7: SUN (DSA key/parameter generation; DSA signing; SHA-1, MD5 digests; SecureRandom; X.509 certificates; JKS keystore; PKIX CertPathValidator; PKIX CertPathBuilder; LDAP, Collection CertStores, JavaPolicy Policy; JavaLoginConfig Configuration)
+2013-04-27 19:02:32.612 DEBUG [main] HttpClient.java:82                SunRsaSign 1.7: Sun RSA signature provider
+2013-04-27 19:02:32.612 DEBUG [main] HttpClient.java:82                SunJSSE 1.7: Sun JSSE provider(PKCS12, SunX509 key/trust factories, SSLv3, TLSv1)
+2013-04-27 19:02:32.612 DEBUG [main] HttpClient.java:82                SunJCE 1.7: SunJCE Provider (implements RSA, DES, Triple DES, AES, Blowfish, ARCFOUR, RC2, PBE, Diffie-Hellman, HMAC)
+2013-04-27 19:02:32.613 DEBUG [main] HttpClient.java:82                SunJGSS 1.7: Sun (Kerberos v5, SPNEGO)
+2013-04-27 19:02:32.613 DEBUG [main] HttpClient.java:82                SunSASL 1.7: Sun SASL provider(implements client mechanisms for: DIGEST-MD5, GSSAPI, EXTERNAL, PLAIN, CRAM-MD5, NTLM; server mechanisms for: DIGEST-MD5, GSSAPI, CRAM-MD5, NTLM)
+2013-04-27 19:02:32.613 DEBUG [main] HttpClient.java:82                XMLDSig 1.0: XMLDSig (DOM XMLSignatureFactory; DOM KeyInfoFactory)
+2013-04-27 19:02:32.613 DEBUG [main] HttpClient.java:82                SunPCSC 1.7: Sun PC/SC provider
+2013-04-27 19:02:32.613 DEBUG [main] HttpClient.java:82                SunPKCS11-NSS 1.7: SunPKCS11-NSS using library null
+2013-04-27 19:02:32.689 DEBUG [main] MultiThreadedHttpConnectionManager.java:412 HttpConnectionManager.getConnection:  config = HostConfiguration[host=http://proj135.istic.univ-rennes1.fr], timeout = 0
+2013-04-27 19:02:32.690 DEBUG [main] MultiThreadedHttpConnectionManager.java:760 Allocating new connection, hostConfig=HostConfiguration[host=http://proj135.istic.univ-rennes1.fr]
+2013-04-27 19:02:32.694 DEBUG [main] HttpConnection.java:692           Open connection to proj135.istic.univ-rennes1.fr:80
+2013-04-27 19:02:32.751 DEBUG [main] Wire.java:70                      >> "PROPFIND /owncloud/files/webdav.php HTTP/1.1[\r][\n]"
+2013-04-27 19:02:32.756 DEBUG [main] HttpMethodBase.java:1352          Adding Host request header
+2013-04-27 19:02:32.768 DEBUG [main] Wire.java:70                      >> "Depth: 1[\r][\n]"
+2013-04-27 19:02:32.768 DEBUG [main] Wire.java:70                      >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+2013-04-27 19:02:32.768 DEBUG [main] Wire.java:70                      >> "Host: proj135.istic.univ-rennes1.fr[\r][\n]"
+2013-04-27 19:02:32.769 DEBUG [main] Wire.java:70                      >> "Content-Length: 106[\r][\n]"
+2013-04-27 19:02:32.769 DEBUG [main] Wire.java:70                      >> "Content-Type: text/xml; charset=UTF-8[\r][\n]"
+2013-04-27 19:02:32.769 DEBUG [main] Wire.java:70                      >> "[\r][\n]"
+2013-04-27 19:02:32.770 DEBUG [main] Wire.java:84                      >> "<?xml version="1.0" encoding="UTF-8" standalone="no"?><D:propfind xmlns:D="DAV:"><D:allprop/></D:propfind>"
+2013-04-27 19:02:32.770 DEBUG [main] EntityEnclosingMethod.java:508    Request body sent
+2013-04-27 19:02:33.046 DEBUG [main] Wire.java:70                      << "HTTP/1.1 401 Unauthorized[\r][\n]"
+2013-04-27 19:02:33.048 DEBUG [main] Wire.java:70                      << "HTTP/1.1 401 Unauthorized[\r][\n]"
+2013-04-27 19:02:33.053 DEBUG [main] Wire.java:70                      << "Date: Sat, 27 Apr 2013 17:59:26 GMT[\r][\n]"
+2013-04-27 19:02:33.057 DEBUG [main] Wire.java:70                      << "Server: Apache/2.2.22 (Ubuntu)[\r][\n]"
+2013-04-27 19:02:33.059 DEBUG [main] Wire.java:70                      << "X-Powered-By: PHP/5.4.6-1ubuntu1.2[\r][\n]"
+2013-04-27 19:02:33.060 DEBUG [main] Wire.java:70                      << "Set-Cookie: 514725f796586=32denv978ge1as2i15fv992oh7; path=/; HttpOnly[\r][\n]"
+2013-04-27 19:02:33.062 DEBUG [main] Wire.java:70                      << "Expires: Thu, 19 Nov 1981 08:52:00 GMT[\r][\n]"
+2013-04-27 19:02:33.063 DEBUG [main] Wire.java:70                      << "Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0[\r][\n]"
+2013-04-27 19:02:33.065 DEBUG [main] Wire.java:70                      << "Pragma: no-cache[\r][\n]"
+2013-04-27 19:02:33.066 DEBUG [main] Wire.java:70                      << "WWW-Authenticate: Basic realm="ownCloud"[\r][\n]"
+2013-04-27 19:02:33.067 DEBUG [main] Wire.java:70                      << "Content-Length: 291[\r][\n]"
+2013-04-27 19:02:33.068 DEBUG [main] Wire.java:70                      << "Content-Type: application/xml; charset=utf-8[\r][\n]"
+2013-04-27 19:02:33.069 DEBUG [main] Wire.java:70                      << "[\r][\n]"
+2013-04-27 19:02:33.074 DEBUG [main] CookieSpecBase.java:337           Unrecognized cookie attribute: name=HttpOnly, value=null
+2013-04-27 19:02:33.074 DEBUG [main] HttpMethodBase.java:1651          Cookie accepted: "$Version=0; 514725f796586=32denv978ge1as2i15fv992oh7; $Path=/"
+2013-04-27 19:02:33.076 DEBUG [main] HttpMethodDirector.java:843       Authorization required
+2013-04-27 19:02:33.088 DEBUG [main] AuthChallengeProcessor.java:90    Supported authentication schemes in the order of preference: [ntlm, digest, basic]
+2013-04-27 19:02:33.089 DEBUG [main] AuthChallengeProcessor.java:111   Challenge for ntlm authentication scheme not available
+2013-04-27 19:02:33.089 DEBUG [main] AuthChallengeProcessor.java:111   Challenge for digest authentication scheme not available
+2013-04-27 19:02:33.089 INFO  [main] AuthChallengeProcessor.java:101   basic authentication scheme selected
+2013-04-27 19:02:33.089 DEBUG [main] AuthChallengeProcessor.java:155   Using authentication scheme: basic
+2013-04-27 19:02:33.097 DEBUG [main] AuthChallengeProcessor.java:163   Authorization challenge processed
+2013-04-27 19:02:33.098 DEBUG [main] HttpMethodDirector.java:714       Authentication scope: BASIC 'ownCloud'@proj135.istic.univ-rennes1.fr:80
+2013-04-27 19:02:33.102 DEBUG [main] HttpMethodDirector.java:194       Retry authentication
+2013-04-27 19:02:33.103 DEBUG [main] Wire.java:70                      << "<?xml version="1.0" encoding="utf-8"?>[\n]"
+2013-04-27 19:02:33.103 DEBUG [main] Wire.java:70                      << "<d:error xmlns:d="DAV:" xmlns:s="http://sabredav.org/ns">[\n]"
+2013-04-27 19:02:33.103 DEBUG [main] Wire.java:70                      << "  <s:exception>Sabre_DAV_Exception_NotAuthenticated</s:exception>[\n]"
+2013-04-27 19:02:33.103 DEBUG [main] Wire.java:70                      << "  <s:message>No basic authentication headers were found</s:message>[\n]"
+2013-04-27 19:02:33.104 DEBUG [main] Wire.java:70                      << "  <s:sabredav-version>1.7.5</s:sabredav-version>[\n]"
+2013-04-27 19:02:33.104 DEBUG [main] Wire.java:70                      << "</d:error>[\n]"
+2013-04-27 19:02:33.104 DEBUG [main] HttpMethodBase.java:1024          Resorting to protocol version default close connection policy
+2013-04-27 19:02:33.105 DEBUG [main] HttpMethodBase.java:1028          Should NOT close connection, using HTTP/1.1
+2013-04-27 19:02:33.105 DEBUG [main] HttpMethodDirector.java:278       Authenticating with BASIC 'ownCloud'@proj135.istic.univ-rennes1.fr:80
+2013-04-27 19:02:33.105 DEBUG [main] HttpMethodParams.java:384         Credential charset not configured, using HTTP element charset
+2013-04-27 19:02:33.113 DEBUG [main] Wire.java:70                      >> "PROPFIND /owncloud/files/webdav.php HTTP/1.1[\r][\n]"
+2013-04-27 19:02:33.114 DEBUG [main] HttpMethodBase.java:1352          Adding Host request header
+2013-04-27 19:02:33.115 DEBUG [main] Wire.java:70                      >> "Depth: 1[\r][\n]"
+2013-04-27 19:02:33.115 DEBUG [main] Wire.java:70                      >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+2013-04-27 19:02:33.115 DEBUG [main] Wire.java:70                      >> "Content-Length: 106[\r][\n]"
+2013-04-27 19:02:33.116 DEBUG [main] Wire.java:70                      >> "Content-Type: text/xml; charset=UTF-8[\r][\n]"
+2013-04-27 19:02:33.116 DEBUG [main] Wire.java:70                      >> "Authorization: Basic UGxvdzpNb3Vqb25Ccm91aCE=[\r][\n]"
+2013-04-27 19:02:33.116 DEBUG [main] Wire.java:70                      >> "Host: proj135.istic.univ-rennes1.fr[\r][\n]"
+2013-04-27 19:02:33.117 DEBUG [main] Wire.java:70                      >> "Cookie: $Version=0; 514725f796586=32denv978ge1as2i15fv992oh7; $Path=/[\r][\n]"
+2013-04-27 19:02:33.117 DEBUG [main] Wire.java:70                      >> "[\r][\n]"
+2013-04-27 19:02:33.118 DEBUG [main] Wire.java:84                      >> "<?xml version="1.0" encoding="UTF-8" standalone="no"?><D:propfind xmlns:D="DAV:"><D:allprop/></D:propfind>"
+2013-04-27 19:02:33.118 DEBUG [main] EntityEnclosingMethod.java:508    Request body sent
+2013-04-27 19:02:33.327 DEBUG [main] Wire.java:70                      << "HTTP/1.1 207 Multi-Status[\r][\n]"
+2013-04-27 19:02:33.331 DEBUG [main] Wire.java:70                      << "HTTP/1.1 207 Multi-Status[\r][\n]"
+2013-04-27 19:02:33.333 DEBUG [main] Wire.java:70                      << "Date: Sat, 27 Apr 2013 17:59:27 GMT[\r][\n]"
+2013-04-27 19:02:33.334 DEBUG [main] Wire.java:70                      << "Server: Apache/2.2.22 (Ubuntu)[\r][\n]"
+2013-04-27 19:02:33.336 DEBUG [main] Wire.java:70                      << "X-Powered-By: PHP/5.4.6-1ubuntu1.2[\r][\n]"
+2013-04-27 19:02:33.337 DEBUG [main] Wire.java:70                      << "Expires: Thu, 19 Nov 1981 08:52:00 GMT[\r][\n]"
+2013-04-27 19:02:33.338 DEBUG [main] Wire.java:70                      << "Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0[\r][\n]"
+2013-04-27 19:02:33.340 DEBUG [main] Wire.java:70                      << "Pragma: no-cache[\r][\n]"
+2013-04-27 19:02:33.341 DEBUG [main] Wire.java:70                      << "Set-Cookie: 514725f796586=bm71g4s7n6rg91c5mkuc8mqop4; path=/; HttpOnly[\r][\n]"
+2013-04-27 19:02:33.342 DEBUG [main] Wire.java:70                      << "Vary: Brief,Prefer[\r][\n]"
+2013-04-27 19:02:33.342 DEBUG [main] Wire.java:70                      << "DAV: 1, 3, extended-mkcol, 2[\r][\n]"
+2013-04-27 19:02:33.343 DEBUG [main] Wire.java:70                      << "Content-Length: 1300[\r][\n]"
+2013-04-27 19:02:33.343 DEBUG [main] Wire.java:70                      << "Content-Type: application/xml; charset=utf-8[\r][\n]"
+2013-04-27 19:02:33.343 DEBUG [main] Wire.java:70                      << "[\r][\n]"
+2013-04-27 19:02:33.344 DEBUG [main] CookieSpecBase.java:337           Unrecognized cookie attribute: name=HttpOnly, value=null
+2013-04-27 19:02:33.344 DEBUG [main] HttpMethodBase.java:1651          Cookie accepted: "$Version=0; 514725f796586=bm71g4s7n6rg91c5mkuc8mqop4; $Path=/"
+2013-04-27 19:02:33.348 DEBUG [main] Wire.java:84                      << "<"
+2013-04-27 19:02:33.349 DEBUG [main] Wire.java:84                      << "?"
+2013-04-27 19:02:33.349 DEBUG [main] Wire.java:84                      << "x"
+2013-04-27 19:02:33.350 DEBUG [main] Wire.java:84                      << "m"
+2013-04-27 19:02:33.350 DEBUG [main] Wire.java:84                      << "l version="1.0" encoding="ut"
+2013-04-27 19:02:33.356 DEBUG [main] Wire.java:84                      << "f"
+2013-04-27 19:02:33.357 DEBUG [main] Wire.java:84                      << "-"
+2013-04-27 19:02:33.357 DEBUG [main] Wire.java:84                      << "8"
+2013-04-27 19:02:33.358 DEBUG [main] Wire.java:84                      << """
+2013-04-27 19:02:33.359 DEBUG [main] Wire.java:84                      << "?"
+2013-04-27 19:02:33.359 DEBUG [main] Wire.java:84                      << ">"
+2013-04-27 19:02:33.360 DEBUG [main] Wire.java:70                      << "[\n]"
+2013-04-27 19:02:33.362 DEBUG [main] Wire.java:70                      << "<d:multistatus xmlns:d="DAV:" xmlns:s="http://sabredav.org/ns"><d:response><d:href>/owncloud/files/webdav.php/</d:href><d:propstat><d:prop><d:getetag>"517c11b19ed56"</d:getetag><d:getlastmodified>Sat, 27 Apr 2013 17:57:59 GMT</d:getlastmodified><d:resourcetype><d:collection/></d:resourcetype><d:quota-used-bytes>0</d:quota-used-bytes><d:quota-available-bytes>63076110336</d:quota-available-bytes></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response><d:response><d:href>/owncloud/files/webdav.php/doc/</d:href><d:propstat><d:prop><d:getetag>"515076825122c"</d:getetag><d:getlastmodified>Mon, 25 Mar 2013 16:08:33 GMT</d:getlastmodified><d:resourcetype><d:collection/></d:resourcetype><d:quota-used-bytes>0</d:quota-used-bytes><d:quota-available-bytes>63076110336</d:quota-available-bytes></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response><d:response><d:href>/owncloud/files/webdav.php/file1</d:href><d:propstat><d:prop><d:getetag>"51507671eb070"</d:getetag><d:getlastmodified>Mon, 25 Mar 2013 16:08:17 GMT</d:getlastmodified><d:getcontentlength>0</d:getcontentlength><d:resourcetype/><d:getcontenttype>inode/x-empty</d:getcontenttype></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response></d:multistatus>[\n]"
+2013-04-27 19:02:33.365 DEBUG [main] HttpMethodBase.java:1024          Resorting to protocol version default close connection policy
+2013-04-27 19:02:33.366 DEBUG [main] HttpMethodBase.java:1028          Should NOT close connection, using HTTP/1.1
+2013-04-27 19:02:33.383 DEBUG [main] HttpConnection.java:1178          Releasing connection back to connection manager.
+2013-04-27 19:02:33.383 DEBUG [main] MultiThreadedHttpConnectionManager.java:979 Freeing connection, hostConfig=HostConfiguration[host=http://proj135.istic.univ-rennes1.fr]
+2013-04-27 19:02:33.383 DEBUG [main] IdleConnectionHandler.java:76     Adding connection at: 1367082153383
+2013-04-27 19:02:33.384 DEBUG [main] MultiThreadedHttpConnectionManager.java:961 Notifying no-one, there are no waiting threads
+2013-04-27 19:03:06.230 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.useragent = Jakarta Commons-HttpClient/3.1
+2013-04-27 19:03:06.237 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.version = HTTP/1.1
+2013-04-27 19:03:06.239 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.connection-manager.class = class org.apache.commons.httpclient.SimpleHttpConnectionManager
+2013-04-27 19:03:06.239 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.cookie-policy = default
+2013-04-27 19:03:06.239 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.element-charset = US-ASCII
+2013-04-27 19:03:06.239 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.content-charset = ISO-8859-1
+2013-04-27 19:03:06.241 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.method.retry-handler = org.apache.commons.httpclient.DefaultHttpMethodRetryHandler@69922b29
+2013-04-27 19:03:06.241 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.dateparser.patterns = [EEE, dd MMM yyyy HH:mm:ss zzz, EEEE, dd-MMM-yy HH:mm:ss zzz, EEE MMM d HH:mm:ss yyyy, EEE, dd-MMM-yyyy HH:mm:ss z, EEE, dd-MMM-yyyy HH-mm-ss z, EEE, dd MMM yy HH:mm:ss z, EEE dd-MMM-yyyy HH:mm:ss z, EEE dd MMM yyyy HH:mm:ss z, EEE dd-MMM-yyyy HH-mm-ss z, EEE dd-MMM-yy HH:mm:ss z, EEE dd MMM yy HH:mm:ss z, EEE,dd-MMM-yy HH:mm:ss z, EEE,dd-MMM-yyyy HH:mm:ss z, EEE, dd-MM-yyyy HH:mm:ss z]
+2013-04-27 19:03:06.253 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.connection-manager.max-per-host = {HostConfiguration[host=http://http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php]=20}
+2013-04-27 19:03:06.255 DEBUG [main] HttpClient.java:72                Java version: 1.7.0_21
+2013-04-27 19:03:06.255 DEBUG [main] HttpClient.java:73                Java vendor: Oracle Corporation
+2013-04-27 19:03:06.256 DEBUG [main] HttpClient.java:74                Java class path: /home/thibaud/workspace/MyOAK/Services/bin:/home/thibaud/workspace/LIB/jackrabbit-standalone-2.6.0.jar
+2013-04-27 19:03:06.256 DEBUG [main] HttpClient.java:75                Operating system name: Linux
+2013-04-27 19:03:06.256 DEBUG [main] HttpClient.java:76                Operating system architecture: amd64
+2013-04-27 19:03:06.256 DEBUG [main] HttpClient.java:77                Operating system version: 3.5.0-17-generic
+2013-04-27 19:03:06.312 DEBUG [main] HttpClient.java:82                SUN 1.7: SUN (DSA key/parameter generation; DSA signing; SHA-1, MD5 digests; SecureRandom; X.509 certificates; JKS keystore; PKIX CertPathValidator; PKIX CertPathBuilder; LDAP, Collection CertStores, JavaPolicy Policy; JavaLoginConfig Configuration)
+2013-04-27 19:03:06.312 DEBUG [main] HttpClient.java:82                SunRsaSign 1.7: Sun RSA signature provider
+2013-04-27 19:03:06.313 DEBUG [main] HttpClient.java:82                SunJSSE 1.7: Sun JSSE provider(PKCS12, SunX509 key/trust factories, SSLv3, TLSv1)
+2013-04-27 19:03:06.313 DEBUG [main] HttpClient.java:82                SunJCE 1.7: SunJCE Provider (implements RSA, DES, Triple DES, AES, Blowfish, ARCFOUR, RC2, PBE, Diffie-Hellman, HMAC)
+2013-04-27 19:03:06.313 DEBUG [main] HttpClient.java:82                SunJGSS 1.7: Sun (Kerberos v5, SPNEGO)
+2013-04-27 19:03:06.313 DEBUG [main] HttpClient.java:82                SunSASL 1.7: Sun SASL provider(implements client mechanisms for: DIGEST-MD5, GSSAPI, EXTERNAL, PLAIN, CRAM-MD5, NTLM; server mechanisms for: DIGEST-MD5, GSSAPI, CRAM-MD5, NTLM)
+2013-04-27 19:03:06.313 DEBUG [main] HttpClient.java:82                XMLDSig 1.0: XMLDSig (DOM XMLSignatureFactory; DOM KeyInfoFactory)
+2013-04-27 19:03:06.313 DEBUG [main] HttpClient.java:82                SunPCSC 1.7: Sun PC/SC provider
+2013-04-27 19:03:06.314 DEBUG [main] HttpClient.java:82                SunPKCS11-NSS 1.7: SunPKCS11-NSS using library null
+2013-04-27 19:03:06.390 DEBUG [main] MultiThreadedHttpConnectionManager.java:412 HttpConnectionManager.getConnection:  config = HostConfiguration[host=http://proj135.istic.univ-rennes1.fr], timeout = 0
+2013-04-27 19:03:06.391 DEBUG [main] MultiThreadedHttpConnectionManager.java:760 Allocating new connection, hostConfig=HostConfiguration[host=http://proj135.istic.univ-rennes1.fr]
+2013-04-27 19:03:06.395 DEBUG [main] HttpConnection.java:692           Open connection to proj135.istic.univ-rennes1.fr:80
+2013-04-27 19:03:06.455 DEBUG [main] Wire.java:70                      >> "PROPFIND /owncloud/files/webdav.php HTTP/1.1[\r][\n]"
+2013-04-27 19:03:06.455 DEBUG [main] HttpMethodBase.java:1352          Adding Host request header
+2013-04-27 19:03:06.469 DEBUG [main] Wire.java:70                      >> "Depth: 1[\r][\n]"
+2013-04-27 19:03:06.470 DEBUG [main] Wire.java:70                      >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+2013-04-27 19:03:06.470 DEBUG [main] Wire.java:70                      >> "Host: proj135.istic.univ-rennes1.fr[\r][\n]"
+2013-04-27 19:03:06.470 DEBUG [main] Wire.java:70                      >> "Content-Length: 106[\r][\n]"
+2013-04-27 19:03:06.470 DEBUG [main] Wire.java:70                      >> "Content-Type: text/xml; charset=UTF-8[\r][\n]"
+2013-04-27 19:03:06.470 DEBUG [main] Wire.java:70                      >> "[\r][\n]"
+2013-04-27 19:03:06.471 DEBUG [main] Wire.java:84                      >> "<?xml version="1.0" encoding="UTF-8" standalone="no"?><D:propfind xmlns:D="DAV:"><D:allprop/></D:propfind>"
+2013-04-27 19:03:06.471 DEBUG [main] EntityEnclosingMethod.java:508    Request body sent
+2013-04-27 19:03:06.645 DEBUG [main] Wire.java:70                      << "HTTP/1.1 401 Unauthorized[\r][\n]"
+2013-04-27 19:03:06.647 DEBUG [main] Wire.java:70                      << "HTTP/1.1 401 Unauthorized[\r][\n]"
+2013-04-27 19:03:06.652 DEBUG [main] Wire.java:70                      << "Date: Sat, 27 Apr 2013 18:00:00 GMT[\r][\n]"
+2013-04-27 19:03:06.654 DEBUG [main] Wire.java:70                      << "Server: Apache/2.2.22 (Ubuntu)[\r][\n]"
+2013-04-27 19:03:06.655 DEBUG [main] Wire.java:70                      << "X-Powered-By: PHP/5.4.6-1ubuntu1.2[\r][\n]"
+2013-04-27 19:03:06.657 DEBUG [main] Wire.java:70                      << "Set-Cookie: 514725f796586=hqflqr9l6e9knipd3q8qck3b11; path=/; HttpOnly[\r][\n]"
+2013-04-27 19:03:06.659 DEBUG [main] Wire.java:70                      << "Expires: Thu, 19 Nov 1981 08:52:00 GMT[\r][\n]"
+2013-04-27 19:03:06.661 DEBUG [main] Wire.java:70                      << "Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0[\r][\n]"
+2013-04-27 19:03:06.662 DEBUG [main] Wire.java:70                      << "Pragma: no-cache[\r][\n]"
+2013-04-27 19:03:06.663 DEBUG [main] Wire.java:70                      << "WWW-Authenticate: Basic realm="ownCloud"[\r][\n]"
+2013-04-27 19:03:06.664 DEBUG [main] Wire.java:70                      << "Content-Length: 291[\r][\n]"
+2013-04-27 19:03:06.666 DEBUG [main] Wire.java:70                      << "Content-Type: application/xml; charset=utf-8[\r][\n]"
+2013-04-27 19:03:06.667 DEBUG [main] Wire.java:70                      << "[\r][\n]"
+2013-04-27 19:03:06.673 DEBUG [main] CookieSpecBase.java:337           Unrecognized cookie attribute: name=HttpOnly, value=null
+2013-04-27 19:03:06.674 DEBUG [main] HttpMethodBase.java:1651          Cookie accepted: "$Version=0; 514725f796586=hqflqr9l6e9knipd3q8qck3b11; $Path=/"
+2013-04-27 19:03:06.675 DEBUG [main] HttpMethodDirector.java:843       Authorization required
+2013-04-27 19:03:06.686 DEBUG [main] AuthChallengeProcessor.java:90    Supported authentication schemes in the order of preference: [ntlm, digest, basic]
+2013-04-27 19:03:06.690 DEBUG [main] AuthChallengeProcessor.java:111   Challenge for ntlm authentication scheme not available
+2013-04-27 19:03:06.690 DEBUG [main] AuthChallengeProcessor.java:111   Challenge for digest authentication scheme not available
+2013-04-27 19:03:06.690 INFO  [main] AuthChallengeProcessor.java:101   basic authentication scheme selected
+2013-04-27 19:03:06.692 DEBUG [main] AuthChallengeProcessor.java:155   Using authentication scheme: basic
+2013-04-27 19:03:06.693 DEBUG [main] AuthChallengeProcessor.java:163   Authorization challenge processed
+2013-04-27 19:03:06.693 DEBUG [main] HttpMethodDirector.java:714       Authentication scope: BASIC 'ownCloud'@proj135.istic.univ-rennes1.fr:80
+2013-04-27 19:03:06.693 DEBUG [main] HttpMethodDirector.java:194       Retry authentication
+2013-04-27 19:03:06.694 DEBUG [main] Wire.java:70                      << "<?xml version="1.0" encoding="utf-8"?>[\n]"
+2013-04-27 19:03:06.695 DEBUG [main] Wire.java:70                      << "<d:error xmlns:d="DAV:" xmlns:s="http://sabredav.org/ns">[\n]"
+2013-04-27 19:03:06.695 DEBUG [main] Wire.java:70                      << "  <s:exception>Sabre_DAV_Exception_NotAuthenticated</s:exception>[\n]"
+2013-04-27 19:03:06.695 DEBUG [main] Wire.java:70                      << "  <s:message>No basic authentication headers were found</s:message>[\n]"
+2013-04-27 19:03:06.700 DEBUG [main] Wire.java:70                      << "  <s:sabredav-version>1.7.5</s:sabredav-version>[\n]"
+2013-04-27 19:03:06.700 DEBUG [main] Wire.java:70                      << "</d:error>[\n]"
+2013-04-27 19:03:06.701 DEBUG [main] HttpMethodBase.java:1024          Resorting to protocol version default close connection policy
+2013-04-27 19:03:06.701 DEBUG [main] HttpMethodBase.java:1028          Should NOT close connection, using HTTP/1.1
+2013-04-27 19:03:06.701 DEBUG [main] HttpMethodDirector.java:278       Authenticating with BASIC 'ownCloud'@proj135.istic.univ-rennes1.fr:80
+2013-04-27 19:03:06.702 DEBUG [main] HttpMethodParams.java:384         Credential charset not configured, using HTTP element charset
+2013-04-27 19:03:06.711 DEBUG [main] Wire.java:70                      >> "PROPFIND /owncloud/files/webdav.php HTTP/1.1[\r][\n]"
+2013-04-27 19:03:06.711 DEBUG [main] HttpMethodBase.java:1352          Adding Host request header
+2013-04-27 19:03:06.712 DEBUG [main] Wire.java:70                      >> "Depth: 1[\r][\n]"
+2013-04-27 19:03:06.712 DEBUG [main] Wire.java:70                      >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+2013-04-27 19:03:06.713 DEBUG [main] Wire.java:70                      >> "Content-Length: 106[\r][\n]"
+2013-04-27 19:03:06.713 DEBUG [main] Wire.java:70                      >> "Content-Type: text/xml; charset=UTF-8[\r][\n]"
+2013-04-27 19:03:06.713 DEBUG [main] Wire.java:70                      >> "Authorization: Basic UGxvdzpNb3Vqb25Ccm91aCE=[\r][\n]"
+2013-04-27 19:03:06.714 DEBUG [main] Wire.java:70                      >> "Host: proj135.istic.univ-rennes1.fr[\r][\n]"
+2013-04-27 19:03:06.714 DEBUG [main] Wire.java:70                      >> "Cookie: $Version=0; 514725f796586=hqflqr9l6e9knipd3q8qck3b11; $Path=/[\r][\n]"
+2013-04-27 19:03:06.715 DEBUG [main] Wire.java:70                      >> "[\r][\n]"
+2013-04-27 19:03:06.715 DEBUG [main] Wire.java:84                      >> "<?xml version="1.0" encoding="UTF-8" standalone="no"?><D:propfind xmlns:D="DAV:"><D:allprop/></D:propfind>"
+2013-04-27 19:03:06.716 DEBUG [main] EntityEnclosingMethod.java:508    Request body sent
+2013-04-27 19:03:06.903 DEBUG [main] Wire.java:70                      << "HTTP/1.1 207 Multi-Status[\r][\n]"
+2013-04-27 19:03:06.905 DEBUG [main] Wire.java:70                      << "HTTP/1.1 207 Multi-Status[\r][\n]"
+2013-04-27 19:03:06.907 DEBUG [main] Wire.java:70                      << "Date: Sat, 27 Apr 2013 18:00:00 GMT[\r][\n]"
+2013-04-27 19:03:06.908 DEBUG [main] Wire.java:70                      << "Server: Apache/2.2.22 (Ubuntu)[\r][\n]"
+2013-04-27 19:03:06.909 DEBUG [main] Wire.java:70                      << "X-Powered-By: PHP/5.4.6-1ubuntu1.2[\r][\n]"
+2013-04-27 19:03:06.910 DEBUG [main] Wire.java:70                      << "Expires: Thu, 19 Nov 1981 08:52:00 GMT[\r][\n]"
+2013-04-27 19:03:06.911 DEBUG [main] Wire.java:70                      << "Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0[\r][\n]"
+2013-04-27 19:03:06.912 DEBUG [main] Wire.java:70                      << "Pragma: no-cache[\r][\n]"
+2013-04-27 19:03:06.914 DEBUG [main] Wire.java:70                      << "Set-Cookie: 514725f796586=5hs6tl450php4afr5c4akalpq3; path=/; HttpOnly[\r][\n]"
+2013-04-27 19:03:06.917 DEBUG [main] Wire.java:70                      << "Vary: Brief,Prefer[\r][\n]"
+2013-04-27 19:03:06.918 DEBUG [main] Wire.java:70                      << "DAV: 1, 3, extended-mkcol, 2[\r][\n]"
+2013-04-27 19:03:06.919 DEBUG [main] Wire.java:70                      << "Content-Length: 1300[\r][\n]"
+2013-04-27 19:03:06.920 DEBUG [main] Wire.java:70                      << "Content-Type: application/xml; charset=utf-8[\r][\n]"
+2013-04-27 19:03:06.921 DEBUG [main] Wire.java:70                      << "[\r][\n]"
+2013-04-27 19:03:06.923 DEBUG [main] CookieSpecBase.java:337           Unrecognized cookie attribute: name=HttpOnly, value=null
+2013-04-27 19:03:06.924 DEBUG [main] HttpMethodBase.java:1651          Cookie accepted: "$Version=0; 514725f796586=5hs6tl450php4afr5c4akalpq3; $Path=/"
+2013-04-27 19:03:06.931 DEBUG [main] Wire.java:84                      << "<"
+2013-04-27 19:03:06.932 DEBUG [main] Wire.java:84                      << "?"
+2013-04-27 19:03:06.933 DEBUG [main] Wire.java:84                      << "x"
+2013-04-27 19:03:06.934 DEBUG [main] Wire.java:84                      << "m"
+2013-04-27 19:03:06.936 DEBUG [main] Wire.java:84                      << "l version="1.0" encoding="ut"
+2013-04-27 19:03:06.941 DEBUG [main] Wire.java:84                      << "f"
+2013-04-27 19:03:06.942 DEBUG [main] Wire.java:84                      << "-"
+2013-04-27 19:03:06.942 DEBUG [main] Wire.java:84                      << "8"
+2013-04-27 19:03:06.942 DEBUG [main] Wire.java:84                      << """
+2013-04-27 19:03:06.943 DEBUG [main] Wire.java:84                      << "?"
+2013-04-27 19:03:06.943 DEBUG [main] Wire.java:84                      << ">"
+2013-04-27 19:03:06.943 DEBUG [main] Wire.java:70                      << "[\n]"
+2013-04-27 19:03:06.945 DEBUG [main] Wire.java:70                      << "<d:multistatus xmlns:d="DAV:" xmlns:s="http://sabredav.org/ns"><d:response><d:href>/owncloud/files/webdav.php/</d:href><d:propstat><d:prop><d:getetag>"517c11b19ed56"</d:getetag><d:getlastmodified>Sat, 27 Apr 2013 17:57:59 GMT</d:getlastmodified><d:resourcetype><d:collection/></d:resourcetype><d:quota-used-bytes>0</d:quota-used-bytes><d:quota-available-bytes>63076102144</d:quota-available-bytes></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response><d:response><d:href>/owncloud/files/webdav.php/doc/</d:href><d:propstat><d:prop><d:getetag>"515076825122c"</d:getetag><d:getlastmodified>Mon, 25 Mar 2013 16:08:33 GMT</d:getlastmodified><d:resourcetype><d:collection/></d:resourcetype><d:quota-used-bytes>0</d:quota-used-bytes><d:quota-available-bytes>63076102144</d:quota-available-bytes></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response><d:response><d:href>/owncloud/files/webdav.php/file1</d:href><d:propstat><d:prop><d:getetag>"51507671eb070"</d:getetag><d:getlastmodified>Mon, 25 Mar 2013 16:08:17 GMT</d:getlastmodified><d:getcontentlength>0</d:getcontentlength><d:resourcetype/><d:getcontenttype>inode/x-empty</d:getcontenttype></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response></d:multistatus>[\n]"
+2013-04-27 19:03:06.947 DEBUG [main] HttpMethodBase.java:1024          Resorting to protocol version default close connection policy
+2013-04-27 19:03:06.948 DEBUG [main] HttpMethodBase.java:1028          Should NOT close connection, using HTTP/1.1
+2013-04-27 19:03:06.964 DEBUG [main] HttpConnection.java:1178          Releasing connection back to connection manager.
+2013-04-27 19:03:06.965 DEBUG [main] MultiThreadedHttpConnectionManager.java:979 Freeing connection, hostConfig=HostConfiguration[host=http://proj135.istic.univ-rennes1.fr]
+2013-04-27 19:03:06.965 DEBUG [main] IdleConnectionHandler.java:76     Adding connection at: 1367082186965
+2013-04-27 19:03:06.965 DEBUG [main] MultiThreadedHttpConnectionManager.java:961 Notifying no-one, there are no waiting threads
+2013-04-27 19:03:44.742 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.useragent = Jakarta Commons-HttpClient/3.1
+2013-04-27 19:03:44.749 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.version = HTTP/1.1
+2013-04-27 19:03:44.751 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.connection-manager.class = class org.apache.commons.httpclient.SimpleHttpConnectionManager
+2013-04-27 19:03:44.752 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.cookie-policy = default
+2013-04-27 19:03:44.752 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.element-charset = US-ASCII
+2013-04-27 19:03:44.752 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.content-charset = ISO-8859-1
+2013-04-27 19:03:44.753 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.method.retry-handler = org.apache.commons.httpclient.DefaultHttpMethodRetryHandler@69922b29
+2013-04-27 19:03:44.754 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.dateparser.patterns = [EEE, dd MMM yyyy HH:mm:ss zzz, EEEE, dd-MMM-yy HH:mm:ss zzz, EEE MMM d HH:mm:ss yyyy, EEE, dd-MMM-yyyy HH:mm:ss z, EEE, dd-MMM-yyyy HH-mm-ss z, EEE, dd MMM yy HH:mm:ss z, EEE dd-MMM-yyyy HH:mm:ss z, EEE dd MMM yyyy HH:mm:ss z, EEE dd-MMM-yyyy HH-mm-ss z, EEE dd-MMM-yy HH:mm:ss z, EEE dd MMM yy HH:mm:ss z, EEE,dd-MMM-yy HH:mm:ss z, EEE,dd-MMM-yyyy HH:mm:ss z, EEE, dd-MM-yyyy HH:mm:ss z]
+2013-04-27 19:03:44.766 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.connection-manager.max-per-host = {HostConfiguration[host=http://http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php]=20}
+2013-04-27 19:03:44.767 DEBUG [main] HttpClient.java:72                Java version: 1.7.0_21
+2013-04-27 19:03:44.767 DEBUG [main] HttpClient.java:73                Java vendor: Oracle Corporation
+2013-04-27 19:03:44.767 DEBUG [main] HttpClient.java:74                Java class path: /home/thibaud/workspace/MyOAK/Services/bin:/home/thibaud/workspace/LIB/jackrabbit-standalone-2.6.0.jar
+2013-04-27 19:03:44.767 DEBUG [main] HttpClient.java:75                Operating system name: Linux
+2013-04-27 19:03:44.768 DEBUG [main] HttpClient.java:76                Operating system architecture: amd64
+2013-04-27 19:03:44.768 DEBUG [main] HttpClient.java:77                Operating system version: 3.5.0-17-generic
+2013-04-27 19:03:44.824 DEBUG [main] HttpClient.java:82                SUN 1.7: SUN (DSA key/parameter generation; DSA signing; SHA-1, MD5 digests; SecureRandom; X.509 certificates; JKS keystore; PKIX CertPathValidator; PKIX CertPathBuilder; LDAP, Collection CertStores, JavaPolicy Policy; JavaLoginConfig Configuration)
+2013-04-27 19:03:44.825 DEBUG [main] HttpClient.java:82                SunRsaSign 1.7: Sun RSA signature provider
+2013-04-27 19:03:44.825 DEBUG [main] HttpClient.java:82                SunJSSE 1.7: Sun JSSE provider(PKCS12, SunX509 key/trust factories, SSLv3, TLSv1)
+2013-04-27 19:03:44.825 DEBUG [main] HttpClient.java:82                SunJCE 1.7: SunJCE Provider (implements RSA, DES, Triple DES, AES, Blowfish, ARCFOUR, RC2, PBE, Diffie-Hellman, HMAC)
+2013-04-27 19:03:44.825 DEBUG [main] HttpClient.java:82                SunJGSS 1.7: Sun (Kerberos v5, SPNEGO)
+2013-04-27 19:03:44.826 DEBUG [main] HttpClient.java:82                SunSASL 1.7: Sun SASL provider(implements client mechanisms for: DIGEST-MD5, GSSAPI, EXTERNAL, PLAIN, CRAM-MD5, NTLM; server mechanisms for: DIGEST-MD5, GSSAPI, CRAM-MD5, NTLM)
+2013-04-27 19:03:44.826 DEBUG [main] HttpClient.java:82                XMLDSig 1.0: XMLDSig (DOM XMLSignatureFactory; DOM KeyInfoFactory)
+2013-04-27 19:03:44.826 DEBUG [main] HttpClient.java:82                SunPCSC 1.7: Sun PC/SC provider
+2013-04-27 19:03:44.826 DEBUG [main] HttpClient.java:82                SunPKCS11-NSS 1.7: SunPKCS11-NSS using library null
+2013-04-27 19:03:44.865 DEBUG [main] MultiThreadedHttpConnectionManager.java:412 HttpConnectionManager.getConnection:  config = HostConfiguration[host=http://http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php], timeout = 0
+2013-04-27 19:03:44.866 DEBUG [main] MultiThreadedHttpConnectionManager.java:760 Allocating new connection, hostConfig=HostConfiguration[host=http://http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php]
+2013-04-27 19:03:44.871 DEBUG [main] HttpConnection.java:692           Open connection to http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php:80
+2013-04-27 19:03:50.073 DEBUG [main] HttpMethodDirector.java:404       Closing the connection.
+2013-04-27 19:03:50.076 DEBUG [main] HttpMethodDirector.java:434       Method retry handler returned false. Automatic recovery will not be attempted
+2013-04-27 19:03:50.077 DEBUG [main] HttpConnection.java:1178          Releasing connection back to connection manager.
+2013-04-27 19:03:50.078 DEBUG [main] MultiThreadedHttpConnectionManager.java:979 Freeing connection, hostConfig=HostConfiguration[host=http://http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php]
+2013-04-27 19:03:50.079 DEBUG [main] IdleConnectionHandler.java:76     Adding connection at: 1367082230079
+2013-04-27 19:03:50.080 DEBUG [main] MultiThreadedHttpConnectionManager.java:961 Notifying no-one, there are no waiting threads
+2013-04-27 19:03:50.144 DEBUG [main] MultiThreadedHttpConnectionManager.java:412 HttpConnectionManager.getConnection:  config = HostConfiguration[host=http://proj135.istic.univ-rennes1.fr], timeout = 0
+2013-04-27 19:03:50.148 DEBUG [main] MultiThreadedHttpConnectionManager.java:760 Allocating new connection, hostConfig=HostConfiguration[host=http://proj135.istic.univ-rennes1.fr]
+2013-04-27 19:03:50.148 DEBUG [main] HttpConnection.java:692           Open connection to proj135.istic.univ-rennes1.fr:80
+2013-04-27 19:03:50.195 DEBUG [main] Wire.java:70                      >> "PROPFIND /owncloud/files/webdav.php HTTP/1.1[\r][\n]"
+2013-04-27 19:03:50.196 DEBUG [main] HttpMethodBase.java:1352          Adding Host request header
+2013-04-27 19:03:50.223 DEBUG [main] Wire.java:70                      >> "Depth: 1[\r][\n]"
+2013-04-27 19:03:50.226 DEBUG [main] Wire.java:70                      >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+2013-04-27 19:03:50.226 DEBUG [main] Wire.java:70                      >> "Host: proj135.istic.univ-rennes1.fr[\r][\n]"
+2013-04-27 19:03:50.227 DEBUG [main] Wire.java:70                      >> "Content-Length: 106[\r][\n]"
+2013-04-27 19:03:50.227 DEBUG [main] Wire.java:70                      >> "Content-Type: text/xml; charset=UTF-8[\r][\n]"
+2013-04-27 19:03:50.227 DEBUG [main] Wire.java:70                      >> "[\r][\n]"
+2013-04-27 19:03:50.228 DEBUG [main] Wire.java:84                      >> "<?xml version="1.0" encoding="UTF-8" standalone="no"?><D:propfind xmlns:D="DAV:"><D:allprop/></D:propfind>"
+2013-04-27 19:03:50.228 DEBUG [main] EntityEnclosingMethod.java:508    Request body sent
+2013-04-27 19:03:50.395 DEBUG [main] Wire.java:70                      << "HTTP/1.1 401 Unauthorized[\r][\n]"
+2013-04-27 19:03:50.395 DEBUG [main] Wire.java:70                      << "HTTP/1.1 401 Unauthorized[\r][\n]"
+2013-04-27 19:03:50.397 DEBUG [main] Wire.java:70                      << "Date: Sat, 27 Apr 2013 18:00:44 GMT[\r][\n]"
+2013-04-27 19:03:50.397 DEBUG [main] Wire.java:70                      << "Server: Apache/2.2.22 (Ubuntu)[\r][\n]"
+2013-04-27 19:03:50.397 DEBUG [main] Wire.java:70                      << "X-Powered-By: PHP/5.4.6-1ubuntu1.2[\r][\n]"
+2013-04-27 19:03:50.397 DEBUG [main] Wire.java:70                      << "Set-Cookie: 514725f796586=s9aq65f5mhtc91n6c1u7avm5k6; path=/; HttpOnly[\r][\n]"
+2013-04-27 19:03:50.398 DEBUG [main] Wire.java:70                      << "Expires: Thu, 19 Nov 1981 08:52:00 GMT[\r][\n]"
+2013-04-27 19:03:50.399 DEBUG [main] Wire.java:70                      << "Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0[\r][\n]"
+2013-04-27 19:03:50.400 DEBUG [main] Wire.java:70                      << "Pragma: no-cache[\r][\n]"
+2013-04-27 19:03:50.400 DEBUG [main] Wire.java:70                      << "WWW-Authenticate: Basic realm="ownCloud"[\r][\n]"
+2013-04-27 19:03:50.401 DEBUG [main] Wire.java:70                      << "Content-Length: 291[\r][\n]"
+2013-04-27 19:03:50.404 DEBUG [main] Wire.java:70                      << "Content-Type: application/xml; charset=utf-8[\r][\n]"
+2013-04-27 19:03:50.404 DEBUG [main] Wire.java:70                      << "[\r][\n]"
+2013-04-27 19:03:50.414 DEBUG [main] CookieSpecBase.java:337           Unrecognized cookie attribute: name=HttpOnly, value=null
+2013-04-27 19:03:50.415 DEBUG [main] HttpMethodBase.java:1651          Cookie accepted: "$Version=0; 514725f796586=s9aq65f5mhtc91n6c1u7avm5k6; $Path=/"
+2013-04-27 19:03:50.418 DEBUG [main] HttpMethodDirector.java:843       Authorization required
+2013-04-27 19:03:50.437 DEBUG [main] AuthChallengeProcessor.java:90    Supported authentication schemes in the order of preference: [ntlm, digest, basic]
+2013-04-27 19:03:50.437 DEBUG [main] AuthChallengeProcessor.java:111   Challenge for ntlm authentication scheme not available
+2013-04-27 19:03:50.437 DEBUG [main] AuthChallengeProcessor.java:111   Challenge for digest authentication scheme not available
+2013-04-27 19:03:50.438 INFO  [main] AuthChallengeProcessor.java:101   basic authentication scheme selected
+2013-04-27 19:03:50.438 DEBUG [main] AuthChallengeProcessor.java:155   Using authentication scheme: basic
+2013-04-27 19:03:50.439 DEBUG [main] AuthChallengeProcessor.java:163   Authorization challenge processed
+2013-04-27 19:03:50.439 DEBUG [main] HttpMethodDirector.java:714       Authentication scope: BASIC 'ownCloud'@proj135.istic.univ-rennes1.fr:80
+2013-04-27 19:03:50.440 DEBUG [main] HttpMethodDirector.java:194       Retry authentication
+2013-04-27 19:03:50.441 DEBUG [main] Wire.java:70                      << "<?xml version="1.0" encoding="utf-8"?>[\n]"
+2013-04-27 19:03:50.441 DEBUG [main] Wire.java:70                      << "<d:error xmlns:d="DAV:" xmlns:s="http://sabredav.org/ns">[\n]"
+2013-04-27 19:03:50.441 DEBUG [main] Wire.java:70                      << "  <s:exception>Sabre_DAV_Exception_NotAuthenticated</s:exception>[\n]"
+2013-04-27 19:03:50.441 DEBUG [main] Wire.java:70                      << "  <s:message>No basic authentication headers were found</s:message>[\n]"
+2013-04-27 19:03:50.442 DEBUG [main] Wire.java:70                      << "  <s:sabredav-version>1.7.5</s:sabredav-version>[\n]"
+2013-04-27 19:03:50.442 DEBUG [main] Wire.java:70                      << "</d:error>[\n]"
+2013-04-27 19:03:50.442 DEBUG [main] HttpMethodBase.java:1024          Resorting to protocol version default close connection policy
+2013-04-27 19:03:50.443 DEBUG [main] HttpMethodBase.java:1028          Should NOT close connection, using HTTP/1.1
+2013-04-27 19:03:50.443 DEBUG [main] HttpMethodDirector.java:278       Authenticating with BASIC 'ownCloud'@proj135.istic.univ-rennes1.fr:80
+2013-04-27 19:03:50.443 DEBUG [main] HttpMethodParams.java:384         Credential charset not configured, using HTTP element charset
+2013-04-27 19:03:50.450 DEBUG [main] Wire.java:70                      >> "PROPFIND /owncloud/files/webdav.php HTTP/1.1[\r][\n]"
+2013-04-27 19:03:50.450 DEBUG [main] HttpMethodBase.java:1352          Adding Host request header
+2013-04-27 19:03:50.451 DEBUG [main] Wire.java:70                      >> "Depth: 1[\r][\n]"
+2013-04-27 19:03:50.451 DEBUG [main] Wire.java:70                      >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+2013-04-27 19:03:50.452 DEBUG [main] Wire.java:70                      >> "Content-Length: 106[\r][\n]"
+2013-04-27 19:03:50.452 DEBUG [main] Wire.java:70                      >> "Content-Type: text/xml; charset=UTF-8[\r][\n]"
+2013-04-27 19:03:50.452 DEBUG [main] Wire.java:70                      >> "Authorization: Basic UGxvdzpNb3Vqb25Ccm91aCE=[\r][\n]"
+2013-04-27 19:03:50.452 DEBUG [main] Wire.java:70                      >> "Host: proj135.istic.univ-rennes1.fr[\r][\n]"
+2013-04-27 19:03:50.453 DEBUG [main] Wire.java:70                      >> "Cookie: $Version=0; 514725f796586=s9aq65f5mhtc91n6c1u7avm5k6; $Path=/[\r][\n]"
+2013-04-27 19:03:50.453 DEBUG [main] Wire.java:70                      >> "[\r][\n]"
+2013-04-27 19:03:50.454 DEBUG [main] Wire.java:84                      >> "<?xml version="1.0" encoding="UTF-8" standalone="no"?><D:propfind xmlns:D="DAV:"><D:allprop/></D:propfind>"
+2013-04-27 19:03:50.454 DEBUG [main] EntityEnclosingMethod.java:508    Request body sent
+2013-04-27 19:03:50.635 DEBUG [main] Wire.java:70                      << "HTTP/1.1 207 Multi-Status[\r][\n]"
+2013-04-27 19:03:50.636 DEBUG [main] Wire.java:70                      << "HTTP/1.1 207 Multi-Status[\r][\n]"
+2013-04-27 19:03:50.636 DEBUG [main] Wire.java:70                      << "Date: Sat, 27 Apr 2013 18:00:44 GMT[\r][\n]"
+2013-04-27 19:03:50.637 DEBUG [main] Wire.java:70                      << "Server: Apache/2.2.22 (Ubuntu)[\r][\n]"
+2013-04-27 19:03:50.637 DEBUG [main] Wire.java:70                      << "X-Powered-By: PHP/5.4.6-1ubuntu1.2[\r][\n]"
+2013-04-27 19:03:50.637 DEBUG [main] Wire.java:70                      << "Expires: Thu, 19 Nov 1981 08:52:00 GMT[\r][\n]"
+2013-04-27 19:03:50.637 DEBUG [main] Wire.java:70                      << "Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0[\r][\n]"
+2013-04-27 19:03:50.637 DEBUG [main] Wire.java:70                      << "Pragma: no-cache[\r][\n]"
+2013-04-27 19:03:50.638 DEBUG [main] Wire.java:70                      << "Set-Cookie: 514725f796586=o96drqg8cr5a043tt255c6tpi3; path=/; HttpOnly[\r][\n]"
+2013-04-27 19:03:50.638 DEBUG [main] Wire.java:70                      << "Vary: Brief,Prefer[\r][\n]"
+2013-04-27 19:03:50.638 DEBUG [main] Wire.java:70                      << "DAV: 1, 3, extended-mkcol, 2[\r][\n]"
+2013-04-27 19:03:50.639 DEBUG [main] Wire.java:70                      << "Content-Length: 1300[\r][\n]"
+2013-04-27 19:03:50.639 DEBUG [main] Wire.java:70                      << "Content-Type: application/xml; charset=utf-8[\r][\n]"
+2013-04-27 19:03:50.639 DEBUG [main] Wire.java:70                      << "[\r][\n]"
+2013-04-27 19:03:50.639 DEBUG [main] CookieSpecBase.java:337           Unrecognized cookie attribute: name=HttpOnly, value=null
+2013-04-27 19:03:50.640 DEBUG [main] HttpMethodBase.java:1651          Cookie accepted: "$Version=0; 514725f796586=o96drqg8cr5a043tt255c6tpi3; $Path=/"
+2013-04-27 19:03:50.642 DEBUG [main] Wire.java:84                      << "<"
+2013-04-27 19:03:50.642 DEBUG [main] Wire.java:84                      << "?"
+2013-04-27 19:03:50.643 DEBUG [main] Wire.java:84                      << "x"
+2013-04-27 19:03:50.643 DEBUG [main] Wire.java:84                      << "m"
+2013-04-27 19:03:50.643 DEBUG [main] Wire.java:84                      << "l version="1.0" encoding="ut"
+2013-04-27 19:03:50.646 DEBUG [main] Wire.java:84                      << "f"
+2013-04-27 19:03:50.646 DEBUG [main] Wire.java:84                      << "-"
+2013-04-27 19:03:50.647 DEBUG [main] Wire.java:84                      << "8"
+2013-04-27 19:03:50.647 DEBUG [main] Wire.java:84                      << """
+2013-04-27 19:03:50.647 DEBUG [main] Wire.java:84                      << "?"
+2013-04-27 19:03:50.647 DEBUG [main] Wire.java:84                      << ">"
+2013-04-27 19:03:50.649 DEBUG [main] Wire.java:70                      << "[\n]"
+2013-04-27 19:03:50.650 DEBUG [main] Wire.java:70                      << "<d:multistatus xmlns:d="DAV:" xmlns:s="http://sabredav.org/ns"><d:response><d:href>/owncloud/files/webdav.php/</d:href><d:propstat><d:prop><d:getetag>"517c11b19ed56"</d:getetag><d:getlastmodified>Sat, 27 Apr 2013 17:57:59 GMT</d:getlastmodified><d:resourcetype><d:collection/></d:resourcetype><d:quota-used-bytes>0</d:quota-used-bytes><d:quota-available-bytes>63076102144</d:quota-available-bytes></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response><d:response><d:href>/owncloud/files/webdav.php/doc/</d:href><d:propstat><d:prop><d:getetag>"515076825122c"</d:getetag><d:getlastmodified>Mon, 25 Mar 2013 16:08:33 GMT</d:getlastmodified><d:resourcetype><d:collection/></d:resourcetype><d:quota-used-bytes>0</d:quota-used-bytes><d:quota-available-bytes>63076102144</d:quota-available-bytes></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response><d:response><d:href>/owncloud/files/webdav.php/file1</d:href><d:propstat><d:prop><d:getetag>"51507671eb070"</d:getetag><d:getlastmodified>Mon, 25 Mar 2013 16:08:17 GMT</d:getlastmodified><d:getcontentlength>0</d:getcontentlength><d:resourcetype/><d:getcontenttype>inode/x-empty</d:getcontenttype></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response></d:multistatus>[\n]"
+2013-04-27 19:03:50.651 DEBUG [main] HttpMethodBase.java:1024          Resorting to protocol version default close connection policy
+2013-04-27 19:03:50.656 DEBUG [main] HttpMethodBase.java:1028          Should NOT close connection, using HTTP/1.1
+2013-04-27 19:03:50.683 DEBUG [main] HttpConnection.java:1178          Releasing connection back to connection manager.
+2013-04-27 19:03:50.684 DEBUG [main] MultiThreadedHttpConnectionManager.java:979 Freeing connection, hostConfig=HostConfiguration[host=http://proj135.istic.univ-rennes1.fr]
+2013-04-27 19:03:50.684 DEBUG [main] IdleConnectionHandler.java:76     Adding connection at: 1367082230684
+2013-04-27 19:03:50.684 DEBUG [main] MultiThreadedHttpConnectionManager.java:961 Notifying no-one, there are no waiting threads
+2013-04-27 19:04:02.511 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.useragent = Jakarta Commons-HttpClient/3.1
+2013-04-27 19:04:02.518 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.version = HTTP/1.1
+2013-04-27 19:04:02.519 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.connection-manager.class = class org.apache.commons.httpclient.SimpleHttpConnectionManager
+2013-04-27 19:04:02.519 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.cookie-policy = default
+2013-04-27 19:04:02.519 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.element-charset = US-ASCII
+2013-04-27 19:04:02.519 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.content-charset = ISO-8859-1
+2013-04-27 19:04:02.521 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.method.retry-handler = org.apache.commons.httpclient.DefaultHttpMethodRetryHandler@69922b29
+2013-04-27 19:04:02.522 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.dateparser.patterns = [EEE, dd MMM yyyy HH:mm:ss zzz, EEEE, dd-MMM-yy HH:mm:ss zzz, EEE MMM d HH:mm:ss yyyy, EEE, dd-MMM-yyyy HH:mm:ss z, EEE, dd-MMM-yyyy HH-mm-ss z, EEE, dd MMM yy HH:mm:ss z, EEE dd-MMM-yyyy HH:mm:ss z, EEE dd MMM yyyy HH:mm:ss z, EEE dd-MMM-yyyy HH-mm-ss z, EEE dd-MMM-yy HH:mm:ss z, EEE dd MMM yy HH:mm:ss z, EEE,dd-MMM-yy HH:mm:ss z, EEE,dd-MMM-yyyy HH:mm:ss z, EEE, dd-MM-yyyy HH:mm:ss z]
+2013-04-27 19:04:02.535 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.connection-manager.max-per-host = {HostConfiguration[host=http://http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php]=20}
+2013-04-27 19:04:02.536 DEBUG [main] HttpClient.java:72                Java version: 1.7.0_21
+2013-04-27 19:04:02.536 DEBUG [main] HttpClient.java:73                Java vendor: Oracle Corporation
+2013-04-27 19:04:02.536 DEBUG [main] HttpClient.java:74                Java class path: /home/thibaud/workspace/MyOAK/Services/bin:/home/thibaud/workspace/LIB/jackrabbit-standalone-2.6.0.jar
+2013-04-27 19:04:02.537 DEBUG [main] HttpClient.java:75                Operating system name: Linux
+2013-04-27 19:04:02.537 DEBUG [main] HttpClient.java:76                Operating system architecture: amd64
+2013-04-27 19:04:02.537 DEBUG [main] HttpClient.java:77                Operating system version: 3.5.0-17-generic
+2013-04-27 19:04:02.602 DEBUG [main] HttpClient.java:82                SUN 1.7: SUN (DSA key/parameter generation; DSA signing; SHA-1, MD5 digests; SecureRandom; X.509 certificates; JKS keystore; PKIX CertPathValidator; PKIX CertPathBuilder; LDAP, Collection CertStores, JavaPolicy Policy; JavaLoginConfig Configuration)
+2013-04-27 19:04:02.602 DEBUG [main] HttpClient.java:82                SunRsaSign 1.7: Sun RSA signature provider
+2013-04-27 19:04:02.603 DEBUG [main] HttpClient.java:82                SunJSSE 1.7: Sun JSSE provider(PKCS12, SunX509 key/trust factories, SSLv3, TLSv1)
+2013-04-27 19:04:02.603 DEBUG [main] HttpClient.java:82                SunJCE 1.7: SunJCE Provider (implements RSA, DES, Triple DES, AES, Blowfish, ARCFOUR, RC2, PBE, Diffie-Hellman, HMAC)
+2013-04-27 19:04:02.603 DEBUG [main] HttpClient.java:82                SunJGSS 1.7: Sun (Kerberos v5, SPNEGO)
+2013-04-27 19:04:02.603 DEBUG [main] HttpClient.java:82                SunSASL 1.7: Sun SASL provider(implements client mechanisms for: DIGEST-MD5, GSSAPI, EXTERNAL, PLAIN, CRAM-MD5, NTLM; server mechanisms for: DIGEST-MD5, GSSAPI, CRAM-MD5, NTLM)
+2013-04-27 19:04:02.603 DEBUG [main] HttpClient.java:82                XMLDSig 1.0: XMLDSig (DOM XMLSignatureFactory; DOM KeyInfoFactory)
+2013-04-27 19:04:02.603 DEBUG [main] HttpClient.java:82                SunPCSC 1.7: Sun PC/SC provider
+2013-04-27 19:04:02.604 DEBUG [main] HttpClient.java:82                SunPKCS11-NSS 1.7: SunPKCS11-NSS using library null
+2013-04-27 19:04:02.654 DEBUG [main] MultiThreadedHttpConnectionManager.java:412 HttpConnectionManager.getConnection:  config = HostConfiguration[host=http://http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php], timeout = 0
+2013-04-27 19:04:02.656 DEBUG [main] MultiThreadedHttpConnectionManager.java:760 Allocating new connection, hostConfig=HostConfiguration[host=http://http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php]
+2013-04-27 19:04:02.663 DEBUG [main] HttpConnection.java:692           Open connection to http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php:80
+2013-04-27 19:04:07.161 DEBUG [main] HttpMethodDirector.java:404       Closing the connection.
+2013-04-27 19:04:07.162 DEBUG [main] HttpMethodDirector.java:434       Method retry handler returned false. Automatic recovery will not be attempted
+2013-04-27 19:04:07.164 DEBUG [main] HttpConnection.java:1178          Releasing connection back to connection manager.
+2013-04-27 19:04:07.165 DEBUG [main] MultiThreadedHttpConnectionManager.java:979 Freeing connection, hostConfig=HostConfiguration[host=http://http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php]
+2013-04-27 19:04:07.167 DEBUG [main] IdleConnectionHandler.java:76     Adding connection at: 1367082247166
+2013-04-27 19:04:07.168 DEBUG [main] MultiThreadedHttpConnectionManager.java:961 Notifying no-one, there are no waiting threads
+2013-04-27 19:04:07.240 DEBUG [main] MultiThreadedHttpConnectionManager.java:412 HttpConnectionManager.getConnection:  config = HostConfiguration[host=http://proj135.istic.univ-rennes1.fr], timeout = 0
+2013-04-27 19:04:07.241 DEBUG [main] MultiThreadedHttpConnectionManager.java:760 Allocating new connection, hostConfig=HostConfiguration[host=http://proj135.istic.univ-rennes1.fr]
+2013-04-27 19:04:07.241 DEBUG [main] HttpConnection.java:692           Open connection to proj135.istic.univ-rennes1.fr:80
+2013-04-27 19:04:07.292 DEBUG [main] Wire.java:70                      >> "PROPFIND /owncloud/files/webdav.php HTTP/1.1[\r][\n]"
+2013-04-27 19:04:07.299 DEBUG [main] HttpMethodBase.java:1352          Adding Host request header
+2013-04-27 19:04:07.319 DEBUG [main] Wire.java:70                      >> "Depth: 1[\r][\n]"
+2013-04-27 19:04:07.319 DEBUG [main] Wire.java:70                      >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+2013-04-27 19:04:07.320 DEBUG [main] Wire.java:70                      >> "Host: proj135.istic.univ-rennes1.fr[\r][\n]"
+2013-04-27 19:04:07.320 DEBUG [main] Wire.java:70                      >> "Content-Length: 106[\r][\n]"
+2013-04-27 19:04:07.320 DEBUG [main] Wire.java:70                      >> "Content-Type: text/xml; charset=UTF-8[\r][\n]"
+2013-04-27 19:04:07.321 DEBUG [main] Wire.java:70                      >> "[\r][\n]"
+2013-04-27 19:04:07.321 DEBUG [main] Wire.java:84                      >> "<?xml version="1.0" encoding="UTF-8" standalone="no"?><D:propfind xmlns:D="DAV:"><D:allprop/></D:propfind>"
+2013-04-27 19:04:07.322 DEBUG [main] EntityEnclosingMethod.java:508    Request body sent
+2013-04-27 19:04:07.470 DEBUG [main] Wire.java:70                      << "HTTP/1.1 401 Unauthorized[\r][\n]"
+2013-04-27 19:04:07.471 DEBUG [main] Wire.java:70                      << "HTTP/1.1 401 Unauthorized[\r][\n]"
+2013-04-27 19:04:07.473 DEBUG [main] Wire.java:70                      << "Date: Sat, 27 Apr 2013 18:01:01 GMT[\r][\n]"
+2013-04-27 19:04:07.474 DEBUG [main] Wire.java:70                      << "Server: Apache/2.2.22 (Ubuntu)[\r][\n]"
+2013-04-27 19:04:07.474 DEBUG [main] Wire.java:70                      << "X-Powered-By: PHP/5.4.6-1ubuntu1.2[\r][\n]"
+2013-04-27 19:04:07.475 DEBUG [main] Wire.java:70                      << "Set-Cookie: 514725f796586=3rhr27ff59p8p3bveimoqphsu7; path=/; HttpOnly[\r][\n]"
+2013-04-27 19:04:07.475 DEBUG [main] Wire.java:70                      << "Expires: Thu, 19 Nov 1981 08:52:00 GMT[\r][\n]"
+2013-04-27 19:04:07.476 DEBUG [main] Wire.java:70                      << "Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0[\r][\n]"
+2013-04-27 19:04:07.476 DEBUG [main] Wire.java:70                      << "Pragma: no-cache[\r][\n]"
+2013-04-27 19:04:07.477 DEBUG [main] Wire.java:70                      << "WWW-Authenticate: Basic realm="ownCloud"[\r][\n]"
+2013-04-27 19:04:07.477 DEBUG [main] Wire.java:70                      << "Content-Length: 291[\r][\n]"
+2013-04-27 19:04:07.479 DEBUG [main] Wire.java:70                      << "Content-Type: application/xml; charset=utf-8[\r][\n]"
+2013-04-27 19:04:07.480 DEBUG [main] Wire.java:70                      << "[\r][\n]"
+2013-04-27 19:04:07.489 DEBUG [main] CookieSpecBase.java:337           Unrecognized cookie attribute: name=HttpOnly, value=null
+2013-04-27 19:04:07.490 DEBUG [main] HttpMethodBase.java:1651          Cookie accepted: "$Version=0; 514725f796586=3rhr27ff59p8p3bveimoqphsu7; $Path=/"
+2013-04-27 19:04:07.492 DEBUG [main] HttpMethodDirector.java:843       Authorization required
+2013-04-27 19:04:07.502 DEBUG [main] AuthChallengeProcessor.java:90    Supported authentication schemes in the order of preference: [ntlm, digest, basic]
+2013-04-27 19:04:07.503 DEBUG [main] AuthChallengeProcessor.java:111   Challenge for ntlm authentication scheme not available
+2013-04-27 19:04:07.503 DEBUG [main] AuthChallengeProcessor.java:111   Challenge for digest authentication scheme not available
+2013-04-27 19:04:07.504 INFO  [main] AuthChallengeProcessor.java:101   basic authentication scheme selected
+2013-04-27 19:04:07.504 DEBUG [main] AuthChallengeProcessor.java:155   Using authentication scheme: basic
+2013-04-27 19:04:07.504 DEBUG [main] AuthChallengeProcessor.java:163   Authorization challenge processed
+2013-04-27 19:04:07.505 DEBUG [main] HttpMethodDirector.java:714       Authentication scope: BASIC 'ownCloud'@proj135.istic.univ-rennes1.fr:80
+2013-04-27 19:04:07.505 DEBUG [main] HttpMethodDirector.java:194       Retry authentication
+2013-04-27 19:04:07.506 DEBUG [main] Wire.java:70                      << "<?xml version="1.0" encoding="utf-8"?>[\n]"
+2013-04-27 19:04:07.506 DEBUG [main] Wire.java:70                      << "<d:error xmlns:d="DAV:" xmlns:s="http://sabredav.org/ns">[\n]"
+2013-04-27 19:04:07.506 DEBUG [main] Wire.java:70                      << "  <s:exception>Sabre_DAV_Exception_NotAuthenticated</s:exception>[\n]"
+2013-04-27 19:04:07.507 DEBUG [main] Wire.java:70                      << "  <s:message>No basic authentication headers were found</s:message>[\n]"
+2013-04-27 19:04:07.507 DEBUG [main] Wire.java:70                      << "  <s:sabredav-version>1.7.5</s:sabredav-version>[\n]"
+2013-04-27 19:04:07.507 DEBUG [main] Wire.java:70                      << "</d:error>[\n]"
+2013-04-27 19:04:07.507 DEBUG [main] HttpMethodBase.java:1024          Resorting to protocol version default close connection policy
+2013-04-27 19:04:07.508 DEBUG [main] HttpMethodBase.java:1028          Should NOT close connection, using HTTP/1.1
+2013-04-27 19:04:07.508 DEBUG [main] HttpMethodDirector.java:278       Authenticating with BASIC 'ownCloud'@proj135.istic.univ-rennes1.fr:80
+2013-04-27 19:04:07.509 DEBUG [main] HttpMethodParams.java:384         Credential charset not configured, using HTTP element charset
+2013-04-27 19:04:07.514 DEBUG [main] Wire.java:70                      >> "PROPFIND /owncloud/files/webdav.php HTTP/1.1[\r][\n]"
+2013-04-27 19:04:07.514 DEBUG [main] HttpMethodBase.java:1352          Adding Host request header
+2013-04-27 19:04:07.515 DEBUG [main] Wire.java:70                      >> "Depth: 1[\r][\n]"
+2013-04-27 19:04:07.515 DEBUG [main] Wire.java:70                      >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+2013-04-27 19:04:07.515 DEBUG [main] Wire.java:70                      >> "Content-Length: 106[\r][\n]"
+2013-04-27 19:04:07.516 DEBUG [main] Wire.java:70                      >> "Content-Type: text/xml; charset=UTF-8[\r][\n]"
+2013-04-27 19:04:07.516 DEBUG [main] Wire.java:70                      >> "Authorization: Basic UGxvdzpNb3Vqb25Ccm91aCE=[\r][\n]"
+2013-04-27 19:04:07.516 DEBUG [main] Wire.java:70                      >> "Host: proj135.istic.univ-rennes1.fr[\r][\n]"
+2013-04-27 19:04:07.516 DEBUG [main] Wire.java:70                      >> "Cookie: $Version=0; 514725f796586=3rhr27ff59p8p3bveimoqphsu7; $Path=/[\r][\n]"
+2013-04-27 19:04:07.516 DEBUG [main] Wire.java:70                      >> "[\r][\n]"
+2013-04-27 19:04:07.517 DEBUG [main] Wire.java:84                      >> "<?xml version="1.0" encoding="UTF-8" standalone="no"?><D:propfind xmlns:D="DAV:"><D:allprop/></D:propfind>"
+2013-04-27 19:04:07.517 DEBUG [main] EntityEnclosingMethod.java:508    Request body sent
+2013-04-27 19:04:07.701 DEBUG [main] Wire.java:70                      << "HTTP/1.1 207 Multi-Status[\r][\n]"
+2013-04-27 19:04:07.703 DEBUG [main] Wire.java:70                      << "HTTP/1.1 207 Multi-Status[\r][\n]"
+2013-04-27 19:04:07.704 DEBUG [main] Wire.java:70                      << "Date: Sat, 27 Apr 2013 18:01:01 GMT[\r][\n]"
+2013-04-27 19:04:07.706 DEBUG [main] Wire.java:70                      << "Server: Apache/2.2.22 (Ubuntu)[\r][\n]"
+2013-04-27 19:04:07.707 DEBUG [main] Wire.java:70                      << "X-Powered-By: PHP/5.4.6-1ubuntu1.2[\r][\n]"
+2013-04-27 19:04:07.708 DEBUG [main] Wire.java:70                      << "Expires: Thu, 19 Nov 1981 08:52:00 GMT[\r][\n]"
+2013-04-27 19:04:07.709 DEBUG [main] Wire.java:70                      << "Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0[\r][\n]"
+2013-04-27 19:04:07.711 DEBUG [main] Wire.java:70                      << "Pragma: no-cache[\r][\n]"
+2013-04-27 19:04:07.712 DEBUG [main] Wire.java:70                      << "Set-Cookie: 514725f796586=fa7p4nkr3q0lc6l2sjjhdv5l27; path=/; HttpOnly[\r][\n]"
+2013-04-27 19:04:07.714 DEBUG [main] Wire.java:70                      << "Vary: Brief,Prefer[\r][\n]"
+2013-04-27 19:04:07.715 DEBUG [main] Wire.java:70                      << "DAV: 1, 3, extended-mkcol, 2[\r][\n]"
+2013-04-27 19:04:07.716 DEBUG [main] Wire.java:70                      << "Content-Length: 1300[\r][\n]"
+2013-04-27 19:04:07.717 DEBUG [main] Wire.java:70                      << "Content-Type: application/xml; charset=utf-8[\r][\n]"
+2013-04-27 19:04:07.719 DEBUG [main] Wire.java:70                      << "[\r][\n]"
+2013-04-27 19:04:07.720 DEBUG [main] CookieSpecBase.java:337           Unrecognized cookie attribute: name=HttpOnly, value=null
+2013-04-27 19:04:07.720 DEBUG [main] HttpMethodBase.java:1651          Cookie accepted: "$Version=0; 514725f796586=fa7p4nkr3q0lc6l2sjjhdv5l27; $Path=/"
+2013-04-27 19:04:07.722 DEBUG [main] Wire.java:84                      << "<"
+2013-04-27 19:04:07.723 DEBUG [main] Wire.java:84                      << "?"
+2013-04-27 19:04:07.723 DEBUG [main] Wire.java:84                      << "x"
+2013-04-27 19:04:07.723 DEBUG [main] Wire.java:84                      << "m"
+2013-04-27 19:04:07.724 DEBUG [main] Wire.java:84                      << "l version="1.0" encoding="ut"
+2013-04-27 19:04:07.727 DEBUG [main] Wire.java:84                      << "f"
+2013-04-27 19:04:07.728 DEBUG [main] Wire.java:84                      << "-"
+2013-04-27 19:04:07.728 DEBUG [main] Wire.java:84                      << "8"
+2013-04-27 19:04:07.729 DEBUG [main] Wire.java:84                      << """
+2013-04-27 19:04:07.729 DEBUG [main] Wire.java:84                      << "?"
+2013-04-27 19:04:07.729 DEBUG [main] Wire.java:84                      << ">"
+2013-04-27 19:04:07.730 DEBUG [main] Wire.java:70                      << "[\n]"
+2013-04-27 19:04:07.731 DEBUG [main] Wire.java:70                      << "<d:multistatus xmlns:d="DAV:" xmlns:s="http://sabredav.org/ns"><d:response><d:href>/owncloud/files/webdav.php/</d:href><d:propstat><d:prop><d:getetag>"517c11b19ed56"</d:getetag><d:getlastmodified>Sat, 27 Apr 2013 17:57:59 GMT</d:getlastmodified><d:resourcetype><d:collection/></d:resourcetype><d:quota-used-bytes>0</d:quota-used-bytes><d:quota-available-bytes>63076093952</d:quota-available-bytes></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response><d:response><d:href>/owncloud/files/webdav.php/doc/</d:href><d:propstat><d:prop><d:getetag>"515076825122c"</d:getetag><d:getlastmodified>Mon, 25 Mar 2013 16:08:33 GMT</d:getlastmodified><d:resourcetype><d:collection/></d:resourcetype><d:quota-used-bytes>0</d:quota-used-bytes><d:quota-available-bytes>63076093952</d:quota-available-bytes></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response><d:response><d:href>/owncloud/files/webdav.php/file1</d:href><d:propstat><d:prop><d:getetag>"51507671eb070"</d:getetag><d:getlastmodified>Mon, 25 Mar 2013 16:08:17 GMT</d:getlastmodified><d:getcontentlength>0</d:getcontentlength><d:resourcetype/><d:getcontenttype>inode/x-empty</d:getcontenttype></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response></d:multistatus>[\n]"
+2013-04-27 19:04:07.733 DEBUG [main] HttpMethodBase.java:1024          Resorting to protocol version default close connection policy
+2013-04-27 19:04:07.733 DEBUG [main] HttpMethodBase.java:1028          Should NOT close connection, using HTTP/1.1
+2013-04-27 19:04:07.752 DEBUG [main] HttpConnection.java:1178          Releasing connection back to connection manager.
+2013-04-27 19:04:07.752 DEBUG [main] MultiThreadedHttpConnectionManager.java:979 Freeing connection, hostConfig=HostConfiguration[host=http://proj135.istic.univ-rennes1.fr]
+2013-04-27 19:04:07.753 DEBUG [main] IdleConnectionHandler.java:76     Adding connection at: 1367082247753
+2013-04-27 19:04:07.753 DEBUG [main] MultiThreadedHttpConnectionManager.java:961 Notifying no-one, there are no waiting threads
+2013-04-27 19:04:41.033 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.useragent = Jakarta Commons-HttpClient/3.1
+2013-04-27 19:04:41.040 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.version = HTTP/1.1
+2013-04-27 19:04:41.041 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.connection-manager.class = class org.apache.commons.httpclient.SimpleHttpConnectionManager
+2013-04-27 19:04:41.042 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.cookie-policy = default
+2013-04-27 19:04:41.042 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.element-charset = US-ASCII
+2013-04-27 19:04:41.042 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.content-charset = ISO-8859-1
+2013-04-27 19:04:41.044 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.method.retry-handler = org.apache.commons.httpclient.DefaultHttpMethodRetryHandler@69922b29
+2013-04-27 19:04:41.045 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.dateparser.patterns = [EEE, dd MMM yyyy HH:mm:ss zzz, EEEE, dd-MMM-yy HH:mm:ss zzz, EEE MMM d HH:mm:ss yyyy, EEE, dd-MMM-yyyy HH:mm:ss z, EEE, dd-MMM-yyyy HH-mm-ss z, EEE, dd MMM yy HH:mm:ss z, EEE dd-MMM-yyyy HH:mm:ss z, EEE dd MMM yyyy HH:mm:ss z, EEE dd-MMM-yyyy HH-mm-ss z, EEE dd-MMM-yy HH:mm:ss z, EEE dd MMM yy HH:mm:ss z, EEE,dd-MMM-yy HH:mm:ss z, EEE,dd-MMM-yyyy HH:mm:ss z, EEE, dd-MM-yyyy HH:mm:ss z]
+2013-04-27 19:04:41.057 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.connection-manager.max-per-host = {HostConfiguration[host=http://http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php]=20}
+2013-04-27 19:04:41.058 DEBUG [main] HttpClient.java:72                Java version: 1.7.0_21
+2013-04-27 19:04:41.058 DEBUG [main] HttpClient.java:73                Java vendor: Oracle Corporation
+2013-04-27 19:04:41.058 DEBUG [main] HttpClient.java:74                Java class path: /home/thibaud/workspace/MyOAK/Services/bin:/home/thibaud/workspace/LIB/jackrabbit-standalone-2.6.0.jar
+2013-04-27 19:04:41.059 DEBUG [main] HttpClient.java:75                Operating system name: Linux
+2013-04-27 19:04:41.059 DEBUG [main] HttpClient.java:76                Operating system architecture: amd64
+2013-04-27 19:04:41.059 DEBUG [main] HttpClient.java:77                Operating system version: 3.5.0-17-generic
+2013-04-27 19:04:41.118 DEBUG [main] HttpClient.java:82                SUN 1.7: SUN (DSA key/parameter generation; DSA signing; SHA-1, MD5 digests; SecureRandom; X.509 certificates; JKS keystore; PKIX CertPathValidator; PKIX CertPathBuilder; LDAP, Collection CertStores, JavaPolicy Policy; JavaLoginConfig Configuration)
+2013-04-27 19:04:41.118 DEBUG [main] HttpClient.java:82                SunRsaSign 1.7: Sun RSA signature provider
+2013-04-27 19:04:41.118 DEBUG [main] HttpClient.java:82                SunJSSE 1.7: Sun JSSE provider(PKCS12, SunX509 key/trust factories, SSLv3, TLSv1)
+2013-04-27 19:04:41.118 DEBUG [main] HttpClient.java:82                SunJCE 1.7: SunJCE Provider (implements RSA, DES, Triple DES, AES, Blowfish, ARCFOUR, RC2, PBE, Diffie-Hellman, HMAC)
+2013-04-27 19:04:41.119 DEBUG [main] HttpClient.java:82                SunJGSS 1.7: Sun (Kerberos v5, SPNEGO)
+2013-04-27 19:04:41.119 DEBUG [main] HttpClient.java:82                SunSASL 1.7: Sun SASL provider(implements client mechanisms for: DIGEST-MD5, GSSAPI, EXTERNAL, PLAIN, CRAM-MD5, NTLM; server mechanisms for: DIGEST-MD5, GSSAPI, CRAM-MD5, NTLM)
+2013-04-27 19:04:41.119 DEBUG [main] HttpClient.java:82                XMLDSig 1.0: XMLDSig (DOM XMLSignatureFactory; DOM KeyInfoFactory)
+2013-04-27 19:04:41.119 DEBUG [main] HttpClient.java:82                SunPCSC 1.7: Sun PC/SC provider
+2013-04-27 19:04:41.119 DEBUG [main] HttpClient.java:82                SunPKCS11-NSS 1.7: SunPKCS11-NSS using library null
+2013-04-27 19:04:41.156 DEBUG [main] MultiThreadedHttpConnectionManager.java:412 HttpConnectionManager.getConnection:  config = HostConfiguration[host=http://http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php], timeout = 0
+2013-04-27 19:04:41.157 DEBUG [main] MultiThreadedHttpConnectionManager.java:760 Allocating new connection, hostConfig=HostConfiguration[host=http://http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php]
+2013-04-27 19:04:41.162 DEBUG [main] HttpConnection.java:692           Open connection to http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php:80
+2013-04-27 19:04:41.244 DEBUG [main] HttpMethodDirector.java:404       Closing the connection.
+2013-04-27 19:04:41.245 DEBUG [main] HttpMethodDirector.java:434       Method retry handler returned false. Automatic recovery will not be attempted
+2013-04-27 19:04:41.245 DEBUG [main] HttpConnection.java:1178          Releasing connection back to connection manager.
+2013-04-27 19:04:41.245 DEBUG [main] MultiThreadedHttpConnectionManager.java:979 Freeing connection, hostConfig=HostConfiguration[host=http://http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php]
+2013-04-27 19:04:41.245 DEBUG [main] IdleConnectionHandler.java:76     Adding connection at: 1367082281245
+2013-04-27 19:04:41.246 DEBUG [main] MultiThreadedHttpConnectionManager.java:961 Notifying no-one, there are no waiting threads
+2013-04-27 19:04:41.291 DEBUG [main] MultiThreadedHttpConnectionManager.java:412 HttpConnectionManager.getConnection:  config = HostConfiguration[host=http://proj135.istic.univ-rennes1.fr], timeout = 0
+2013-04-27 19:04:41.292 DEBUG [main] MultiThreadedHttpConnectionManager.java:760 Allocating new connection, hostConfig=HostConfiguration[host=http://proj135.istic.univ-rennes1.fr]
+2013-04-27 19:04:41.292 DEBUG [main] HttpConnection.java:692           Open connection to proj135.istic.univ-rennes1.fr:80
+2013-04-27 19:04:41.347 DEBUG [main] Wire.java:70                      >> "PROPFIND /owncloud/files/webdav.php HTTP/1.1[\r][\n]"
+2013-04-27 19:04:41.352 DEBUG [main] HttpMethodBase.java:1352          Adding Host request header
+2013-04-27 19:04:41.378 DEBUG [main] Wire.java:70                      >> "Depth: 1[\r][\n]"
+2013-04-27 19:04:41.381 DEBUG [main] Wire.java:70                      >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+2013-04-27 19:04:41.381 DEBUG [main] Wire.java:70                      >> "Host: proj135.istic.univ-rennes1.fr[\r][\n]"
+2013-04-27 19:04:41.382 DEBUG [main] Wire.java:70                      >> "Content-Length: 106[\r][\n]"
+2013-04-27 19:04:41.382 DEBUG [main] Wire.java:70                      >> "Content-Type: text/xml; charset=UTF-8[\r][\n]"
+2013-04-27 19:04:41.382 DEBUG [main] Wire.java:70                      >> "[\r][\n]"
+2013-04-27 19:04:41.383 DEBUG [main] Wire.java:84                      >> "<?xml version="1.0" encoding="UTF-8" standalone="no"?><D:propfind xmlns:D="DAV:"><D:allprop/></D:propfind>"
+2013-04-27 19:04:41.383 DEBUG [main] EntityEnclosingMethod.java:508    Request body sent
+2013-04-27 19:04:41.529 DEBUG [main] Wire.java:70                      << "HTTP/1.1 401 Unauthorized[\r][\n]"
+2013-04-27 19:04:41.531 DEBUG [main] Wire.java:70                      << "HTTP/1.1 401 Unauthorized[\r][\n]"
+2013-04-27 19:04:41.537 DEBUG [main] Wire.java:70                      << "Date: Sat, 27 Apr 2013 18:01:35 GMT[\r][\n]"
+2013-04-27 19:04:41.538 DEBUG [main] Wire.java:70                      << "Server: Apache/2.2.22 (Ubuntu)[\r][\n]"
+2013-04-27 19:04:41.540 DEBUG [main] Wire.java:70                      << "X-Powered-By: PHP/5.4.6-1ubuntu1.2[\r][\n]"
+2013-04-27 19:04:41.542 DEBUG [main] Wire.java:70                      << "Set-Cookie: 514725f796586=s454d51a5aoa3m3u5b3o6g2pm0; path=/; HttpOnly[\r][\n]"
+2013-04-27 19:04:41.543 DEBUG [main] Wire.java:70                      << "Expires: Thu, 19 Nov 1981 08:52:00 GMT[\r][\n]"
+2013-04-27 19:04:41.545 DEBUG [main] Wire.java:70                      << "Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0[\r][\n]"
+2013-04-27 19:04:41.546 DEBUG [main] Wire.java:70                      << "Pragma: no-cache[\r][\n]"
+2013-04-27 19:04:41.547 DEBUG [main] Wire.java:70                      << "WWW-Authenticate: Basic realm="ownCloud"[\r][\n]"
+2013-04-27 19:04:41.548 DEBUG [main] Wire.java:70                      << "Content-Length: 291[\r][\n]"
+2013-04-27 19:04:41.555 DEBUG [main] Wire.java:70                      << "Content-Type: application/xml; charset=utf-8[\r][\n]"
+2013-04-27 19:04:41.556 DEBUG [main] Wire.java:70                      << "[\r][\n]"
+2013-04-27 19:04:41.568 DEBUG [main] CookieSpecBase.java:337           Unrecognized cookie attribute: name=HttpOnly, value=null
+2013-04-27 19:04:41.569 DEBUG [main] HttpMethodBase.java:1651          Cookie accepted: "$Version=0; 514725f796586=s454d51a5aoa3m3u5b3o6g2pm0; $Path=/"
+2013-04-27 19:04:41.571 DEBUG [main] HttpMethodDirector.java:843       Authorization required
+2013-04-27 19:04:41.585 DEBUG [main] AuthChallengeProcessor.java:90    Supported authentication schemes in the order of preference: [ntlm, digest, basic]
+2013-04-27 19:04:41.585 DEBUG [main] AuthChallengeProcessor.java:111   Challenge for ntlm authentication scheme not available
+2013-04-27 19:04:41.586 DEBUG [main] AuthChallengeProcessor.java:111   Challenge for digest authentication scheme not available
+2013-04-27 19:04:41.586 INFO  [main] AuthChallengeProcessor.java:101   basic authentication scheme selected
+2013-04-27 19:04:41.587 DEBUG [main] AuthChallengeProcessor.java:155   Using authentication scheme: basic
+2013-04-27 19:04:41.587 DEBUG [main] AuthChallengeProcessor.java:163   Authorization challenge processed
+2013-04-27 19:04:41.587 DEBUG [main] HttpMethodDirector.java:714       Authentication scope: BASIC 'ownCloud'@proj135.istic.univ-rennes1.fr:80
+2013-04-27 19:04:41.588 DEBUG [main] HttpMethodDirector.java:194       Retry authentication
+2013-04-27 19:04:41.589 DEBUG [main] Wire.java:70                      << "<?xml version="1.0" encoding="utf-8"?>[\n]"
+2013-04-27 19:04:41.589 DEBUG [main] Wire.java:70                      << "<d:error xmlns:d="DAV:" xmlns:s="http://sabredav.org/ns">[\n]"
+2013-04-27 19:04:41.589 DEBUG [main] Wire.java:70                      << "  <s:exception>Sabre_DAV_Exception_NotAuthenticated</s:exception>[\n]"
+2013-04-27 19:04:41.590 DEBUG [main] Wire.java:70                      << "  <s:message>No basic authentication headers were found</s:message>[\n]"
+2013-04-27 19:04:41.590 DEBUG [main] Wire.java:70                      << "  <s:sabredav-version>1.7.5</s:sabredav-version>[\n]"
+2013-04-27 19:04:41.590 DEBUG [main] Wire.java:70                      << "</d:error>[\n]"
+2013-04-27 19:04:41.590 DEBUG [main] HttpMethodBase.java:1024          Resorting to protocol version default close connection policy
+2013-04-27 19:04:41.590 DEBUG [main] HttpMethodBase.java:1028          Should NOT close connection, using HTTP/1.1
+2013-04-27 19:04:41.591 DEBUG [main] HttpMethodDirector.java:278       Authenticating with BASIC 'ownCloud'@proj135.istic.univ-rennes1.fr:80
+2013-04-27 19:04:41.591 DEBUG [main] HttpMethodParams.java:384         Credential charset not configured, using HTTP element charset
+2013-04-27 19:04:41.596 DEBUG [main] Wire.java:70                      >> "PROPFIND /owncloud/files/webdav.php HTTP/1.1[\r][\n]"
+2013-04-27 19:04:41.597 DEBUG [main] HttpMethodBase.java:1352          Adding Host request header
+2013-04-27 19:04:41.597 DEBUG [main] Wire.java:70                      >> "Depth: 1[\r][\n]"
+2013-04-27 19:04:41.597 DEBUG [main] Wire.java:70                      >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+2013-04-27 19:04:41.597 DEBUG [main] Wire.java:70                      >> "Content-Length: 106[\r][\n]"
+2013-04-27 19:04:41.598 DEBUG [main] Wire.java:70                      >> "Content-Type: text/xml; charset=UTF-8[\r][\n]"
+2013-04-27 19:04:41.598 DEBUG [main] Wire.java:70                      >> "Authorization: Basic UGxvdzpNb3Vqb25Ccm91aCE=[\r][\n]"
+2013-04-27 19:04:41.598 DEBUG [main] Wire.java:70                      >> "Host: proj135.istic.univ-rennes1.fr[\r][\n]"
+2013-04-27 19:04:41.598 DEBUG [main] Wire.java:70                      >> "Cookie: $Version=0; 514725f796586=s454d51a5aoa3m3u5b3o6g2pm0; $Path=/[\r][\n]"
+2013-04-27 19:04:41.598 DEBUG [main] Wire.java:70                      >> "[\r][\n]"
+2013-04-27 19:04:41.599 DEBUG [main] Wire.java:84                      >> "<?xml version="1.0" encoding="UTF-8" standalone="no"?><D:propfind xmlns:D="DAV:"><D:allprop/></D:propfind>"
+2013-04-27 19:04:41.599 DEBUG [main] EntityEnclosingMethod.java:508    Request body sent
+2013-04-27 19:04:41.775 DEBUG [main] Wire.java:70                      << "HTTP/1.1 207 Multi-Status[\r][\n]"
+2013-04-27 19:04:41.776 DEBUG [main] Wire.java:70                      << "HTTP/1.1 207 Multi-Status[\r][\n]"
+2013-04-27 19:04:41.776 DEBUG [main] Wire.java:70                      << "Date: Sat, 27 Apr 2013 18:01:35 GMT[\r][\n]"
+2013-04-27 19:04:41.777 DEBUG [main] Wire.java:70                      << "Server: Apache/2.2.22 (Ubuntu)[\r][\n]"
+2013-04-27 19:04:41.777 DEBUG [main] Wire.java:70                      << "X-Powered-By: PHP/5.4.6-1ubuntu1.2[\r][\n]"
+2013-04-27 19:04:41.777 DEBUG [main] Wire.java:70                      << "Expires: Thu, 19 Nov 1981 08:52:00 GMT[\r][\n]"
+2013-04-27 19:04:41.778 DEBUG [main] Wire.java:70                      << "Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0[\r][\n]"
+2013-04-27 19:04:41.778 DEBUG [main] Wire.java:70                      << "Pragma: no-cache[\r][\n]"
+2013-04-27 19:04:41.778 DEBUG [main] Wire.java:70                      << "Set-Cookie: 514725f796586=ochkguspptufh8ad2s6qlnr7q1; path=/; HttpOnly[\r][\n]"
+2013-04-27 19:04:41.779 DEBUG [main] Wire.java:70                      << "Vary: Brief,Prefer[\r][\n]"
+2013-04-27 19:04:41.779 DEBUG [main] Wire.java:70                      << "DAV: 1, 3, extended-mkcol, 2[\r][\n]"
+2013-04-27 19:04:41.779 DEBUG [main] Wire.java:70                      << "Content-Length: 1300[\r][\n]"
+2013-04-27 19:04:41.780 DEBUG [main] Wire.java:70                      << "Content-Type: application/xml; charset=utf-8[\r][\n]"
+2013-04-27 19:04:41.780 DEBUG [main] Wire.java:70                      << "[\r][\n]"
+2013-04-27 19:04:41.781 DEBUG [main] CookieSpecBase.java:337           Unrecognized cookie attribute: name=HttpOnly, value=null
+2013-04-27 19:04:41.781 DEBUG [main] HttpMethodBase.java:1651          Cookie accepted: "$Version=0; 514725f796586=ochkguspptufh8ad2s6qlnr7q1; $Path=/"
+2013-04-27 19:04:41.783 DEBUG [main] Wire.java:84                      << "<"
+2013-04-27 19:04:41.783 DEBUG [main] Wire.java:84                      << "?"
+2013-04-27 19:04:41.784 DEBUG [main] Wire.java:84                      << "x"
+2013-04-27 19:04:41.784 DEBUG [main] Wire.java:84                      << "m"
+2013-04-27 19:04:41.784 DEBUG [main] Wire.java:84                      << "l version="1.0" encoding="ut"
+2013-04-27 19:04:41.788 DEBUG [main] Wire.java:84                      << "f"
+2013-04-27 19:04:41.789 DEBUG [main] Wire.java:84                      << "-"
+2013-04-27 19:04:41.789 DEBUG [main] Wire.java:84                      << "8"
+2013-04-27 19:04:41.790 DEBUG [main] Wire.java:84                      << """
+2013-04-27 19:04:41.790 DEBUG [main] Wire.java:84                      << "?"
+2013-04-27 19:04:41.790 DEBUG [main] Wire.java:84                      << ">"
+2013-04-27 19:04:41.791 DEBUG [main] Wire.java:70                      << "[\n]"
+2013-04-27 19:04:41.792 DEBUG [main] Wire.java:70                      << "<d:multistatus xmlns:d="DAV:" xmlns:s="http://sabredav.org/ns"><d:response><d:href>/owncloud/files/webdav.php/</d:href><d:propstat><d:prop><d:getetag>"517c11b19ed56"</d:getetag><d:getlastmodified>Sat, 27 Apr 2013 17:57:59 GMT</d:getlastmodified><d:resourcetype><d:collection/></d:resourcetype><d:quota-used-bytes>0</d:quota-used-bytes><d:quota-available-bytes>63076069376</d:quota-available-bytes></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response><d:response><d:href>/owncloud/files/webdav.php/doc/</d:href><d:propstat><d:prop><d:getetag>"515076825122c"</d:getetag><d:getlastmodified>Mon, 25 Mar 2013 16:08:33 GMT</d:getlastmodified><d:resourcetype><d:collection/></d:resourcetype><d:quota-used-bytes>0</d:quota-used-bytes><d:quota-available-bytes>63076069376</d:quota-available-bytes></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response><d:response><d:href>/owncloud/files/webdav.php/file1</d:href><d:propstat><d:prop><d:getetag>"51507671eb070"</d:getetag><d:getlastmodified>Mon, 25 Mar 2013 16:08:17 GMT</d:getlastmodified><d:getcontentlength>0</d:getcontentlength><d:resourcetype/><d:getcontenttype>inode/x-empty</d:getcontenttype></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response></d:multistatus>[\n]"
+2013-04-27 19:04:41.794 DEBUG [main] HttpMethodBase.java:1024          Resorting to protocol version default close connection policy
+2013-04-27 19:04:41.795 DEBUG [main] HttpMethodBase.java:1028          Should NOT close connection, using HTTP/1.1
+2013-04-27 19:04:41.810 DEBUG [main] HttpConnection.java:1178          Releasing connection back to connection manager.
+2013-04-27 19:04:41.811 DEBUG [main] MultiThreadedHttpConnectionManager.java:979 Freeing connection, hostConfig=HostConfiguration[host=http://proj135.istic.univ-rennes1.fr]
+2013-04-27 19:04:41.811 DEBUG [main] IdleConnectionHandler.java:76     Adding connection at: 1367082281811
+2013-04-27 19:04:41.811 DEBUG [main] MultiThreadedHttpConnectionManager.java:961 Notifying no-one, there are no waiting threads
+2013-04-27 19:05:10.178 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.useragent = Jakarta Commons-HttpClient/3.1
+2013-04-27 19:05:10.185 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.version = HTTP/1.1
+2013-04-27 19:05:10.187 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.connection-manager.class = class org.apache.commons.httpclient.SimpleHttpConnectionManager
+2013-04-27 19:05:10.187 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.cookie-policy = default
+2013-04-27 19:05:10.188 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.element-charset = US-ASCII
+2013-04-27 19:05:10.188 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.protocol.content-charset = ISO-8859-1
+2013-04-27 19:05:10.189 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.method.retry-handler = org.apache.commons.httpclient.DefaultHttpMethodRetryHandler@69922b29
+2013-04-27 19:05:10.190 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.dateparser.patterns = [EEE, dd MMM yyyy HH:mm:ss zzz, EEEE, dd-MMM-yy HH:mm:ss zzz, EEE MMM d HH:mm:ss yyyy, EEE, dd-MMM-yyyy HH:mm:ss z, EEE, dd-MMM-yyyy HH-mm-ss z, EEE, dd MMM yy HH:mm:ss z, EEE dd-MMM-yyyy HH:mm:ss z, EEE dd MMM yyyy HH:mm:ss z, EEE dd-MMM-yyyy HH-mm-ss z, EEE dd-MMM-yy HH:mm:ss z, EEE dd MMM yy HH:mm:ss z, EEE,dd-MMM-yy HH:mm:ss z, EEE,dd-MMM-yyyy HH:mm:ss z, EEE, dd-MM-yyyy HH:mm:ss z]
+2013-04-27 19:05:10.202 DEBUG [main] DefaultHttpParams.java:151        Set parameter http.connection-manager.max-per-host = {HostConfiguration[host=http://http://proj135.istic.univ-rennes1.fr/owncloud/files/webdav.php]=20}
+2013-04-27 19:05:10.203 DEBUG [main] HttpClient.java:72                Java version: 1.7.0_21
+2013-04-27 19:05:10.203 DEBUG [main] HttpClient.java:73                Java vendor: Oracle Corporation
+2013-04-27 19:05:10.203 DEBUG [main] HttpClient.java:74                Java class path: /home/thibaud/workspace/MyOAK/Services/bin:/home/thibaud/workspace/LIB/jackrabbit-standalone-2.6.0.jar
+2013-04-27 19:05:10.203 DEBUG [main] HttpClient.java:75                Operating system name: Linux
+2013-04-27 19:05:10.204 DEBUG [main] HttpClient.java:76                Operating system architecture: amd64
+2013-04-27 19:05:10.204 DEBUG [main] HttpClient.java:77                Operating system version: 3.5.0-17-generic
+2013-04-27 19:05:10.272 DEBUG [main] HttpClient.java:82                SUN 1.7: SUN (DSA key/parameter generation; DSA signing; SHA-1, MD5 digests; SecureRandom; X.509 certificates; JKS keystore; PKIX CertPathValidator; PKIX CertPathBuilder; LDAP, Collection CertStores, JavaPolicy Policy; JavaLoginConfig Configuration)
+2013-04-27 19:05:10.272 DEBUG [main] HttpClient.java:82                SunRsaSign 1.7: Sun RSA signature provider
+2013-04-27 19:05:10.273 DEBUG [main] HttpClient.java:82                SunJSSE 1.7: Sun JSSE provider(PKCS12, SunX509 key/trust factories, SSLv3, TLSv1)
+2013-04-27 19:05:10.273 DEBUG [main] HttpClient.java:82                SunJCE 1.7: SunJCE Provider (implements RSA, DES, Triple DES, AES, Blowfish, ARCFOUR, RC2, PBE, Diffie-Hellman, HMAC)
+2013-04-27 19:05:10.274 DEBUG [main] HttpClient.java:82                SunJGSS 1.7: Sun (Kerberos v5, SPNEGO)
+2013-04-27 19:05:10.274 DEBUG [main] HttpClient.java:82                SunSASL 1.7: Sun SASL provider(implements client mechanisms for: DIGEST-MD5, GSSAPI, EXTERNAL, PLAIN, CRAM-MD5, NTLM; server mechanisms for: DIGEST-MD5, GSSAPI, CRAM-MD5, NTLM)
+2013-04-27 19:05:10.274 DEBUG [main] HttpClient.java:82                XMLDSig 1.0: XMLDSig (DOM XMLSignatureFactory; DOM KeyInfoFactory)
+2013-04-27 19:05:10.274 DEBUG [main] HttpClient.java:82                SunPCSC 1.7: Sun PC/SC provider
+2013-04-27 19:05:10.274 DEBUG [main] HttpClient.java:82                SunPKCS11-NSS 1.7: SunPKCS11-NSS using library null
+2013-04-27 19:05:10.330 DEBUG [main] MultiThreadedHttpConnectionManager.java:412 HttpConnectionManager.getConnection:  config = HostConfiguration[host=http://proj135.istic.univ-rennes1.fr], timeout = 0
+2013-04-27 19:05:10.331 DEBUG [main] MultiThreadedHttpConnectionManager.java:760 Allocating new connection, hostConfig=HostConfiguration[host=http://proj135.istic.univ-rennes1.fr]
+2013-04-27 19:05:10.338 DEBUG [main] HttpConnection.java:692           Open connection to proj135.istic.univ-rennes1.fr:80
+2013-04-27 19:05:10.393 DEBUG [main] Wire.java:70                      >> "MKCOL /owncloud/files/webdav.php/TOTO HTTP/1.1[\r][\n]"
+2013-04-27 19:05:10.395 DEBUG [main] HttpMethodBase.java:1352          Adding Host request header
+2013-04-27 19:05:10.409 DEBUG [main] Wire.java:70                      >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+2013-04-27 19:05:10.410 DEBUG [main] Wire.java:70                      >> "Host: proj135.istic.univ-rennes1.fr[\r][\n]"
+2013-04-27 19:05:10.410 DEBUG [main] Wire.java:70                      >> "Content-Length: 0[\r][\n]"
+2013-04-27 19:05:10.410 DEBUG [main] Wire.java:70                      >> "[\r][\n]"
+2013-04-27 19:05:10.411 DEBUG [main] EntityEnclosingMethod.java:473    Request body has not been specified
+2013-04-27 19:05:10.558 DEBUG [main] Wire.java:70                      << "HTTP/1.1 401 Unauthorized[\r][\n]"
+2013-04-27 19:05:10.558 DEBUG [main] Wire.java:70                      << "HTTP/1.1 401 Unauthorized[\r][\n]"
+2013-04-27 19:05:10.560 DEBUG [main] Wire.java:70                      << "Date: Sat, 27 Apr 2013 18:02:04 GMT[\r][\n]"
+2013-04-27 19:05:10.560 DEBUG [main] Wire.java:70                      << "Server: Apache/2.2.22 (Ubuntu)[\r][\n]"
+2013-04-27 19:05:10.561 DEBUG [main] Wire.java:70                      << "X-Powered-By: PHP/5.4.6-1ubuntu1.2[\r][\n]"
+2013-04-27 19:05:10.561 DEBUG [main] Wire.java:70                      << "Set-Cookie: 514725f796586=5e9f1risvf47uh2fphinbcl8a2; path=/; HttpOnly[\r][\n]"
+2013-04-27 19:05:10.561 DEBUG [main] Wire.java:70                      << "Expires: Thu, 19 Nov 1981 08:52:00 GMT[\r][\n]"
+2013-04-27 19:05:10.562 DEBUG [main] Wire.java:70                      << "Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0[\r][\n]"
+2013-04-27 19:05:10.562 DEBUG [main] Wire.java:70                      << "Pragma: no-cache[\r][\n]"
+2013-04-27 19:05:10.562 DEBUG [main] Wire.java:70                      << "WWW-Authenticate: Basic realm="ownCloud"[\r][\n]"
+2013-04-27 19:05:10.563 DEBUG [main] Wire.java:70                      << "Content-Length: 291[\r][\n]"
+2013-04-27 19:05:10.563 DEBUG [main] Wire.java:70                      << "Content-Type: application/xml; charset=utf-8[\r][\n]"
+2013-04-27 19:05:10.563 DEBUG [main] Wire.java:70                      << "[\r][\n]"
+2013-04-27 19:05:10.566 DEBUG [main] CookieSpecBase.java:337           Unrecognized cookie attribute: name=HttpOnly, value=null
+2013-04-27 19:05:10.567 DEBUG [main] HttpMethodBase.java:1651          Cookie accepted: "$Version=0; 514725f796586=5e9f1risvf47uh2fphinbcl8a2; $Path=/"
+2013-04-27 19:05:10.568 DEBUG [main] HttpMethodDirector.java:843       Authorization required
+2013-04-27 19:05:10.575 DEBUG [main] AuthChallengeProcessor.java:90    Supported authentication schemes in the order of preference: [ntlm, digest, basic]
+2013-04-27 19:05:10.575 DEBUG [main] AuthChallengeProcessor.java:111   Challenge for ntlm authentication scheme not available
+2013-04-27 19:05:10.576 DEBUG [main] AuthChallengeProcessor.java:111   Challenge for digest authentication scheme not available
+2013-04-27 19:05:10.576 INFO  [main] AuthChallengeProcessor.java:101   basic authentication scheme selected
+2013-04-27 19:05:10.576 DEBUG [main] AuthChallengeProcessor.java:155   Using authentication scheme: basic
+2013-04-27 19:05:10.576 DEBUG [main] AuthChallengeProcessor.java:163   Authorization challenge processed
+2013-04-27 19:05:10.576 DEBUG [main] HttpMethodDirector.java:714       Authentication scope: BASIC 'ownCloud'@proj135.istic.univ-rennes1.fr:80
+2013-04-27 19:05:10.577 DEBUG [main] HttpMethodDirector.java:194       Retry authentication
+2013-04-27 19:05:10.578 DEBUG [main] Wire.java:70                      << "<?xml version="1.0" encoding="utf-8"?>[\n]"
+2013-04-27 19:05:10.578 DEBUG [main] Wire.java:70                      << "<d:error xmlns:d="DAV:" xmlns:s="http://sabredav.org/ns">[\n]"
+2013-04-27 19:05:10.578 DEBUG [main] Wire.java:70                      << "  <s:exception>Sabre_DAV_Exception_NotAuthenticated</s:exception>[\n]"
+2013-04-27 19:05:10.578 DEBUG [main] Wire.java:70                      << "  <s:message>No basic authentication headers were found</s:message>[\n]"
+2013-04-27 19:05:10.578 DEBUG [main] Wire.java:70                      << "  <s:sabredav-version>1.7.5</s:sabredav-version>[\n]"
+2013-04-27 19:05:10.579 DEBUG [main] Wire.java:70                      << "</d:error>[\n]"
+2013-04-27 19:05:10.579 DEBUG [main] HttpMethodBase.java:1024          Resorting to protocol version default close connection policy
+2013-04-27 19:05:10.579 DEBUG [main] HttpMethodBase.java:1028          Should NOT close connection, using HTTP/1.1
+2013-04-27 19:05:10.579 DEBUG [main] HttpMethodDirector.java:278       Authenticating with BASIC 'ownCloud'@proj135.istic.univ-rennes1.fr:80
+2013-04-27 19:05:10.580 DEBUG [main] HttpMethodParams.java:384         Credential charset not configured, using HTTP element charset
+2013-04-27 19:05:10.586 DEBUG [main] Wire.java:70                      >> "MKCOL /owncloud/files/webdav.php/TOTO HTTP/1.1[\r][\n]"
+2013-04-27 19:05:10.586 DEBUG [main] HttpMethodBase.java:1352          Adding Host request header
+2013-04-27 19:05:10.586 DEBUG [main] Wire.java:70                      >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+2013-04-27 19:05:10.587 DEBUG [main] Wire.java:70                      >> "Content-Length: 0[\r][\n]"
+2013-04-27 19:05:10.587 DEBUG [main] Wire.java:70                      >> "Authorization: Basic UGxvdzpNb3Vqb25Ccm91aCE=[\r][\n]"
+2013-04-27 19:05:10.587 DEBUG [main] Wire.java:70                      >> "Host: proj135.istic.univ-rennes1.fr[\r][\n]"
+2013-04-27 19:05:10.587 DEBUG [main] Wire.java:70                      >> "Cookie: $Version=0; 514725f796586=5e9f1risvf47uh2fphinbcl8a2; $Path=/[\r][\n]"
+2013-04-27 19:05:10.587 DEBUG [main] Wire.java:70                      >> "[\r][\n]"
+2013-04-27 19:05:10.593 DEBUG [main] EntityEnclosingMethod.java:473    Request body has not been specified
+2013-04-27 19:05:11.727 DEBUG [main] Wire.java:70                      << "HTTP/1.1 201 Created[\r][\n]"
+2013-04-27 19:05:11.727 DEBUG [main] Wire.java:70                      << "HTTP/1.1 201 Created[\r][\n]"
+2013-04-27 19:05:11.728 DEBUG [main] Wire.java:70                      << "Date: Sat, 27 Apr 2013 18:02:04 GMT[\r][\n]"
+2013-04-27 19:05:11.728 DEBUG [main] Wire.java:70                      << "Server: Apache/2.2.22 (Ubuntu)[\r][\n]"
+2013-04-27 19:05:11.729 DEBUG [main] Wire.java:70                      << "X-Powered-By: PHP/5.4.6-1ubuntu1.2[\r][\n]"
+2013-04-27 19:05:11.729 DEBUG [main] Wire.java:70                      << "Expires: Thu, 19 Nov 1981 08:52:00 GMT[\r][\n]"
+2013-04-27 19:05:11.729 DEBUG [main] Wire.java:70                      << "Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0[\r][\n]"
+2013-04-27 19:05:11.729 DEBUG [main] Wire.java:70                      << "Pragma: no-cache[\r][\n]"
+2013-04-27 19:05:11.730 DEBUG [main] Wire.java:70                      << "Set-Cookie: 514725f796586=1oij3dvbjqjesh33d6el0of0t3; path=/; HttpOnly[\r][\n]"
+2013-04-27 19:05:11.730 DEBUG [main] Wire.java:70                      << "Content-Length: 0[\r][\n]"
+2013-04-27 19:05:11.730 DEBUG [main] Wire.java:70                      << "Vary: Accept-Encoding[\r][\n]"
+2013-04-27 19:05:11.730 DEBUG [main] Wire.java:70                      << "Content-Type: text/html; charset=utf-8[\r][\n]"
+2013-04-27 19:05:11.730 DEBUG [main] Wire.java:70                      << "[\r][\n]"
+2013-04-27 19:05:11.731 DEBUG [main] CookieSpecBase.java:337           Unrecognized cookie attribute: name=HttpOnly, value=null
+2013-04-27 19:05:11.731 DEBUG [main] HttpMethodBase.java:1651          Cookie accepted: "$Version=0; 514725f796586=1oij3dvbjqjesh33d6el0of0t3; $Path=/"
+2013-04-27 19:05:11.811 DEBUG [main] MultiThreadedHttpConnectionManager.java:412 HttpConnectionManager.getConnection:  config = HostConfiguration[host=http://proj135.istic.univ-rennes1.fr], timeout = 0
+2013-04-27 19:05:11.812 DEBUG [main] MultiThreadedHttpConnectionManager.java:760 Allocating new connection, hostConfig=HostConfiguration[host=http://proj135.istic.univ-rennes1.fr]
+2013-04-27 19:05:11.813 DEBUG [main] HttpConnection.java:692           Open connection to proj135.istic.univ-rennes1.fr:80
+2013-04-27 19:05:11.817 DEBUG [main] Wire.java:70                      >> "PROPFIND /owncloud/files/webdav.php HTTP/1.1[\r][\n]"
+2013-04-27 19:05:11.817 DEBUG [main] HttpMethodBase.java:1352          Adding Host request header
+2013-04-27 19:05:11.817 DEBUG [main] Wire.java:70                      >> "Depth: 1[\r][\n]"
+2013-04-27 19:05:11.817 DEBUG [main] Wire.java:70                      >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+2013-04-27 19:05:11.818 DEBUG [main] Wire.java:70                      >> "Host: proj135.istic.univ-rennes1.fr[\r][\n]"
+2013-04-27 19:05:11.819 DEBUG [main] Wire.java:70                      >> "Cookie: $Version=0; 514725f796586=1oij3dvbjqjesh33d6el0of0t3; $Path=/[\r][\n]"
+2013-04-27 19:05:11.819 DEBUG [main] Wire.java:70                      >> "Content-Length: 106[\r][\n]"
+2013-04-27 19:05:11.819 DEBUG [main] Wire.java:70                      >> "Content-Type: text/xml; charset=UTF-8[\r][\n]"
+2013-04-27 19:05:11.819 DEBUG [main] Wire.java:70                      >> "[\r][\n]"
+2013-04-27 19:05:11.820 DEBUG [main] Wire.java:84                      >> "<?xml version="1.0" encoding="UTF-8" standalone="no"?><D:propfind xmlns:D="DAV:"><D:allprop/></D:propfind>"
+2013-04-27 19:05:11.820 DEBUG [main] EntityEnclosingMethod.java:508    Request body sent
+2013-04-27 19:05:12.024 DEBUG [main] Wire.java:70                      << "HTTP/1.1 401 Unauthorized[\r][\n]"
+2013-04-27 19:05:12.025 DEBUG [main] Wire.java:70                      << "HTTP/1.1 401 Unauthorized[\r][\n]"
+2013-04-27 19:05:12.025 DEBUG [main] Wire.java:70                      << "Date: Sat, 27 Apr 2013 18:02:06 GMT[\r][\n]"
+2013-04-27 19:05:12.025 DEBUG [main] Wire.java:70                      << "Server: Apache/2.2.22 (Ubuntu)[\r][\n]"
+2013-04-27 19:05:12.026 DEBUG [main] Wire.java:70                      << "X-Powered-By: PHP/5.4.6-1ubuntu1.2[\r][\n]"
+2013-04-27 19:05:12.026 DEBUG [main] Wire.java:70                      << "Expires: Thu, 19 Nov 1981 08:52:00 GMT[\r][\n]"
+2013-04-27 19:05:12.026 DEBUG [main] Wire.java:70                      << "Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0[\r][\n]"
+2013-04-27 19:05:12.026 DEBUG [main] Wire.java:70                      << "Pragma: no-cache[\r][\n]"
+2013-04-27 19:05:12.026 DEBUG [main] Wire.java:70                      << "WWW-Authenticate: Basic realm="ownCloud"[\r][\n]"
+2013-04-27 19:05:12.027 DEBUG [main] Wire.java:70                      << "Content-Length: 291[\r][\n]"
+2013-04-27 19:05:12.027 DEBUG [main] Wire.java:70                      << "Content-Type: application/xml; charset=utf-8[\r][\n]"
+2013-04-27 19:05:12.027 DEBUG [main] Wire.java:70                      << "[\r][\n]"
+2013-04-27 19:05:12.027 DEBUG [main] HttpMethodDirector.java:843       Authorization required
+2013-04-27 19:05:12.028 DEBUG [main] AuthChallengeProcessor.java:90    Supported authentication schemes in the order of preference: [ntlm, digest, basic]
+2013-04-27 19:05:12.028 DEBUG [main] AuthChallengeProcessor.java:111   Challenge for ntlm authentication scheme not available
+2013-04-27 19:05:12.028 DEBUG [main] AuthChallengeProcessor.java:111   Challenge for digest authentication scheme not available
+2013-04-27 19:05:12.028 INFO  [main] AuthChallengeProcessor.java:101   basic authentication scheme selected
+2013-04-27 19:05:12.028 DEBUG [main] AuthChallengeProcessor.java:155   Using authentication scheme: basic
+2013-04-27 19:05:12.029 DEBUG [main] AuthChallengeProcessor.java:163   Authorization challenge processed
+2013-04-27 19:05:12.029 DEBUG [main] HttpMethodDirector.java:714       Authentication scope: BASIC 'ownCloud'@proj135.istic.univ-rennes1.fr:80
+2013-04-27 19:05:12.029 DEBUG [main] HttpMethodDirector.java:194       Retry authentication
+2013-04-27 19:05:12.029 DEBUG [main] Wire.java:70                      << "<?xml version="1.0" encoding="utf-8"?>[\n]"
+2013-04-27 19:05:12.030 DEBUG [main] Wire.java:70                      << "<d:error xmlns:d="DAV:" xmlns:s="http://sabredav.org/ns">[\n]"
+2013-04-27 19:05:12.030 DEBUG [main] Wire.java:70                      << "  <s:exception>Sabre_DAV_Exception_NotAuthenticated</s:exception>[\n]"
+2013-04-27 19:05:12.031 DEBUG [main] Wire.java:70                      << "  <s:message>No basic authentication headers were found</s:message>[\n]"
+2013-04-27 19:05:12.031 DEBUG [main] Wire.java:70                      << "  <s:sabredav-version>1.7.5</s:sabredav-version>[\n]"
+2013-04-27 19:05:12.031 DEBUG [main] Wire.java:70                      << "</d:error>[\n]"
+2013-04-27 19:05:12.032 DEBUG [main] HttpMethodBase.java:1024          Resorting to protocol version default close connection policy
+2013-04-27 19:05:12.032 DEBUG [main] HttpMethodBase.java:1028          Should NOT close connection, using HTTP/1.1
+2013-04-27 19:05:12.032 DEBUG [main] HttpMethodDirector.java:278       Authenticating with BASIC 'ownCloud'@proj135.istic.univ-rennes1.fr:80
+2013-04-27 19:05:12.032 DEBUG [main] HttpMethodParams.java:384         Credential charset not configured, using HTTP element charset
+2013-04-27 19:05:12.034 DEBUG [main] Wire.java:70                      >> "PROPFIND /owncloud/files/webdav.php HTTP/1.1[\r][\n]"
+2013-04-27 19:05:12.034 DEBUG [main] HttpMethodBase.java:1352          Adding Host request header
+2013-04-27 19:05:12.034 DEBUG [main] Wire.java:70                      >> "Depth: 1[\r][\n]"
+2013-04-27 19:05:12.034 DEBUG [main] Wire.java:70                      >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+2013-04-27 19:05:12.035 DEBUG [main] Wire.java:70                      >> "Content-Length: 106[\r][\n]"
+2013-04-27 19:05:12.035 DEBUG [main] Wire.java:70                      >> "Content-Type: text/xml; charset=UTF-8[\r][\n]"
+2013-04-27 19:05:12.036 DEBUG [main] Wire.java:70                      >> "Authorization: Basic UGxvdzpNb3Vqb25Ccm91aCE=[\r][\n]"
+2013-04-27 19:05:12.036 DEBUG [main] Wire.java:70                      >> "Host: proj135.istic.univ-rennes1.fr[\r][\n]"
+2013-04-27 19:05:12.036 DEBUG [main] Wire.java:70                      >> "Cookie: $Version=0; 514725f796586=1oij3dvbjqjesh33d6el0of0t3; $Path=/[\r][\n]"
+2013-04-27 19:05:12.036 DEBUG [main] Wire.java:70                      >> "[\r][\n]"
+2013-04-27 19:05:12.041 DEBUG [main] Wire.java:84                      >> "<?xml version="1.0" encoding="UTF-8" standalone="no"?><D:propfind xmlns:D="DAV:"><D:allprop/></D:propfind>"
+2013-04-27 19:05:12.041 DEBUG [main] EntityEnclosingMethod.java:508    Request body sent
+2013-04-27 19:05:12.787 DEBUG [main] Wire.java:70                      << "HTTP/1.1 207 Multi-Status[\r][\n]"
+2013-04-27 19:05:12.790 DEBUG [main] Wire.java:70                      << "HTTP/1.1 207 Multi-Status[\r][\n]"
+2013-04-27 19:05:12.791 DEBUG [main] Wire.java:70                      << "Date: Sat, 27 Apr 2013 18:02:06 GMT[\r][\n]"
+2013-04-27 19:05:12.793 DEBUG [main] Wire.java:70                      << "Server: Apache/2.2.22 (Ubuntu)[\r][\n]"
+2013-04-27 19:05:12.796 DEBUG [main] Wire.java:70                      << "X-Powered-By: PHP/5.4.6-1ubuntu1.2[\r][\n]"
+2013-04-27 19:05:12.798 DEBUG [main] Wire.java:70                      << "Expires: Thu, 19 Nov 1981 08:52:00 GMT[\r][\n]"
+2013-04-27 19:05:12.799 DEBUG [main] Wire.java:70                      << "Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0[\r][\n]"
+2013-04-27 19:05:12.800 DEBUG [main] Wire.java:70                      << "Pragma: no-cache[\r][\n]"
+2013-04-27 19:05:12.801 DEBUG [main] Wire.java:70                      << "Vary: Brief,Prefer[\r][\n]"
+2013-04-27 19:05:12.804 DEBUG [main] Wire.java:70                      << "DAV: 1, 3, extended-mkcol, 2[\r][\n]"
+2013-04-27 19:05:12.805 DEBUG [main] Wire.java:70                      << "Content-Length: 1710[\r][\n]"
+2013-04-27 19:05:12.807 DEBUG [main] Wire.java:70                      << "Content-Type: application/xml; charset=utf-8[\r][\n]"
+2013-04-27 19:05:12.808 DEBUG [main] Wire.java:70                      << "[\r][\n]"
+2013-04-27 19:05:12.815 DEBUG [main] Wire.java:84                      << "<"
+2013-04-27 19:05:12.816 DEBUG [main] Wire.java:84                      << "?"
+2013-04-27 19:05:12.818 DEBUG [main] Wire.java:84                      << "x"
+2013-04-27 19:05:12.819 DEBUG [main] Wire.java:84                      << "m"
+2013-04-27 19:05:12.820 DEBUG [main] Wire.java:84                      << "l version="1.0" encoding="ut"
+2013-04-27 19:05:12.827 DEBUG [main] Wire.java:84                      << "f"
+2013-04-27 19:05:12.828 DEBUG [main] Wire.java:84                      << "-"
+2013-04-27 19:05:12.828 DEBUG [main] Wire.java:84                      << "8"
+2013-04-27 19:05:12.829 DEBUG [main] Wire.java:84                      << """
+2013-04-27 19:05:12.829 DEBUG [main] Wire.java:84                      << "?"
+2013-04-27 19:05:12.829 DEBUG [main] Wire.java:84                      << ">"
+2013-04-27 19:05:12.830 DEBUG [main] Wire.java:70                      << "[\n]"
+2013-04-27 19:05:12.831 DEBUG [main] Wire.java:70                      << "<d:multistatus xmlns:d="DAV:" xmlns:s="http://sabredav.org/ns"><d:response><d:href>/owncloud/files/webdav.php/</d:href><d:propstat><d:prop><d:getetag>"517c129e3f24d"</d:getetag><d:getlastmodified>Sat, 27 Apr 2013 18:02:04 GMT</d:getlastmodified><d:resourcetype><d:collection/></d:resourcetype><d:quota-used-bytes>0</d:quota-used-bytes><d:quota-available-bytes>63076061184</d:quota-available-bytes></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response><d:response><d:href>/owncloud/files/webdav.php/TOTO/</d:href><d:propstat><d:prop><d:getetag>"517c129d384f7"</d:getetag><d:getlastmodified>Sat, 27 Apr 2013 18:02:04 GMT</d:getlastmodified><d:resourcetype><d:collection/></d:resourcetype><d:quota-used-bytes>0</d:quota-used-bytes><d:quota-available-bytes>63076061184</d:quota-available-bytes></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response><d:response><d:href>/owncloud/files/webdav.php/doc/</d:href><d:propstat><d:prop><d:getetag>"515076825122c"</d:getetag><d:getlastmodified>Mon, 25 Mar 2013 16:08:33 GMT</d:getlastmodified><d:resourcetype><d:collection/></d:resourcetype><d:quota-used-bytes>0</d:quota-used-bytes><d:quota-available-bytes>63076061184</d:quota-available-bytes></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response><d:response><d:href>/owncloud/files/webdav.php/file1</d:href><d:propstat><d:prop><d:getetag>"51507671eb070"</d:getetag><d:getlastmodified>Mon, 25 Mar 2013 16:08:17 GMT</d:getlastmodified><d:getcontentlength>0</d:getcontentlength><d:resourcetype/><d:getcontenttype>inode/x-empty</d:getcontenttype></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response></d:multistatus>[\n]"
+2013-04-27 19:05:12.834 DEBUG [main] HttpMethodBase.java:1024          Resorting to protocol version default close connection policy
+2013-04-27 19:05:12.834 DEBUG [main] HttpMethodBase.java:1028          Should NOT close connection, using HTTP/1.1
+2013-04-27 19:05:12.852 DEBUG [main] HttpConnection.java:1178          Releasing connection back to connection manager.
+2013-04-27 19:05:12.852 DEBUG [main] MultiThreadedHttpConnectionManager.java:979 Freeing connection, hostConfig=HostConfiguration[host=http://proj135.istic.univ-rennes1.fr]
+2013-04-27 19:05:12.852 DEBUG [main] IdleConnectionHandler.java:76     Adding connection at: 1367082312852
+2013-04-27 19:05:12.853 DEBUG [main] MultiThreadedHttpConnectionManager.java:961 Notifying no-one, there are no waiting threads

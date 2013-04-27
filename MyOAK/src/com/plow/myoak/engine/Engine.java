@@ -11,6 +11,7 @@ public interface Engine {
 	public List<Node> ls(Node node);
 	public String cp(Node src, Node dest);
 	public String rm(Node node);
+	public String mkdir(String name);
 	public String get(Node res);
 	public void put(String src, Node dest);
 
