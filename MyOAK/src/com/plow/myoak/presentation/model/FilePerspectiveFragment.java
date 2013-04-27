@@ -1,7 +1,10 @@
 package com.plow.myoak.presentation.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.Menu;
@@ -14,6 +17,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.plow.myoak.R;
+import com.plow.myoak.model.Node;
+import com.plow.myoak.utils.EngineUtils;
 import com.plow.myoak.utils.Factory;
 
 public class FilePerspectiveFragment extends ListFragment implements OnClickListener {
@@ -30,17 +35,21 @@ public class FilePerspectiveFragment extends ListFragment implements OnClickList
 	private static final String STATE_ACTIVATED_POSITION = "activated_position";
 	
 	
-	 List<ResourcePresentation> resources ;
+	 private List<ResourcePresentation> resources ;
+	 private ResourcePresentation currentRes;
+	 
+	 private AlertDialog alert;
+	 
+	 
 	 @Override
 	  public void onActivityCreated(Bundle savedInstanceState) {
 	    super.onActivityCreated(savedInstanceState);
 	    View header = getActivity().getLayoutInflater().inflate(R.layout.file_perspective_header, null);
 	    getListView().addHeaderView(header);
 	    
-	    resources = Factory.getResources(getActivity(), null);
-		FilePerspectiveListAdapter filePerspectiveListAdapter = new FilePerspectiveListAdapter(getActivity(), this, resources);
-	    setListAdapter(filePerspectiveListAdapter);
-	    
+	    currentRes = null;
+	    refresh();
+
 	    //Activate action menus
 	    setHasOptionsMenu(true); 
 	    setMenuVisibility(false);
@@ -67,9 +76,34 @@ public class FilePerspectiveFragment extends ListFragment implements OnClickList
 	//Handling ActionBar actions
 	@Override
 	  public boolean onOptionsItemSelected(MenuItem item) {
+		final List<Node> selected = new ArrayList<Node>();
+		for (ResourcePresentation res : resources) {
+			if (res.isSelected())
+				selected.add(res.getResource());
+		}
+		
 	    switch (item.getItemId()) {
 		    case R.id.action_delete:
-		    	Toast.makeText(getActivity(), "Menu Delete selected", Toast.LENGTH_SHORT).show();
+		    	AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+		    	builder.setTitle("Supprimer");
+		    	builder.setMessage("Voulez-vous supprimer cette Intervention ?").setPositiveButton("Oui", new DialogInterface.OnClickListener() {
+		    		@Override
+		    		public void onClick(DialogInterface dialogInterface, int i) {
+		    			for (Node n : selected) {
+				    		Toast.makeText(getActivity(), EngineUtils.getEngine().rm(n), Toast.LENGTH_SHORT).show();
+				    	}
+		    			alert.cancel();
+				    	refresh();
+				    	setMenuVisibility(false); 
+		    		}
+		    	}).setNegativeButton("Non", new DialogInterface.OnClickListener() {
+		    		@Override
+		    		public void onClick(DialogInterface dialogInterface, int i) {
+		    			alert.cancel();
+		    		}
+		    	});
+		    	alert = builder.create();
+		    	alert.show();
 		    	return true;
 		    case R.id.action_create_file:
 		    	Toast.makeText(getActivity(), "Menu create selected", Toast.LENGTH_SHORT).show();
@@ -78,21 +112,29 @@ public class FilePerspectiveFragment extends ListFragment implements OnClickList
 		    	Toast.makeText(getActivity(), "Menu create selected", Toast.LENGTH_SHORT).show();
 		    	return true;
 		    case R.id.action_refresh:
-		    	Toast.makeText(getActivity(), "Menu refresh selected", Toast.LENGTH_SHORT).show();
+		    	refresh();
+		    	setMenuVisibility(false); 
 		    	return true;
 		    default:
 		    	return super.onOptionsItemSelected(item);
 	    }
 	  }
+	
+	private void refresh() {
+		if (currentRes == null) {
+			resources = Factory.getResources(getActivity(), null);
+		}
+		else if (currentRes.getResource().isDirectory()) {
+			resources = Factory.getResources(getActivity(), currentRes);
+		}
+		setListAdapter(new FilePerspectiveListAdapter(getActivity(), this, resources));
+	}
 
 	@Override
 	public void onClick(View view) {
 		if (view instanceof ResourcePresentation) {
-			ResourcePresentation res = (ResourcePresentation) view;
-			if (res.getResource().isDirectory()) {
-				resources = Factory.getResources(getActivity(), res);
-				setListAdapter(new FilePerspectiveListAdapter(getActivity(), this, resources));
-			}
+			currentRes = (ResourcePresentation) view;
+			refresh();
 		}
 		else if(view instanceof CheckBox) {
 			CheckBox cb = (CheckBox) view ; 
@@ -101,7 +143,6 @@ public class FilePerspectiveFragment extends ListFragment implements OnClickList
 	        //Activate action menus
 	        setMenuVisibility(isOneResourceSelected());   
 			getActivity().invalidateOptionsMenu();
-			Toast.makeText(getActivity(), "Menu refresh selected", Toast.LENGTH_SHORT).show();
 		}
 	} 
 	

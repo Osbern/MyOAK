@@ -40,7 +40,10 @@ public class ResourcePresentation extends LinearLayout {
 			txtVwSize.setText(resource.getSize() + " Kb");
 		txtVwDate.setText(resource.getDate().toGMTString());
 		
-		addView(chkSelect, 30, 40);
+		if (i > 0)
+			addView(chkSelect, 30, 40);
+		else
+			addView(new TextView(context), 30, 40);
 		addView(image, 30, 40);
 		addView(txtVwname, 200, 40);
 		addView(txtVwSize, 100, 40);

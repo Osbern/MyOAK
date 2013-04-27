@@ -117,8 +117,8 @@ public class EngineImpl implements Engine {
 	}
 
 	@Override
-	public void cp(Node src, Node dest) {
-		DavMethod cp = new CopyMethod(EngineUtils.WEBDAV + src.getName(), EngineUtils.WEBDAV + dest.getName(), true);
+	public String cp(Node src, Node dest) {
+		DavMethod cp = new CopyMethod(EngineUtils.WEBDAV + "/" + src.getName(), EngineUtils.WEBDAV + "/" + dest.getName(), true);
         try {
 			client.executeMethod(cp);
 		} catch (HttpException e) {
@@ -126,12 +126,13 @@ public class EngineImpl implements Engine {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-        //return cp.getStatusCode() + " " + cp.getStatusText();
+        return cp.getStatusCode() + " " + cp.getStatusText();
 	}
 
 	@Override
-	public void rm(Node res) {
-		DavMethod rm = new DeleteMethod(EngineUtils.WEBDAV + res.getName());
+	public String rm(Node res) {
+		DavMethod rm = new DeleteMethod(EngineUtils.WEBDAV + "/" + res.getName());
+		Log.w("DELETE", EngineUtils.WEBDAV + res.getName());
 		try {
 			client.executeMethod(rm);
 		} catch (HttpException e) {
@@ -139,7 +140,7 @@ public class EngineImpl implements Engine {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		//return rm.getStatusCode() + " " + rm.getStatusText();
+		return rm.getStatusCode() + " " + rm.getStatusText();
 	}
 
 	@Override
