@@ -12,16 +12,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.CheckBox;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.plow.myoak.R;
 import com.plow.myoak.utils.Factory;
 
-public class FilePerspectiveFragment extends ListFragment implements android.view.View.OnClickListener, OnItemClickListener{
+public class FilePerspectiveFragment extends ListFragment implements android.view.View.OnClickListener, OnItemClickListener {
 
 	/**
 	 * A callback interface that all activities containing this fragment must
@@ -57,9 +54,11 @@ public class FilePerspectiveFragment extends ListFragment implements android.vie
 	    super.onActivityCreated(savedInstanceState);
 	    View header = getActivity().getLayoutInflater().inflate(R.layout.file_perspective_header, null);
 	    getListView().addHeaderView(header);
-	    resources = Factory.getResources(null);
-		FilePerspectiveListAdapter filePerspectiveListAdapter = new FilePerspectiveListAdapter(getActivity(), this, resources );
+	    
+	    resources = Factory.getResources(getActivity(), null);
+		FilePerspectiveListAdapter filePerspectiveListAdapter = new FilePerspectiveListAdapter(getActivity(), this, resources);
 	    setListAdapter(filePerspectiveListAdapter);
+	    
 	    //Activate action menus
 	    setHasOptionsMenu(true); 
 	    setMenuVisibility(false);
@@ -114,27 +113,37 @@ public class FilePerspectiveFragment extends ListFragment implements android.vie
 		    default:
 		    	return super.onOptionsItemSelected(item);
 	    }
-
 	  }
 
 	//Handling CheckBox listener
 	@Override
 	public void onClick(View view) {
-		if(view instanceof CheckBox){
-			CheckBox cb = (CheckBox) view ; 
-	        ResourcePresentation clickedresource = (ResourcePresentation) cb.getTag(); 
-	        clickedresource.setSelected(cb.isChecked());
-	        //Activate action menus
-	        setMenuVisibility(isOneResourceSelected());   
-			getActivity().invalidateOptionsMenu();
-			Toast.makeText(getActivity(), "Menu refresh selected", Toast.LENGTH_SHORT).show();
-		}else if (view instanceof ImageView) {
-			ImageView imageView = (ImageView) view;
-			System.out.println("********************* " +((DirectoryPresentation) imageView.getTag()).getName());
-		}else if (view instanceof TextView) {
-			TextView textView = (TextView)  view;
-			System.out.println("********************* " +((DirectoryPresentation) textView.getTag()).getName());
+		if (view instanceof ResourcePresentation) {
+			ResourcePresentation res = (ResourcePresentation) view;
+			Log.d("onListItemClick","CLICK ************ *********!" + res.getResource().getName());
+			
+			if (res.getResource().isDirectory()) {
+				resources = Factory.getResources(getActivity(), res);
+				setListAdapter(new FilePerspectiveListAdapter(getActivity(), this, resources));
+			}
 		}
+//		if(view instanceof CheckBox){
+//			CheckBox cb = (CheckBox) view ; 
+//	        ResourcePresentation clickedresource = (ResourcePresentation) cb.getTag(); 
+//	        clickedresource.setSelected(cb.isChecked());
+//	        //Activate action menus
+//	        setMenuVisibility(isOneResourceSelected());   
+//			getActivity().invalidateOptionsMenu();
+//			Toast.makeText(getActivity(), "Menu refresh selected", Toast.LENGTH_SHORT).show();
+//		}else if (view instanceof ImageView) {
+//			ImageView imageView = (ImageView) view;
+//			Toast.makeText(getActivity(), "ImageView selected", Toast.LENGTH_SHORT).show();
+//			System.out.println("********************* " +((DirectoryPresentation) imageView.getTag()).getName());
+//		}else if (view instanceof TextView) {
+//			TextView textView = (TextView)  view;
+//			Toast.makeText(getActivity(), "TextView selected", Toast.LENGTH_SHORT).show();
+//			System.out.println("********************* " +((DirectoryPresentation) textView.getTag()).getName());
+//		}
 		
 	} 
 	
@@ -150,12 +159,12 @@ public class FilePerspectiveFragment extends ListFragment implements android.vie
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 		ResourcePresentation clickedresource = resources.get(position);
 		  Log.w("***************", "Item selected "+ (clickedresource.isDirectory() ? "D" : "F"));
-		  if(clickedresource.isDirectory()){
-			  resources = ((DirectoryPresentation)clickedresource).getChildren();
-			  FilePerspectiveListAdapter filePerspectiveListAdapter = new FilePerspectiveListAdapter(getActivity(), this, resources );
-			  setListAdapter(filePerspectiveListAdapter);
-			  Log.w("***************", "Item selected "+clickedresource.getName());
-		  }
+//		  if(clickedresource.isDirectory()){
+//			  resources = ((DirectoryPresentation)clickedresource).getChildren();
+//			  FilePerspectiveListAdapter filePerspectiveListAdapter = new FilePerspectiveListAdapter(getActivity(), this, resources );
+//			  setListAdapter(filePerspectiveListAdapter);
+//			  Log.w("***************", "Item selected "+clickedresource.getName());
+//		  }
 
 		
 	}

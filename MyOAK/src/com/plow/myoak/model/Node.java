@@ -2,13 +2,15 @@ package com.plow.myoak.model;
 
 import java.util.Date;
 
+import android.util.Log;
+
 public abstract class Node {
 	
-	private String name;
-	private String path;
-	private boolean directory;
-	private long size;
-	private Date date;
+	protected String name;
+	protected String path;
+	protected boolean directory;
+	protected long size;
+	protected Date date;
 	
 	public Node() {
 		name = "";
@@ -16,6 +18,19 @@ public abstract class Node {
 		directory = false;
 		size = 0;
 		date = null;
+	}
+	
+	public Node(String path) {
+		this();
+		if (path.equals("")) {
+			this.path = path;
+			this.name = "..";
+		} else {
+			String[] tmp = path.split("/");
+			this.path = tmp[tmp.length - 1];
+			this.name = this.path;
+		}
+		Log.w("NODE", "name:" + this.name + " | path:" + this.path);
 	}
 	
 	public String getName() {

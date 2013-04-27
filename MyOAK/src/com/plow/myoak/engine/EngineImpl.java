@@ -67,21 +67,20 @@ public class EngineImpl implements Engine {
 		String dest = "";
 		
 		if (res != null)
-			dest = res.getPath();
+			dest = "/" + res.getPath();
 		
 		DavMethod pFind;
         MultiStatus multiStatus = null;
         
 		try {
 			pFind = new PropFindMethod(EngineUtils.WEBDAV + dest, DavConstants.PROPFIND_ALL_PROP, DavConstants.DEPTH_1);
-			Log.w("info", EngineUtils.WEBDAV + dest);
 			client.executeMethod(pFind);
 			multiStatus = pFind.getResponseBodyAsMultiStatus();
+			int i = 0;
 			
 			Node tmp;
 	        for (MultiStatusResponse resp : multiStatus.getResponses()) {
-	        	String path = resp.getHref();
-	        	Log.w("info", path);
+	        	String path = (i == 0) ? "" : resp.getHref();
 	        	DavPropertySet props = resp.getProperties(200);
 	        	
 	        	Date date = null;
@@ -106,6 +105,7 @@ public class EngineImpl implements Engine {
 	        		tmp = new File(path, size, date);
 	        	
 	        	result.add(tmp);
+	        	i++;
 	        }
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -118,7 +118,7 @@ public class EngineImpl implements Engine {
 
 	@Override
 	public void cp(Node src, Node dest) {
-		DavMethod cp = new CopyMethod(src.getPath(), dest.getPath(), true);
+		DavMethod cp = new CopyMethod(EngineUtils.WEBDAV + src.getName(), EngineUtils.WEBDAV + dest.getName(), true);
         try {
 			client.executeMethod(cp);
 		} catch (HttpException e) {
@@ -131,7 +131,7 @@ public class EngineImpl implements Engine {
 
 	@Override
 	public void rm(Node res) {
-		DavMethod rm = new DeleteMethod(res.getPath());
+		DavMethod rm = new DeleteMethod(EngineUtils.WEBDAV + res.getName());
 		try {
 			client.executeMethod(rm);
 		} catch (HttpException e) {

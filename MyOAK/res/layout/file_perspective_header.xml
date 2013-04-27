@@ -9,9 +9,10 @@
 	     <TextView
 	        android:id="@+id/TypeHeader"
 	        android:layout_width="match_parent"
-	        android:layout_height="match_parent"	        
-	        android:layout_marginLeft="14dp"
-			android:layout_marginRight="20dp"
+	        android:layout_height="match_parent"	
+	        android:layout_marginLeft="30dp"
+	        android:layout_marginRight="30dp"
+	        android:width="30dp"        
 			android:text="Type"
 	        />
 	
@@ -19,9 +20,8 @@
 	    <TextView
 	        android:id="@+id/nameHeader"
 	        android:layout_width="match_parent"
-	        android:layout_height="match_parent"	        
-	        android:layout_marginLeft="10dp"
-			android:layout_marginRight="20dp"
+	        android:layout_height="match_parent"	
+	        android:width="170dp"             
 			android:text="Name"
 	        />
 	 
@@ -29,8 +29,7 @@
 	        android:id="@+id/sizeHeader"
 	        android:layout_width="match_parent"
 	        android:layout_height="match_parent"
-	         android:layout_marginLeft="10dp"
-			android:layout_marginRight="10dp" 
+	        android:width="100dp"     
 			android:text="Size" 
 			/>
 	    
@@ -38,8 +37,7 @@
 	        android:id="@+id/date"
 	        android:layout_width="match_parent"
 	        android:layout_height="match_parent"
-	         android:layout_marginLeft="10dp"
-			android:layout_marginRight="10dp" 
+	        android:width="200dp"     
 			android:text="Date"       
 	        />
     </TableRow>

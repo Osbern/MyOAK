@@ -6,20 +6,17 @@ public class File extends Node {
 	
 	public File() {
 		super();
-		super.setDirectory(false);
+		this.directory = false;
 	}
 	
 	public File(String path) {
-		this();
-		super.setPath(path);
-		String[] tmp = path.split("/");
-		super.setName(tmp[tmp.length - 1]);
+		super(path);
+		this.directory = false;
 	}
 
 	public File(String path, long size, Date date) {
 		this(path);
-		super.setPath(path);
-		super.setSize(size);
-		super.setDate(date);
+		this.size = size;
+		this.date = date;
 	}
 }
