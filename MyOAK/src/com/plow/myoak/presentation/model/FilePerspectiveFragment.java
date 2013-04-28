@@ -2,6 +2,7 @@ package com.plow.myoak.presentation.model;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,9 +10,13 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnPreparedListener;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -159,27 +164,53 @@ public class FilePerspectiveFragment extends ListFragment implements OnClickList
 			if (currentRes.isDirectory())
 				refresh();
 			else {
-				String buffer = EngineUtils.getEngine().get(currentRes.getResource());
-				FileOutputStream outputStream;
+				String name = currentRes.getResource().getName();
+				String extension = MimeTypeMap.getFileExtensionFromUrl(name);
+				String mime = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
 				
-				try {
-				  outputStream = getActivity().openFileOutput(currentRes.getResource().getName(), Context.MODE_WORLD_READABLE);
-				  outputStream.write(buffer.getBytes());
-				  outputStream.close();
-				} catch (Exception e) {
-				  e.printStackTrace();
+				if (mime.startsWith("audio")) {
+					final MediaPlayer mediaPlayer = new MediaPlayer();
+					mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+					try {
+						mediaPlayer.setDataSource(EngineUtils.WEBDAV + "/" + name);
+						mediaPlayer.setOnPreparedListener(new OnPreparedListener() {
+							@Override
+							public void onPrepared(MediaPlayer mp) {
+								mediaPlayer.start();
+							}
+						});
+						mediaPlayer.prepareAsync();
+					} catch (IllegalArgumentException e) {
+						e.printStackTrace();
+					} catch (SecurityException e) {
+						e.printStackTrace();
+					} catch (IllegalStateException e) {
+						e.printStackTrace();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				} else {
+					String buffer = EngineUtils.getEngine().get(currentRes.getResource());
+					FileOutputStream outputStream;
+					
+					try {
+					  outputStream = getActivity().openFileOutput(name, Context.MODE_WORLD_READABLE);
+					  outputStream.write(buffer.getBytes());
+					  outputStream.close();
+					} catch (Exception e) {
+					  e.printStackTrace();
+					}
+					
+					File file = new File(getActivity().getFilesDir(), currentRes.getResource().getName());
+					if (extension.isEmpty())
+						extension = "txt";
+					String mimetype = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
+					
+					Intent i = new Intent();
+					i.setAction(android.content.Intent.ACTION_VIEW);
+					i.setDataAndType(Uri.fromFile(file), mimetype);
+					startActivity(i);
 				}
-				
-				File file = new File(getActivity().getFilesDir(), currentRes.getResource().getName());
-				String extension = MimeTypeMap.getFileExtensionFromUrl(Uri.fromFile(file).toString());
-				if (extension.isEmpty())
-					extension = "txt";
-				String mimetype = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
-				
-				Intent i = new Intent();
-				i.setAction(android.content.Intent.ACTION_VIEW);
-				i.setDataAndType(Uri.fromFile(file), mimetype);
-				startActivity(i);
 			}
 		}
 		else if(view instanceof CheckBox) {
@@ -190,7 +221,7 @@ public class FilePerspectiveFragment extends ListFragment implements OnClickList
 	        setMenuVisibility(isOneResourceSelected());   
 			getActivity().invalidateOptionsMenu();
 		}
-	} 
+	}
 	
 	private boolean isOneResourceSelected() {		
 		boolean isOneResourceSelected = false;
