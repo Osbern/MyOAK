@@ -1,63 +1,47 @@
 \section{Architecture}
-\subsection{Activity}
+\begin{frame}{Architecture}
+	\hspace{2.5cm} \includegraphics[scale=0.42]{img/Archi}
+\end{frame}
 
-		\begin{frame}{Architecture}
-		image
-		\end{frame}
-
-		\begin{frame}{WebDAV}
+\begin{frame}{WebDAV}
+	\begin{itemize}
+	\item \textbf{Web} \textbf{D}istributed \textbf{A}uthoring and \textbf{V}ersioning
+	\item Extension du protocole HTTP
+	\item But: Facilciter la gestion des fichiers avec des serveurs distants
 		\begin{itemize}
-		\item Web Distributed Authoring and Versioning
-\item Extension du protocole HTTP
-\item But: Facilciter la gestion des fichiers avec des serveurs distants
-\item \begin{itemize}
-	\item Récupérer
-\item Déposer
-\item Synchroniser
-\item Publier
-\item Accès concurrents
-\end{itemize}
+		\item RÃ©cupÃ©rer
+		\item DÃ©poser
+		\item Synchroniser
+		\item Publier
+		\item AccÃ¨s concurrents
 		\end{itemize}
-		\end{frame}
+	\end{itemize}
+\end{frame}
 		
 \begin{frame}{Business}
-		\begin{itemize}
-			\item Couche métier
-			\item Design pattern Composite
-		\end{itemize}
-		image composite
+	\begin{itemize}
+		\item Couche mÃ©tier
+		\item Design pattern Composite
+	\end{itemize}
+	\hspace{3cm} \includegraphics[scale=0.6]{img/designComposite}
 \end{frame}		
 		
-\begin{frame}{Présentation}
-		\begin{itemize}
-			\item Séparation avec les modèles métiers
-			\item Utilisation de la délégation
-		\end{itemize}
-		image presentation
+\begin{frame}{PrÃ©sentation}
+	\begin{itemize}
+		\item SÃ©paration avec les modÃ¨les mÃ©tiers
+		\item Utilisation de la dÃ©lÃ©gation
+	\end{itemize}
+	\includegraphics[scale=0.5]{img/presentation}
 \end{frame}	
 
 \begin{frame}{MyOAK Main Activity}
-		\begin{itemize}
-			\item Activité principale et unique de l’application
+	\begin{itemize}
+		\item ActivitÃ© principale et unique de lâ€™application
 			\begin{itemize}
-				\item Un fragment statique (Menu général)
-				\item Un fragment dynamique
+			\item Un fragment statique (Menu gÃ©nÃ©ral)
+			\item Un fragment dynamique
 			\end{itemize}
-			\item Un fragment pour chaque menu
-			\item Chaque fragment ajoute ses options dans la barre d’action
-		\end{itemize}
+		\item Un fragment pour chaque menu
+		\item Chaque fragment ajoute ses options dans la barre dâ€™action
+	\end{itemize}
 \end{frame}	
-
-\subsection{Service}
-		\begin{frame}{}
-		\begin{itemize}
-		\item bob
-		\end{itemize}
-		\end{frame}
-		
-		\begin{frame}{}
-		\begin{itemize}
-		\item bob
-		\end{itemize}
-		\end{frame}
-
