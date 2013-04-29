@@ -1,17 +1,52 @@
 \section{Architecture}
 \subsection{Activity}
 
-		\begin{frame}{}
-		\begin{itemize}
-		\item bob
-		\end{itemize}
+		\begin{frame}{Architecture}
+		image
 		\end{frame}
 
-		\begin{frame}{}
+		\begin{frame}{WebDAV}
 		\begin{itemize}
-		\item bob
+		\item Web Distributed Authoring and Versioning
+\item Extension du protocole HTTP
+\item But: Facilciter la gestion des fichiers avec des serveurs distants
+\item \begin{itemize}
+	\item Récupérer
+\item Déposer
+\item Synchroniser
+\item Publier
+\item Accès concurrents
+\end{itemize}
 		\end{itemize}
 		\end{frame}
+		
+\begin{frame}{Business}
+		\begin{itemize}
+			\item Couche métier
+			\item Design pattern Composite
+		\end{itemize}
+		image composite
+\end{frame}		
+		
+\begin{frame}{Présentation}
+		\begin{itemize}
+			\item Séparation avec les modèles métiers
+			\item Utilisation de la délégation
+		\end{itemize}
+		image presentation
+\end{frame}	
+
+\begin{frame}{MyOAK Main Activity}
+		\begin{itemize}
+			\item Activité principale et unique de l’application
+			\begin{itemize}
+				\item Un fragment statique (Menu général)
+				\item Un fragment dynamique
+			\end{itemize}
+			\item Un fragment pour chaque menu
+			\item Chaque fragment ajoute ses options dans la barre d’action
+		\end{itemize}
+\end{frame}	
 
 \subsection{Service}
 		\begin{frame}{}
