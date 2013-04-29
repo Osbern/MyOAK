@@ -9,12 +9,14 @@
 \usepackage[utf8]{inputenc}
 \usepackage[french]{babel}
 \usepackage{listings}
+\usepackage{graphicx}
+
 
 
 \title{My Oak}
-\subtitle{Une application Android pour OwnCloud}
+\subtitle{OwnCloud dans la poche!}
 \author{Abdoulaye Dramé, Thibaud Destouches \& Marceau Lacroix}
-\institute{ISTIC}
+\institute{\includegraphics[scale=0.7]{img/myoak}}
 \date{}
 \AtBeginSection[]
 {
@@ -38,26 +40,40 @@
 \section{Introduction}
 
 	\begin{frame}{OwnCloud, c'est quoi ça?}
-	\begin{itemize}
-	\item Une application de synchronisation de:
+	\begin{columns}[c]
+\column{4cm}
+		\includegraphics[scale=0.2]{img/owncloud}	
+\column{7.5cm}
 		\begin{itemize}
-		\item Fichiers
-		\item Contacts
-		\item Calendriers
+		\item Une application de synchronisation de:
+			\begin{itemize}
+			\item Fichiers
+			\item Contacts
+			\item Calendriers
+			\end{itemize}
+\pause
+		\item Similaire à dropbox, mais chez soi!
+\pause
+		\item Opensource
 		\end{itemize}
-	\item Similaire à dropbox, mais chez soi!
-	\item Opensource
-	\end{itemize}
+	
+	\end{columns}
 	\end{frame}
-
-	\begin{frame}{Pourquoi faire une application android?}
-	\begin{itemize}
-	\item Acceder à ses données de partout
-	\pause
-	\item Synchroniser les contacts "chez soi"
-	\pause
-	\item Application déjà existante de mauvaise qualité
-	\end{itemize}
+	
+		\begin{frame}{Pourquoi faire une application android?}
+		\begin{itemize}
+		\item Acceder à ses données de partout
+		\pause
+		\begin{itemize}
+			\item Ecouter de la musique dans le bus
+			\item Partager une photo avec ses amis
+			\item Sauvegarder son répertoire téléphone 
+		\end{itemize}
+		\pause
+		\item Synchronisation \textcolor{red}{\textbf{privée}}
+		\pause
+		\item Application déjà existante de mauvaise qualité et payante
+		\end{itemize}
 	\end{frame}
 
 
@@ -70,6 +86,7 @@
 	\begin{itemize}
 	\item Manque de temps
 	\item API ownCloud obscure
+	\item Comportement d'android parfois imprévisible
 	\item Les salles de l'université qui ferment à 22h
 	\end{itemize}
 	\end{frame}
@@ -86,6 +103,8 @@
 		\item Suppression de fichiers et de dossiers
 		\item Ouverture de fichiers
 		\item Ajout de dossier 
+		\pause
+		\item Streaming de musique
 		\end{itemize}
 	\pause
 	\item Ce qui n'est pas encore implémenté:
@@ -93,7 +112,7 @@
 		\item Ajout de fichiers
 		\item Synchronisation de contacts
 		\item Gestion des calendriers
-		\item Streaming de musique
+
 		\end{itemize}
 	\end{itemize}
 	\end{frame}
