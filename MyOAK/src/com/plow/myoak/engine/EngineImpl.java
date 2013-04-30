@@ -170,13 +170,13 @@ public class EngineImpl implements Engine {
 	}
 
 	@Override
-	public String get(Node res) {
+	public byte[] get(Node res) {
 		GetMethod get = new GetMethod(EngineUtils.WEBDAV + "/" + res.getPath());
-		String buffer = "";
+		byte[] buffer = null;
 
 		try {
 			client.executeMethod(get);
-			buffer = get.getResponseBodyAsString();
+			buffer = get.getResponseBody();
 		} catch (HttpException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -209,12 +209,12 @@ public class EngineImpl implements Engine {
 	public void open(Context ctxt, Node n) {
 		String name = n.getName();
 		String extension = MimeTypeMap.getFileExtensionFromUrl(name);
-		String buffer = EngineUtils.getEngine().get(n);
+		byte[] buffer = EngineUtils.getEngine().get(n);
 		FileOutputStream outputStream;
 		
 		try {
 		  outputStream = ctxt.openFileOutput(name, Context.MODE_WORLD_READABLE);
-		  outputStream.write(buffer.getBytes());
+		  outputStream.write(buffer);
 		  outputStream.close();
 		} catch (Exception e) {
 		  e.printStackTrace();

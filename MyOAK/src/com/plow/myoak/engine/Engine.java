@@ -14,7 +14,7 @@ public interface Engine {
 	public String cp(Node src, Node dest);
 	public String rm(Node node);
 	public String mkdir(String name);
-	public String get(Node res);
+	public byte[] get(Node res);
 	public void put(String src);
 	public void open(final Context ctxt, Node n);
 	public void stream(final Context ctxt, Node audio);

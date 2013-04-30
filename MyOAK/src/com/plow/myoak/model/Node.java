@@ -6,6 +6,8 @@ import android.util.Log;
 
 public abstract class Node {
 	
+	public static String prefix = "owncloud/files/webdav.php";
+	
 	protected String name;
 	protected String path;
 	protected boolean directory;
@@ -26,9 +28,9 @@ public abstract class Node {
 			this.path = path;
 			this.name = "..";
 		} else {
+			this.path = path.replace(prefix, "");
 			String[] tmp = path.split("/");
-			this.path = tmp[tmp.length - 1];
-			this.name = this.path;
+			this.name = tmp[tmp.length - 1];
 		}
 		Log.w("NODE", "name:" + this.name + " | path:" + this.path);
 	}
