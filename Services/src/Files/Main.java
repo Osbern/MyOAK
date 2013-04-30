@@ -1,5 +1,8 @@
 package Files;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -16,6 +19,9 @@ import org.apache.commons.httpclient.HttpException;
 import org.apache.commons.httpclient.MultiThreadedHttpConnectionManager;
 import org.apache.commons.httpclient.UsernamePasswordCredentials;
 import org.apache.commons.httpclient.auth.AuthScope;
+import org.apache.commons.httpclient.methods.InputStreamRequestEntity;
+import org.apache.commons.httpclient.methods.PutMethod;
+import org.apache.commons.httpclient.methods.RequestEntity;
 import org.apache.commons.httpclient.params.HttpConnectionManagerParams;
 import org.apache.jackrabbit.webdav.DavConstants;
 import org.apache.jackrabbit.webdav.DavException;
@@ -24,7 +30,6 @@ import org.apache.jackrabbit.webdav.MultiStatusResponse;
 import org.apache.jackrabbit.webdav.client.methods.CopyMethod;
 import org.apache.jackrabbit.webdav.client.methods.DavMethod;
 import org.apache.jackrabbit.webdav.client.methods.DeleteMethod;
-import org.apache.jackrabbit.webdav.client.methods.MkColMethod;
 import org.apache.jackrabbit.webdav.client.methods.PropFindMethod;
 import org.apache.jackrabbit.webdav.property.DavProperty;
 import org.apache.jackrabbit.webdav.property.DavPropertyName;
@@ -140,14 +145,30 @@ public class Main {
         
 		//System.out.println(pr.cp("", "/bob2"));
         
-        DavMethod mkdir = new MkColMethod(host + "/TOTO");
-        try {
-			client.executeMethod(mkdir);
+//        DavMethod mkdir = new MkColMethod(host + "/TOTO");
+//        try {
+//			client.executeMethod(mkdir);
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+
+        File f = new File("test");
+        
+        PutMethod method = new PutMethod(host + "/" + f.getName());
+        RequestEntity requestEntity;
+		try {
+			requestEntity = new InputStreamRequestEntity(new FileInputStream(f));
+	        method.setRequestEntity(requestEntity);
+	        client.executeMethod(method);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (HttpException e) {
+			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+        
       for (String d : pr.ls()) {
     	System.out.println(d);
       }

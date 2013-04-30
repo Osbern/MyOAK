@@ -1,5 +1,6 @@
 package com.plow.myoak.engine;
 
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -19,6 +20,9 @@ import org.apache.commons.httpclient.MultiThreadedHttpConnectionManager;
 import org.apache.commons.httpclient.UsernamePasswordCredentials;
 import org.apache.commons.httpclient.auth.AuthScope;
 import org.apache.commons.httpclient.methods.GetMethod;
+import org.apache.commons.httpclient.methods.InputStreamRequestEntity;
+import org.apache.commons.httpclient.methods.PutMethod;
+import org.apache.commons.httpclient.methods.RequestEntity;
 import org.apache.commons.httpclient.params.HttpConnectionManagerParams;
 import org.apache.jackrabbit.webdav.DavConstants;
 import org.apache.jackrabbit.webdav.DavException;
@@ -33,7 +37,11 @@ import org.apache.jackrabbit.webdav.property.DavProperty;
 import org.apache.jackrabbit.webdav.property.DavPropertyName;
 import org.apache.jackrabbit.webdav.property.DavPropertySet;
 
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.util.Log;
+import android.webkit.MimeTypeMap;
 
 import com.plow.myoak.model.Directory;
 import com.plow.myoak.model.File;
@@ -61,12 +69,12 @@ public class EngineImpl implements Engine {
 	}
 	
 	@Override
-	public List<Node> ls() {
-		return ls(null);
+	public List<Node> ls(String type) {
+		return ls(type, null);
 	}
 
 	@Override
-	public List<Node> ls(Node res) {
+	public List<Node> ls(String type, Node res) {
 		List<Node> result = new ArrayList<Node>();
 		String dest = "";
 		
@@ -77,7 +85,7 @@ public class EngineImpl implements Engine {
         MultiStatus multiStatus = null;
         
 		try {
-			pFind = new PropFindMethod(EngineUtils.WEBDAV + dest, DavConstants.PROPFIND_ALL_PROP, DavConstants.DEPTH_1);
+			pFind = new PropFindMethod(type + dest, DavConstants.PROPFIND_ALL_PROP, DavConstants.DEPTH_1);
 			client.executeMethod(pFind);
 			multiStatus = pFind.getResponseBodyAsMultiStatus();
 			int i = 0;
@@ -88,12 +96,15 @@ public class EngineImpl implements Engine {
 	        	DavPropertySet props = resp.getProperties(200);
 	        	
 	        	Date date = null;
-	        	String p = props.get(DavPropertyName.GETLASTMODIFIED).getValue().toString();
-	            try {
-	            	date = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss Z", Locale.US).parse(p);
-	            } catch (ParseException e) {
-	            	e.printStackTrace();
-	            }
+	        	
+	        	if (type.equals(EngineUtils.WEBDAV)) {
+	        		String p = props.get(DavPropertyName.GETLASTMODIFIED).getValue().toString();
+	        		try {
+	        			date = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss Z", Locale.US).parse(p);
+	        		} catch (ParseException e) {
+	        			e.printStackTrace();
+	        		}
+	        	}
 	            
 	            DavProperty prop = props.get(DavPropertyName.GETCONTENTLENGTH);
 	            long size = 0;
@@ -176,9 +187,58 @@ public class EngineImpl implements Engine {
 	}
 
 	@Override
-	public void put(java.io.File src, String dest) {
-		// TODO Auto-generated method stub
+	public void put(String src) {
+        java.io.File f = new java.io.File(src);
+        
+        PutMethod method = new PutMethod(EngineUtils.WEBDAV + "/" + f.getName());
+        RequestEntity requestEntity;
+		try {
+			requestEntity = new InputStreamRequestEntity(new FileInputStream(f));
+	        method.setRequestEntity(requestEntity);
+	        client.executeMethod(method);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (HttpException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public void open(Context ctxt, Node n) {
+		String name = n.getName();
+		String extension = MimeTypeMap.getFileExtensionFromUrl(name);
+		String buffer = EngineUtils.getEngine().get(n);
+		FileOutputStream outputStream;
 		
+		try {
+		  outputStream = ctxt.openFileOutput(name, Context.MODE_WORLD_READABLE);
+		  outputStream.write(buffer.getBytes());
+		  outputStream.close();
+		} catch (Exception e) {
+		  e.printStackTrace();
+		}
+		
+		java.io.File file = new java.io.File(ctxt.getFilesDir(), name);
+		if (extension.isEmpty())
+			extension = "txt";
+		String mimetype = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
+		
+		Intent i = new Intent();
+		i.setAction(android.content.Intent.ACTION_VIEW);
+		i.setDataAndType(Uri.fromFile(file), mimetype);
+		ctxt.startActivity(i);
+	}
+
+	@Override
+	public void stream(final Context ctxt, Node audio) {
+		String url= "https://gslb-dl.dropboxusercontent.com/s/hlzpg8px6ymcyq4/00%20-%20Drakwald%20-%20Baldr%27s%20Dream.mp3?token_hash=AAEA59qT4JaH_YgHHQeln3V_tnHj0vWYS0egawKVvbxbIw&dl=1";
+		
+		Intent i = new Intent();
+		i.setAction(android.content.Intent.ACTION_VIEW);
+		i.setDataAndType(Uri.parse(url), "audio/*");
+		ctxt.startActivity(i);
 	}
 
 }

@@ -21,7 +21,7 @@
 	        android:id="@+id/nameHeader"
 	        android:layout_width="match_parent"
 	        android:layout_height="match_parent"	
-	        android:width="465dp"             
+	        android:width="165dp"             
 			android:text="Name"
 	        />
 	 
@@ -33,13 +33,6 @@
 			android:text="Size" 
 			/>
 	    
-	    <TextView
-	        android:id="@+id/date"
-	        android:layout_width="match_parent"
-	        android:layout_height="match_parent"
-	        android:width="200dp"     
-			android:text="Date"       
-	        />
     </TableRow>
 
 </TableLayout>

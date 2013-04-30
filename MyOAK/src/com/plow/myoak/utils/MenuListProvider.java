@@ -32,8 +32,8 @@ public class MenuListProvider {
 
 		addItem(new MenuItem("1", "Fichiers"));
 		addItem(new MenuItem("2", "Contacts"));
-		addItem(new MenuItem("3", "Calendrier"));
-		addItem(new MenuItem("4", "Musique"));
+		//addItem(new MenuItem("3", "Calendrier"));
+		//addItem(new MenuItem("4", "Musique"));
 	}
 
 
